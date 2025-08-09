@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd414c7b92132443eb5194ffa1b5509d, type: 3}
+  m_Name: RewardSystem
+  m_EditorClassIdentifier: 
+  availablePowerUps:
+  - {fileID: 11400000, guid: 64ec5384301324fb39e0061f7e307032, type: 2}
+  - {fileID: 11400000, guid: 7c22fc1b8651943ee8f9a4c53430888d, type: 2}
+  - {fileID: 11400000, guid: 13443b13f4ec74d279bb30de4e0e57e9, type: 2}
+  - {fileID: 11400000, guid: d7e4cd06ba1934afb84567fd6493a194, type: 2}
+  - {fileID: 11400000, guid: 4dcd55ffe25544280b53447d3bc21ae6, type: 2}
+  availableWeapons:
+  - {fileID: 11400000, guid: c8a8464cb17424f1593b615febaf337c, type: 2}
+  - {fileID: 11400000, guid: 3410256778060401ab56b7d2a30c4560, type: 2}
+  - {fileID: 11400000, guid: 7b51cf9fcbbda43beb06b408324795a6, type: 2}
+  - {fileID: 11400000, guid: 04724d4655504428e92f7720eb5ca5a0, type: 2}
+  - {fileID: 11400000, guid: bb37bb68242904fc08364d2085bcbb9a, type: 2}
+  - {fileID: 11400000, guid: 9f9ba189d9d9c47cb9c7c63abd74b4b6, type: 2}
+  - {fileID: 11400000, guid: ce939afd4da224bcea54a83172447806, type: 2}
+  - {fileID: 11400000, guid: e3534783e5e514e87861a9273167c006, type: 2}
+  weaponRewardPrefab: {fileID: 2625252264419367545, guid: 8e6d8f712c82a44679f57cf42b0b5148, type: 3}
+  weaponSpawnChance: 0.6
+  levelVarianceStrength: 0.3
+  maxLevelVariance: 2
+  constantRewardYPosition: 1
+  useConstantYPosition: 1
+  progressionSystem: {fileID: 11400000, guid: a2b3a9d9be03e42209d2401518a11559, type: 2}
+  OnRewardSpawned: {fileID: 11400000, guid: cf147f82ecbee4628abe5e3ca8bbcbef, type: 2}

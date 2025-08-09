@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd4c8f2435f094dec86fd9f4f0da67fb, type: 3}
+  m_Name: GameStateSystem
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  isTransitioning: 0
+  mouseSensitivity: 2000
+  minSensitivity: 100
+  maxSensitivity: 2000
+  defaultSensitivity: 500
+  masterVolume: 1
+  musicVolume: 0.7
+  sfxVolume: 1
+  fadeInDuration: 0.3
+  mainMenuSceneName: MainMenu
+  limboSceneName: Limbo
+  hurtSoundCooldown: 0.5
+  OnGamePaused: {fileID: 11400000, guid: cb845cbc374ed4f0291c1efa227ee8c7, type: 2}
+  OnGameResumed: {fileID: 11400000, guid: 678836dc615394eda9b043bca4e0da7c, type: 2}
+  OnSettingsChanged: {fileID: 11400000, guid: 6e6b769d3a6ec4e38babe5601013493a, type: 2}
+  OnMouseSensitivityChanged: {fileID: 11400000, guid: 638b8c8a555474467a098e9e17a1402a, type: 2}

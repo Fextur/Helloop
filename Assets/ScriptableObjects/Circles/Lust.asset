@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ce00b083d9f44cd6a2b54e53ed0d8bb, type: 3}
+  m_Name: Lust
+  m_EditorClassIdentifier: 
+  circleLevel: 2
+  circleName: Lust
+  nextCircle: {fileID: 11400000, guid: 72bd866fc8b5f4ae6a3b04b097805192, type: 2}
+  entryRoom: {fileID: 7944020806768574695, guid: c9d89727e7dbc49d7a969c65e125c5e1, type: 3}
+  bossRoom:
+    roomPrefab: {fileID: 7944020806768574695, guid: 19be08040d78e419589ffd33fe2c3ed5, type: 3}
+    roomType: 0
+  roomCollection:
+  - roomPrefab: {fileID: 7944020806768574695, guid: e662270cd733b4b1e902ed62776e18f8, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 7944020806768574695, guid: d925635ae3acd4b60b72709d63df94a5, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 7944020806768574695, guid: 1c66c986bfaaf4d4fbb2e70937fd8b2d, type: 3}
+    roomType: 0
+  complexity: 2

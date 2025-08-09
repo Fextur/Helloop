@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323ec81e3acff48799c5377bd26266a3, type: 3}
+  m_Name: BurstRifle
+  m_EditorClassIdentifier: 
+  weaponName: M4
+  weaponType: 0
+  weaponPrefab: {fileID: 7560492995733453455, guid: cfcd266c39be04699a6c5455314ab11b, type: 3}
+  damage: 13
+  projectilePrefab: {fileID: 8297191405790434548, guid: 0707898d3f02d8c499685d8871d5031a, type: 3}
+  reloadTime: 2.2
+  projectileSpeed: 30
+  falloffDistance: 75
+  maxAmmoSize: 120
+  clipSize: 30
+  fireMode: 2
+  fireRate: 0.06
+  burstCount: 3
+  fireSound: {fileID: 8300000, guid: b79e5f27d4c854cb6961c4eac96efd54, type: 3}
+  reloadSound: {fileID: 8300000, guid: d444f1a85ffb844918ee72c04bfdaa34, type: 3}
+  emptyClipSound: {fileID: 8300000, guid: 080d0697bedd74743b4b12c10049f39a, type: 3}

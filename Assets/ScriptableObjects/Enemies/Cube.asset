@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
+  m_Name: Cube
+  m_EditorClassIdentifier: 
+  enemyName: Cube
+  enemyPrefab: {fileID: 5560456726937334590, guid: 86054f65617204240aac2b6c21565dde, type: 3}
+  maxHealth: 15
+  damage: 10
+  attackRange: 2
+  enemyType: 0
+  sightRange: 8
+  pursueDistance: 15
+  moveSpeed: 3.5
+  attackCooldown: 1
+  attackDamageDelay: 0.5
+  attackAnimationDuration: 1
+  idleSound: {fileID: 0}
+  hittingSound: {fileID: 0}
+  gettingHitSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  animatorController: {fileID: 0}
