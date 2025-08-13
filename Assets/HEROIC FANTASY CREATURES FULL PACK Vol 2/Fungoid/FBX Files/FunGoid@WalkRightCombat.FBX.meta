@@ -1,0 +1,510 @@
+fileFormatVersion: 2
+guid: f01f132047796cf418b31645e163b592
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: BO_STAFF
+    100002: //RootNode
+    100004: FUNGOID_
+    100006: FUNGOID_ Head
+    100008: FUNGOID_ L Calf
+    100010: FUNGOID_ L Clavicle
+    100012: FUNGOID_ L Finger0
+    100014: FUNGOID_ L Finger01
+    100016: FUNGOID_ L Finger02
+    100018: FUNGOID_ L Finger1
+    100020: FUNGOID_ L Finger11
+    100022: FUNGOID_ L Finger12
+    100024: FUNGOID_ L Finger2
+    100026: FUNGOID_ L Finger21
+    100028: FUNGOID_ L Finger22
+    100030: FUNGOID_ L Foot
+    100032: FUNGOID_ L Forearm
+    100034: FUNGOID_ L Hand
+    100036: FUNGOID_ L Thigh
+    100038: FUNGOID_ L Toe0
+    100040: FUNGOID_ L Toe01
+    100042: FUNGOID_ L Toe1
+    100044: FUNGOID_ L Toe11
+    100046: FUNGOID_ L Toe2
+    100048: FUNGOID_ L Toe21
+    100050: FUNGOID_ L UpperArm
+    100052: FUNGOID_ Neck
+    100054: FUNGOID_ Pelvis
+    100056: FUNGOID_ Ponytail1
+    100058: FUNGOID_ R Calf
+    100060: FUNGOID_ R Clavicle
+    100062: FUNGOID_ R Finger0
+    100064: FUNGOID_ R Finger01
+    100066: FUNGOID_ R Finger02
+    100068: FUNGOID_ R Finger1
+    100070: FUNGOID_ R Finger11
+    100072: FUNGOID_ R Finger12
+    100074: FUNGOID_ R Finger2
+    100076: FUNGOID_ R Finger21
+    100078: FUNGOID_ R Finger22
+    100080: FUNGOID_ R Foot
+    100082: FUNGOID_ R Forearm
+    100084: FUNGOID_ R Hand
+    100086: FUNGOID_ R Thigh
+    100088: FUNGOID_ R Toe0
+    100090: FUNGOID_ R Toe01
+    100092: FUNGOID_ R Toe1
+    100094: FUNGOID_ R Toe11
+    100096: FUNGOID_ R Toe2
+    100098: FUNGOID_ R Toe21
+    100100: FUNGOID_ R UpperArm
+    100102: FUNGOID_ Spine
+    100104: FUNGOID_ Spine1
+    100106: Fungoid_
+    100108: Fungoid_ Head
+    100110: Fungoid_ L Calf
+    100112: Fungoid_ L Clavicle
+    100114: Fungoid_ L Finger0
+    100116: Fungoid_ L Finger01
+    100118: Fungoid_ L Finger02
+    100120: Fungoid_ L Finger1
+    100122: Fungoid_ L Finger11
+    100124: Fungoid_ L Finger12
+    100126: Fungoid_ L Finger2
+    100128: Fungoid_ L Finger21
+    100130: Fungoid_ L Finger22
+    100132: Fungoid_ L Foot
+    100134: Fungoid_ L Forearm
+    100136: Fungoid_ L Hand
+    100138: Fungoid_ L Thigh
+    100140: Fungoid_ L Toe0
+    100142: Fungoid_ L Toe01
+    100144: Fungoid_ L Toe1
+    100146: Fungoid_ L Toe11
+    100148: Fungoid_ L Toe2
+    100150: Fungoid_ L Toe21
+    100152: Fungoid_ L UpperArm
+    100154: Fungoid_ Neck
+    100156: Fungoid_ Pelvis
+    100158: Fungoid_ Ponytail1
+    100160: Fungoid_ R Calf
+    100162: Fungoid_ R Clavicle
+    100164: Fungoid_ R Finger0
+    100166: Fungoid_ R Finger01
+    100168: Fungoid_ R Finger02
+    100170: Fungoid_ R Finger1
+    100172: Fungoid_ R Finger11
+    100174: Fungoid_ R Finger12
+    100176: Fungoid_ R Finger2
+    100178: Fungoid_ R Finger21
+    100180: Fungoid_ R Finger22
+    100182: Fungoid_ R Foot
+    100184: Fungoid_ R Forearm
+    100186: Fungoid_ R Hand
+    100188: Fungoid_ R Thigh
+    100190: Fungoid_ R Toe0
+    100192: Fungoid_ R Toe01
+    100194: Fungoid_ R Toe1
+    100196: Fungoid_ R Toe11
+    100198: Fungoid_ R Toe2
+    100200: Fungoid_ R Toe21
+    100202: Fungoid_ R UpperArm
+    100204: Fungoid_ Spine
+    100206: Fungoid_ Spine1
+    100208: root
+    400000: BO_STAFF
+    400002: //RootNode
+    400004: FUNGOID_
+    400006: FUNGOID_ Head
+    400008: FUNGOID_ L Calf
+    400010: FUNGOID_ L Clavicle
+    400012: FUNGOID_ L Finger0
+    400014: FUNGOID_ L Finger01
+    400016: FUNGOID_ L Finger02
+    400018: FUNGOID_ L Finger1
+    400020: FUNGOID_ L Finger11
+    400022: FUNGOID_ L Finger12
+    400024: FUNGOID_ L Finger2
+    400026: FUNGOID_ L Finger21
+    400028: FUNGOID_ L Finger22
+    400030: FUNGOID_ L Foot
+    400032: FUNGOID_ L Forearm
+    400034: FUNGOID_ L Hand
+    400036: FUNGOID_ L Thigh
+    400038: FUNGOID_ L Toe0
+    400040: FUNGOID_ L Toe01
+    400042: FUNGOID_ L Toe1
+    400044: FUNGOID_ L Toe11
+    400046: FUNGOID_ L Toe2
+    400048: FUNGOID_ L Toe21
+    400050: FUNGOID_ L UpperArm
+    400052: FUNGOID_ Neck
+    400054: FUNGOID_ Pelvis
+    400056: FUNGOID_ Ponytail1
+    400058: FUNGOID_ R Calf
+    400060: FUNGOID_ R Clavicle
+    400062: FUNGOID_ R Finger0
+    400064: FUNGOID_ R Finger01
+    400066: FUNGOID_ R Finger02
+    400068: FUNGOID_ R Finger1
+    400070: FUNGOID_ R Finger11
+    400072: FUNGOID_ R Finger12
+    400074: FUNGOID_ R Finger2
+    400076: FUNGOID_ R Finger21
+    400078: FUNGOID_ R Finger22
+    400080: FUNGOID_ R Foot
+    400082: FUNGOID_ R Forearm
+    400084: FUNGOID_ R Hand
+    400086: FUNGOID_ R Thigh
+    400088: FUNGOID_ R Toe0
+    400090: FUNGOID_ R Toe01
+    400092: FUNGOID_ R Toe1
+    400094: FUNGOID_ R Toe11
+    400096: FUNGOID_ R Toe2
+    400098: FUNGOID_ R Toe21
+    400100: FUNGOID_ R UpperArm
+    400102: FUNGOID_ Spine
+    400104: FUNGOID_ Spine1
+    400106: Fungoid_
+    400108: Fungoid_ Head
+    400110: Fungoid_ L Calf
+    400112: Fungoid_ L Clavicle
+    400114: Fungoid_ L Finger0
+    400116: Fungoid_ L Finger01
+    400118: Fungoid_ L Finger02
+    400120: Fungoid_ L Finger1
+    400122: Fungoid_ L Finger11
+    400124: Fungoid_ L Finger12
+    400126: Fungoid_ L Finger2
+    400128: Fungoid_ L Finger21
+    400130: Fungoid_ L Finger22
+    400132: Fungoid_ L Foot
+    400134: Fungoid_ L Forearm
+    400136: Fungoid_ L Hand
+    400138: Fungoid_ L Thigh
+    400140: Fungoid_ L Toe0
+    400142: Fungoid_ L Toe01
+    400144: Fungoid_ L Toe1
+    400146: Fungoid_ L Toe11
+    400148: Fungoid_ L Toe2
+    400150: Fungoid_ L Toe21
+    400152: Fungoid_ L UpperArm
+    400154: Fungoid_ Neck
+    400156: Fungoid_ Pelvis
+    400158: Fungoid_ Ponytail1
+    400160: Fungoid_ R Calf
+    400162: Fungoid_ R Clavicle
+    400164: Fungoid_ R Finger0
+    400166: Fungoid_ R Finger01
+    400168: Fungoid_ R Finger02
+    400170: Fungoid_ R Finger1
+    400172: Fungoid_ R Finger11
+    400174: Fungoid_ R Finger12
+    400176: Fungoid_ R Finger2
+    400178: Fungoid_ R Finger21
+    400180: Fungoid_ R Finger22
+    400182: Fungoid_ R Foot
+    400184: Fungoid_ R Forearm
+    400186: Fungoid_ R Hand
+    400188: Fungoid_ R Thigh
+    400190: Fungoid_ R Toe0
+    400192: Fungoid_ R Toe01
+    400194: Fungoid_ R Toe1
+    400196: Fungoid_ R Toe11
+    400198: Fungoid_ R Toe2
+    400200: Fungoid_ R Toe21
+    400202: Fungoid_ R UpperArm
+    400204: Fungoid_ Spine
+    400206: Fungoid_ Spine1
+    400208: root
+    7400000: walkRightCombat
+    9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walkRightCombat
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 1
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/Fungoid_
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh/Fungoid_ L Calf
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh/Fungoid_ L Calf/Fungoid_
+          L Foot
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh/Fungoid_ L Calf/Fungoid_
+          L Foot/Fungoid_ L Toe0
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh/Fungoid_ L Calf/Fungoid_
+          L Foot/Fungoid_ L Toe0/Fungoid_ L Toe01
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh/Fungoid_ L Calf/Fungoid_
+          L Foot/Fungoid_ L Toe1
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh/Fungoid_ L Calf/Fungoid_
+          L Foot/Fungoid_ L Toe1/Fungoid_ L Toe11
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh/Fungoid_ L Calf/Fungoid_
+          L Foot/Fungoid_ L Toe2
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ L Thigh/Fungoid_ L Calf/Fungoid_
+          L Foot/Fungoid_ L Toe2/Fungoid_ L Toe21
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh/Fungoid_ R Calf
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh/Fungoid_ R Calf/Fungoid_
+          R Foot
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh/Fungoid_ R Calf/Fungoid_
+          R Foot/Fungoid_ R Toe0
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh/Fungoid_ R Calf/Fungoid_
+          R Foot/Fungoid_ R Toe0/Fungoid_ R Toe01
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh/Fungoid_ R Calf/Fungoid_
+          R Foot/Fungoid_ R Toe1
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh/Fungoid_ R Calf/Fungoid_
+          R Foot/Fungoid_ R Toe1/Fungoid_ R Toe11
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh/Fungoid_ R Calf/Fungoid_
+          R Foot/Fungoid_ R Toe2
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ R Thigh/Fungoid_ R Calf/Fungoid_
+          R Foot/Fungoid_ R Toe2/Fungoid_ R Toe21
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger0
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger0/Fungoid_ L Finger01
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger0/Fungoid_ L Finger01/Fungoid_ L Finger02
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger1
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger1/Fungoid_ L Finger11
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger1/Fungoid_ L Finger11/Fungoid_ L Finger12
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger2
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger2/Fungoid_ L Finger21
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          L Clavicle/Fungoid_ L UpperArm/Fungoid_ L Forearm/Fungoid_ L Hand/Fungoid_
+          L Finger2/Fungoid_ L Finger21/Fungoid_ L Finger22
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          Neck
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          Neck/Fungoid_ Head
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          Neck/Fungoid_ Head/Fungoid_ Ponytail1
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/BO_STAFF
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger0
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger0/Fungoid_ R Finger01
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger0/Fungoid_ R Finger01/Fungoid_ R Finger02
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger1
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger1/Fungoid_ R Finger11
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger1/Fungoid_ R Finger11/Fungoid_ R Finger12
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger2
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger2/Fungoid_ R Finger21
+        weight: 1
+      - path: root/Fungoid_/Fungoid_ Pelvis/Fungoid_ Spine/Fungoid_ Spine1/Fungoid_
+          R Clavicle/Fungoid_ R UpperArm/Fungoid_ R Forearm/Fungoid_ R Hand/Fungoid_
+          R Finger2/Fungoid_ R Finger21/Fungoid_ R Finger22
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: f6121b67367ac17479a43cc826c8167c,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 18165
+  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 2
+  packageVersion: 2.31
+  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK Vol 2/Fungoid/FBX Files/FunGoid@WalkRightCombat.FBX
+  uploadId: 626737

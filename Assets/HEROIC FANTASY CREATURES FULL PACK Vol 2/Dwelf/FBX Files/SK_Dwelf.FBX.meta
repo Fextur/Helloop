@@ -1,0 +1,327 @@
+fileFormatVersion: 2
+guid: fc31dabcdf2dfe942869c2d311a6ab55
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Dummy001
+    100002: DWELF_SWORD_ACTION
+    100004: DWELF_SWORD_IDLE
+    100006: Factice001
+    100008: HAIRCUT_A
+    100010: HAIRCUT_B
+    100012: HOBBIT
+    100014: HOBBIT_
+    100016: HOBBIT_ Head
+    100018: HOBBIT_ L Calf
+    100020: HOBBIT_ L Clavicle
+    100022: HOBBIT_ L Finger0
+    100024: HOBBIT_ L Finger01
+    100026: HOBBIT_ L Finger02
+    100028: HOBBIT_ L Finger1
+    100030: HOBBIT_ L Finger11
+    100032: HOBBIT_ L Finger12
+    100034: HOBBIT_ L Finger2
+    100036: HOBBIT_ L Finger21
+    100038: HOBBIT_ L Finger22
+    100040: HOBBIT_ L Finger3
+    100042: HOBBIT_ L Finger31
+    100044: HOBBIT_ L Finger32
+    100046: HOBBIT_ L Finger4
+    100048: HOBBIT_ L Finger41
+    100050: HOBBIT_ L Finger42
+    100052: HOBBIT_ L Foot
+    100054: HOBBIT_ L Forearm
+    100056: HOBBIT_ L Hand
+    100058: HOBBIT_ L Thigh
+    100060: HOBBIT_ L Toe0
+    100062: HOBBIT_ L UpperArm
+    100064: HOBBIT_ Neck
+    100066: HOBBIT_ Pelvis
+    100068: HOBBIT_ Queue de cheval 1
+    100070: HOBBIT_ R Calf
+    100072: HOBBIT_ R Clavicle
+    100074: HOBBIT_ R Finger0
+    100076: HOBBIT_ R Finger01
+    100078: HOBBIT_ R Finger02
+    100080: HOBBIT_ R Finger1
+    100082: HOBBIT_ R Finger11
+    100084: HOBBIT_ R Finger12
+    100086: HOBBIT_ R Finger2
+    100088: HOBBIT_ R Finger21
+    100090: HOBBIT_ R Finger22
+    100092: HOBBIT_ R Finger3
+    100094: HOBBIT_ R Finger31
+    100096: HOBBIT_ R Finger32
+    100098: HOBBIT_ R Finger4
+    100100: HOBBIT_ R Finger41
+    100102: HOBBIT_ R Finger42
+    100104: HOBBIT_ R Foot
+    100106: HOBBIT_ R Forearm
+    100108: HOBBIT_ R Hand
+    100110: HOBBIT_ R Thigh
+    100112: HOBBIT_ R Toe0
+    100114: HOBBIT_ R UpperArm
+    100116: HOBBIT_ Spine
+    100118: HOBBIT_ Spine1
+    100120: HOBBIT_BAG
+    100122: HOBBIT_CLOAK
+    100124: HOBBIT_CLOAK_1
+    100126: HOBBIT_CLOAK_2
+    100128: HOBBIT_CLOAK_3
+    100130: HOBBIT_CLOAK_4
+    100132: HOBBIT_CLOAK_5
+    100134: HOBBIT_SLINGSHOT_1
+    100136: HOBBIT_SLINGSHOT_1_nub
+    100138: HOBBIT_SLINGSHOT_2
+    100140: HOBBIT_SLINGSHOT_3
+    100142: HOBBIT_SWORD_HOLDSTER_1
+    100144: HOBBIT_SWORD_HOLDSTER_2
+    100146: ROOT_
+    100148: //RootNode
+    100150: SLINGSHOT
+    100152: sword_action
+    100154: sword_idle
+    100156: HOBBIT_ Ponytail1
+    100158: HOBBIT_SWORD_ACTION
+    100160: HOBBIT_SWORD_IDLE
+    100162: SK_Cloak
+    100164: SK_Dwelf
+    100166: SK_Haircut_A
+    100168: SK_Haircut_B
+    100170: SK_Slingshot
+    100172: SM_SwordAction
+    100174: SM_SwordIdle
+    400000: Dummy001
+    400002: DWELF_SWORD_ACTION
+    400004: DWELF_SWORD_IDLE
+    400006: Factice001
+    400008: HAIRCUT_A
+    400010: HAIRCUT_B
+    400012: HOBBIT
+    400014: HOBBIT_
+    400016: HOBBIT_ Head
+    400018: HOBBIT_ L Calf
+    400020: HOBBIT_ L Clavicle
+    400022: HOBBIT_ L Finger0
+    400024: HOBBIT_ L Finger01
+    400026: HOBBIT_ L Finger02
+    400028: HOBBIT_ L Finger1
+    400030: HOBBIT_ L Finger11
+    400032: HOBBIT_ L Finger12
+    400034: HOBBIT_ L Finger2
+    400036: HOBBIT_ L Finger21
+    400038: HOBBIT_ L Finger22
+    400040: HOBBIT_ L Finger3
+    400042: HOBBIT_ L Finger31
+    400044: HOBBIT_ L Finger32
+    400046: HOBBIT_ L Finger4
+    400048: HOBBIT_ L Finger41
+    400050: HOBBIT_ L Finger42
+    400052: HOBBIT_ L Foot
+    400054: HOBBIT_ L Forearm
+    400056: HOBBIT_ L Hand
+    400058: HOBBIT_ L Thigh
+    400060: HOBBIT_ L Toe0
+    400062: HOBBIT_ L UpperArm
+    400064: HOBBIT_ Neck
+    400066: HOBBIT_ Pelvis
+    400068: HOBBIT_ Queue de cheval 1
+    400070: HOBBIT_ R Calf
+    400072: HOBBIT_ R Clavicle
+    400074: HOBBIT_ R Finger0
+    400076: HOBBIT_ R Finger01
+    400078: HOBBIT_ R Finger02
+    400080: HOBBIT_ R Finger1
+    400082: HOBBIT_ R Finger11
+    400084: HOBBIT_ R Finger12
+    400086: HOBBIT_ R Finger2
+    400088: HOBBIT_ R Finger21
+    400090: HOBBIT_ R Finger22
+    400092: HOBBIT_ R Finger3
+    400094: HOBBIT_ R Finger31
+    400096: HOBBIT_ R Finger32
+    400098: HOBBIT_ R Finger4
+    400100: HOBBIT_ R Finger41
+    400102: HOBBIT_ R Finger42
+    400104: HOBBIT_ R Foot
+    400106: HOBBIT_ R Forearm
+    400108: HOBBIT_ R Hand
+    400110: HOBBIT_ R Thigh
+    400112: HOBBIT_ R Toe0
+    400114: HOBBIT_ R UpperArm
+    400116: HOBBIT_ Spine
+    400118: HOBBIT_ Spine1
+    400120: HOBBIT_BAG
+    400122: HOBBIT_CLOAK
+    400124: HOBBIT_CLOAK_1
+    400126: HOBBIT_CLOAK_2
+    400128: HOBBIT_CLOAK_3
+    400130: HOBBIT_CLOAK_4
+    400132: HOBBIT_CLOAK_5
+    400134: HOBBIT_SLINGSHOT_1
+    400136: HOBBIT_SLINGSHOT_1_nub
+    400138: HOBBIT_SLINGSHOT_2
+    400140: HOBBIT_SLINGSHOT_3
+    400142: HOBBIT_SWORD_HOLDSTER_1
+    400144: HOBBIT_SWORD_HOLDSTER_2
+    400146: ROOT_
+    400148: //RootNode
+    400150: SLINGSHOT
+    400152: sword_action
+    400154: sword_idle
+    400156: HOBBIT_ Ponytail1
+    400158: HOBBIT_SWORD_ACTION
+    400160: HOBBIT_SWORD_IDLE
+    400162: SK_Cloak
+    400164: SK_Dwelf
+    400166: SK_Haircut_A
+    400168: SK_Haircut_B
+    400170: SK_Slingshot
+    400172: SM_SwordAction
+    400174: SM_SwordIdle
+    2100000: DWELF_BODY
+    2100002: DWELF_PROPS
+    2100004: DWELF_HAIR_A
+    2300000: HAIRCUT_B
+    2300002: sword_action
+    2300004: sword_idle
+    2300006: SM_SwordAction
+    2300008: SM_SwordIdle
+    3300000: HAIRCUT_B
+    3300002: sword_action
+    3300004: sword_idle
+    3300006: SM_SwordAction
+    3300008: SM_SwordIdle
+    4300000: HOBBIT
+    4300002: HAIRCUT_A
+    4300004: HOBBIT_CLOAK
+    4300006: SLINGSHOT
+    4300008: HAIRCUT_B
+    4300010: sword_action
+    4300012: sword_idle
+    4300014: SK_Dwelf
+    4300016: SK_Haircut_A
+    4300018: SK_Cloak
+    4300020: SK_Slingshot
+    4300022: SK_Haircut_B
+    4300024: SM_SwordAction
+    4300026: SM_SwordIdle
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: HAIRCUT_A
+    13700002: HOBBIT
+    13700004: HOBBIT_CLOAK
+    13700006: SLINGSHOT
+    13700008: SK_Cloak
+    13700010: SK_Dwelf
+    13700012: SK_Haircut_A
+    13700014: SK_Haircut_B
+    13700016: SK_Slingshot
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Dwelf
+    second: {fileID: 2100000, guid: de646ffcb9bcd5249a99a853aef4851c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_DwelfProps
+    second: {fileID: 2100000, guid: f2aa94bfe8c1d3543beb1877c1a43a6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_Hair
+    second: {fileID: 2100000, guid: 0b8a57e2eed38ae4f8cbc0698fa25dfc, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: ROOT_
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 18165
+  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 2
+  packageVersion: 2.31
+  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK Vol 2/Dwelf/FBX Files/SK_Dwelf.FBX
+  uploadId: 626737

@@ -1,0 +1,464 @@
+fileFormatVersion: 2
+guid: 6265a02fd74652948932e788c96d5ed9
+timeCreated: 1525904059
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: root
+    100002: //RootNode
+    100004: WerespiderAbdomen
+    100006: WerespiderArmLowerLeft_1
+    100008: WerespiderArmLowerLeft_2
+    100010: WerespiderArmLowerLeft_3
+    100012: WerespiderArmLowerLeft_4
+    100014: WerespiderArmLowerRight_1
+    100016: WerespiderArmLowerRight_2
+    100018: WerespiderArmLowerRight_3
+    100020: WerespiderArmLowerRight_4
+    100022: WerespiderArmUpperLeft_1
+    100024: WerespiderArmUpperLeft_2
+    100026: WerespiderArmUpperLeft_3
+    100028: WerespiderArmUpperLeft_4
+    100030: WerespiderArmUpperRight_1
+    100032: WerespiderArmUpperRight_2
+    100034: WerespiderArmUpperRight_3
+    100036: WerespiderArmUpperRight_4
+    100038: WerespidercheliceraeLeft
+    100040: WerespidercheliceraeRight
+    100042: WerespiderFingerALowerLeft_1
+    100044: WerespiderFingerALowerLeft_2
+    100046: WerespiderFingerALowerRight_1
+    100048: WerespiderFingerALowerRight_2
+    100050: WerespiderFingerAUpperLeft_1
+    100052: WerespiderFingerAUpperLeft_2
+    100054: WerespiderFingerAUpperRight_1
+    100056: WerespiderFingerAUpperRight_2
+    100058: WerespiderFingerBLowerLeft_1
+    100060: WerespiderFingerBLowerLeft_2
+    100062: WerespiderFingerBLowerLeft_3
+    100064: WerespiderFingerBLowerRight_1
+    100066: WerespiderFingerBLowerRight_2
+    100068: WerespiderFingerBLowerRight_3
+    100070: WerespiderFingerBUpperLeft_1
+    100072: WerespiderFingerBUpperLeft_2
+    100074: WerespiderFingerBUpperLeft_3
+    100076: WerespiderFingerBUpperRight_1
+    100078: WerespiderFingerBUpperRight_2
+    100080: WerespiderFingerBUpperRight_3
+    100082: WerespiderFingerCLowerLeft_1
+    100084: WerespiderFingerCLowerLeft_2
+    100086: WerespiderFingerCLowerLeft_3
+    100088: WerespiderFingerCLowerRight_1
+    100090: WerespiderFingerCLowerRight_2
+    100092: WerespiderFingerCLowerRight_3
+    100094: WerespiderFingerCUpperLeft_1
+    100096: WerespiderFingerCUpperLeft_2
+    100098: WerespiderFingerCUpperLeft_3
+    100100: WerespiderFingerCUpperRight_1
+    100102: WerespiderFingerCUpperRight_2
+    100104: WerespiderFingerCUpperRight_3
+    100106: WerespiderFootFrontLeft
+    100108: WerespiderFootFrontRight
+    100110: WerespiderFootRearLeft
+    100112: WerespiderFootRearRight
+    100114: WerespiderHandLowerLeft
+    100116: WerespiderHandLowerRight
+    100118: WerespiderHandUpperLeft
+    100120: WerespiderHandUpperRight
+    100122: WerespiderLegFrontLeft_1
+    100124: WerespiderLegFrontLeft_2
+    100126: WerespiderLegFrontLeft_3
+    100128: WerespiderLegFrontLeft_4
+    100130: WerespiderLegFrontRight_1
+    100132: WerespiderLegFrontRight_2
+    100134: WerespiderLegFrontRight_3
+    100136: WerespiderLegFrontRight_4
+    100138: WerespiderLegRearLeft_1
+    100140: WerespiderLegRearLeft_2
+    100142: WerespiderLegRearLeft_3
+    100144: WerespiderLegRearLeft_4
+    100146: WerespiderLegRearRight_1
+    100148: WerespiderLegRearRight_2
+    100150: WerespiderLegRearRight_3
+    100152: WerespiderLegRearRight_4
+    100154: WerespiderLowerJawLeft
+    100156: WerespiderLowerJawRight
+    100158: WerespiderMandibuleLeft_1
+    100160: WerespiderMandibuleLeft_2
+    100162: WerespiderMandibuleLeft_3
+    100164: WerespiderMandibuleRight_1
+    100166: WerespiderMandibuleRight_2
+    100168: WerespiderMandibuleRight_3
+    100170: WerespiderThorax
+    100172: WerespiderUpperJaw
+    400000: root
+    400002: //RootNode
+    400004: WerespiderAbdomen
+    400006: WerespiderArmLowerLeft_1
+    400008: WerespiderArmLowerLeft_2
+    400010: WerespiderArmLowerLeft_3
+    400012: WerespiderArmLowerLeft_4
+    400014: WerespiderArmLowerRight_1
+    400016: WerespiderArmLowerRight_2
+    400018: WerespiderArmLowerRight_3
+    400020: WerespiderArmLowerRight_4
+    400022: WerespiderArmUpperLeft_1
+    400024: WerespiderArmUpperLeft_2
+    400026: WerespiderArmUpperLeft_3
+    400028: WerespiderArmUpperLeft_4
+    400030: WerespiderArmUpperRight_1
+    400032: WerespiderArmUpperRight_2
+    400034: WerespiderArmUpperRight_3
+    400036: WerespiderArmUpperRight_4
+    400038: WerespidercheliceraeLeft
+    400040: WerespidercheliceraeRight
+    400042: WerespiderFingerALowerLeft_1
+    400044: WerespiderFingerALowerLeft_2
+    400046: WerespiderFingerALowerRight_1
+    400048: WerespiderFingerALowerRight_2
+    400050: WerespiderFingerAUpperLeft_1
+    400052: WerespiderFingerAUpperLeft_2
+    400054: WerespiderFingerAUpperRight_1
+    400056: WerespiderFingerAUpperRight_2
+    400058: WerespiderFingerBLowerLeft_1
+    400060: WerespiderFingerBLowerLeft_2
+    400062: WerespiderFingerBLowerLeft_3
+    400064: WerespiderFingerBLowerRight_1
+    400066: WerespiderFingerBLowerRight_2
+    400068: WerespiderFingerBLowerRight_3
+    400070: WerespiderFingerBUpperLeft_1
+    400072: WerespiderFingerBUpperLeft_2
+    400074: WerespiderFingerBUpperLeft_3
+    400076: WerespiderFingerBUpperRight_1
+    400078: WerespiderFingerBUpperRight_2
+    400080: WerespiderFingerBUpperRight_3
+    400082: WerespiderFingerCLowerLeft_1
+    400084: WerespiderFingerCLowerLeft_2
+    400086: WerespiderFingerCLowerLeft_3
+    400088: WerespiderFingerCLowerRight_1
+    400090: WerespiderFingerCLowerRight_2
+    400092: WerespiderFingerCLowerRight_3
+    400094: WerespiderFingerCUpperLeft_1
+    400096: WerespiderFingerCUpperLeft_2
+    400098: WerespiderFingerCUpperLeft_3
+    400100: WerespiderFingerCUpperRight_1
+    400102: WerespiderFingerCUpperRight_2
+    400104: WerespiderFingerCUpperRight_3
+    400106: WerespiderFootFrontLeft
+    400108: WerespiderFootFrontRight
+    400110: WerespiderFootRearLeft
+    400112: WerespiderFootRearRight
+    400114: WerespiderHandLowerLeft
+    400116: WerespiderHandLowerRight
+    400118: WerespiderHandUpperLeft
+    400120: WerespiderHandUpperRight
+    400122: WerespiderLegFrontLeft_1
+    400124: WerespiderLegFrontLeft_2
+    400126: WerespiderLegFrontLeft_3
+    400128: WerespiderLegFrontLeft_4
+    400130: WerespiderLegFrontRight_1
+    400132: WerespiderLegFrontRight_2
+    400134: WerespiderLegFrontRight_3
+    400136: WerespiderLegFrontRight_4
+    400138: WerespiderLegRearLeft_1
+    400140: WerespiderLegRearLeft_2
+    400142: WerespiderLegRearLeft_3
+    400144: WerespiderLegRearLeft_4
+    400146: WerespiderLegRearRight_1
+    400148: WerespiderLegRearRight_2
+    400150: WerespiderLegRearRight_3
+    400152: WerespiderLegRearRight_4
+    400154: WerespiderLowerJawLeft
+    400156: WerespiderLowerJawRight
+    400158: WerespiderMandibuleLeft_1
+    400160: WerespiderMandibuleLeft_2
+    400162: WerespiderMandibuleLeft_3
+    400164: WerespiderMandibuleRight_1
+    400166: WerespiderMandibuleRight_2
+    400168: WerespiderMandibuleRight_3
+    400170: WerespiderThorax
+    400172: WerespiderUpperJaw
+    7400000: JumpForward
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: JumpForward
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/WerespiderAbdomen
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontLeft_1/WerespiderLegFrontLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontLeft_1/WerespiderLegFrontLeft_2/WerespiderLegFrontLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontLeft_1/WerespiderLegFrontLeft_2/WerespiderLegFrontLeft_3/WerespiderLegFrontLeft_4
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontLeft_1/WerespiderLegFrontLeft_2/WerespiderLegFrontLeft_3/WerespiderLegFrontLeft_4/WerespiderFootFrontLeft
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontRight_1/WerespiderLegFrontRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontRight_1/WerespiderLegFrontRight_2/WerespiderLegFrontRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontRight_1/WerespiderLegFrontRight_2/WerespiderLegFrontRight_3/WerespiderLegFrontRight_4
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegFrontRight_1/WerespiderLegFrontRight_2/WerespiderLegFrontRight_3/WerespiderLegFrontRight_4/WerespiderFootFrontRight
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearLeft_1/WerespiderLegRearLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearLeft_1/WerespiderLegRearLeft_2/WerespiderLegRearLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearLeft_1/WerespiderLegRearLeft_2/WerespiderLegRearLeft_3/WerespiderLegRearLeft_4
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearLeft_1/WerespiderLegRearLeft_2/WerespiderLegRearLeft_3/WerespiderLegRearLeft_4/WerespiderFootRearLeft
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearRight_1/WerespiderLegRearRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearRight_1/WerespiderLegRearRight_2/WerespiderLegRearRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearRight_1/WerespiderLegRearRight_2/WerespiderLegRearRight_3/WerespiderLegRearRight_4
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderLegRearRight_1/WerespiderLegRearRight_2/WerespiderLegRearRight_3/WerespiderLegRearRight_4/WerespiderFootRearRight
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft/WerespiderFingerALowerLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft/WerespiderFingerALowerLeft_1/WerespiderFingerALowerLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft/WerespiderFingerBLowerLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft/WerespiderFingerBLowerLeft_1/WerespiderFingerBLowerLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft/WerespiderFingerBLowerLeft_1/WerespiderFingerBLowerLeft_2/WerespiderFingerBLowerLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft/WerespiderFingerCLowerLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft/WerespiderFingerCLowerLeft_1/WerespiderFingerCLowerLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerLeft_1/WerespiderArmLowerLeft_2/WerespiderArmLowerLeft_3/WerespiderArmLowerLeft_4/WerespiderHandLowerLeft/WerespiderFingerCLowerLeft_1/WerespiderFingerCLowerLeft_2/WerespiderFingerCLowerLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight/WerespiderFingerALowerRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight/WerespiderFingerALowerRight_1/WerespiderFingerALowerRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight/WerespiderFingerBLowerRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight/WerespiderFingerBLowerRight_1/WerespiderFingerBLowerRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight/WerespiderFingerBLowerRight_1/WerespiderFingerBLowerRight_2/WerespiderFingerBLowerRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight/WerespiderFingerCLowerRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight/WerespiderFingerCLowerRight_1/WerespiderFingerCLowerRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmLowerRight_1/WerespiderArmLowerRight_2/WerespiderArmLowerRight_3/WerespiderArmLowerRight_4/WerespiderHandLowerRight/WerespiderFingerCLowerRight_1/WerespiderFingerCLowerRight_2/WerespiderFingerCLowerRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft/WerespiderFingerAUpperLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft/WerespiderFingerAUpperLeft_1/WerespiderFingerAUpperLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft/WerespiderFingerBUpperLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft/WerespiderFingerBUpperLeft_1/WerespiderFingerBUpperLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft/WerespiderFingerBUpperLeft_1/WerespiderFingerBUpperLeft_2/WerespiderFingerBUpperLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft/WerespiderFingerCUpperLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft/WerespiderFingerCUpperLeft_1/WerespiderFingerCUpperLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperLeft_1/WerespiderArmUpperLeft_2/WerespiderArmUpperLeft_3/WerespiderArmUpperLeft_4/WerespiderHandUpperLeft/WerespiderFingerCUpperLeft_1/WerespiderFingerCUpperLeft_2/WerespiderFingerCUpperLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight/WerespiderFingerAUpperRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight/WerespiderFingerAUpperRight_1/WerespiderFingerAUpperRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight/WerespiderFingerBUpperRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight/WerespiderFingerBUpperRight_1/WerespiderFingerBUpperRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight/WerespiderFingerBUpperRight_1/WerespiderFingerBUpperRight_2/WerespiderFingerBUpperRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight/WerespiderFingerCUpperRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight/WerespiderFingerCUpperRight_1/WerespiderFingerCUpperRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderArmUpperRight_1/WerespiderArmUpperRight_2/WerespiderArmUpperRight_3/WerespiderArmUpperRight_4/WerespiderHandUpperRight/WerespiderFingerCUpperRight_1/WerespiderFingerCUpperRight_2/WerespiderFingerCUpperRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespidercheliceraeLeft
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespidercheliceraeRight
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderLowerJawLeft
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderLowerJawRight
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderMandibuleLeft_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderMandibuleLeft_1/WerespiderMandibuleLeft_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderMandibuleLeft_1/WerespiderMandibuleLeft_2/WerespiderMandibuleLeft_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderMandibuleRight_1
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderMandibuleRight_1/WerespiderMandibuleRight_2
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderMandibuleRight_1/WerespiderMandibuleRight_2/WerespiderMandibuleRight_3
+        weight: 1
+      - path: root/WerespiderAbdomen/WerespiderThorax/WerespiderUpperJaw
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 1
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 2b8b53abcba109c4e832cbb780d50553,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127490
+  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 3
+  packageVersion: 1.13
+  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK VOL3/Heroic Fantasy Were Creatures
+    Pack Vol2/Werespider/FBX Files/Werespider@JumpForward.FBX
+  uploadId: 669994

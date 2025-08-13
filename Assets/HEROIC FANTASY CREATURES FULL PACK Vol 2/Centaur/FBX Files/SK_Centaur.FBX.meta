@@ -1,0 +1,434 @@
+fileFormatVersion: 2
+guid: 85e9777187d4de7448a0896849815125
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: ArrowAction
+    100002: ArrowActionSocket
+    100004: Beard
+    100006: Bow_Idle
+    100008: bowHoldster_1
+    100010: bowHoldster_2
+    100012: bowHoldster_3
+    100014: bowHoldster_4
+    100016: BowIdle_Socket
+    100018: CENTAUR_
+    100020: CENTAUR_ Footsteps
+    100022: CENTAUR_ Head
+    100024: CENTAUR_ L Calf
+    100026: CENTAUR_ L Clavicle
+    100028: CENTAUR_ L Finger0
+    100030: CENTAUR_ L Foot
+    100032: CENTAUR_ L Forearm
+    100034: CENTAUR_ L Hand
+    100036: CENTAUR_ L HorseLink
+    100038: CENTAUR_ L Thigh
+    100040: CENTAUR_ L UpperArm
+    100042: CENTAUR_ Neck
+    100044: CENTAUR_ Neck1
+    100046: CENTAUR_ Neck2
+    100048: CENTAUR_ Neck3
+    100050: CENTAUR_ Pelvis
+    100052: CENTAUR_ Queue de cheval 1
+    100054: CENTAUR_ R Calf
+    100056: CENTAUR_ R Clavicle
+    100058: CENTAUR_ R Finger0
+    100060: CENTAUR_ R Foot
+    100062: CENTAUR_ R Forearm
+    100064: CENTAUR_ R Hand
+    100066: CENTAUR_ R HorseLink
+    100068: CENTAUR_ R Thigh
+    100070: CENTAUR_ R UpperArm
+    100072: CENTAUR_ Spine
+    100074: CENTAUR_ Spine1
+    100076: CENTAUR_ Spine2
+    100078: CENTAUR_ Tail
+    100080: CENTAUR_ Tail1
+    100082: CENTAUR_ Tail2
+    100084: CENTAUR_ Tail3
+    100086: CENTAUR_ Tail4
+    100088: CENTAUR_ARM_L
+    100090: CENTAUR_ARM_R
+    100092: CENTAUR_BODY
+    100094: CENTAUR_BOW_BOTTOM_CURVE_1
+    100096: CENTAUR_BOW_BOTTOM_CURVE_2
+    100098: CENTAUR_BOW_BOTTOM_CURVE_3
+    100100: CENTAUR_BOW_HANDLE
+    100102: CENTAUR_BOW_ROOT_
+    100104: CENTAUR_BOW_STRING
+    100106: CENTAUR_BOW_UP_CURVE_1
+    100108: CENTAUR_BOW_UP_CURVE_2
+    100110: CENTAUR_BOW_UP_CURVE_3
+    100112: CENTAUR_CLAVICLE_L
+    100114: CENTAUR_CLAVICLE_R
+    100116: CENTAUR_FOREARM_L
+    100118: CENTAUR_FOREARM_R
+    100120: CENTAUR_HAND_L
+    100122: CENTAUR_HAND_R
+    100124: CENTAUR_index_L_01
+    100126: CENTAUR_index_L_02
+    100128: CENTAUR_index_L_03
+    100130: CENTAUR_index_R_01
+    100132: CENTAUR_index_R_02
+    100134: CENTAUR_index_R_03
+    100136: CENTAUR_MANE
+    100138: CENTAUR_middle_L_01
+    100140: CENTAUR_middle_L_02
+    100142: CENTAUR_middle_L_03
+    100144: CENTAUR_middle_R_01
+    100146: CENTAUR_middle_R_02
+    100148: CENTAUR_middle_R_03
+    100150: CENTAUR_pinky_L_01
+    100152: CENTAUR_pinky_L_02
+    100154: CENTAUR_pinky_L_03
+    100156: CENTAUR_pinky_R_01
+    100158: CENTAUR_pinky_R_02
+    100160: CENTAUR_pinky_R_03
+    100162: CENTAUR_ring_L_01
+    100164: CENTAUR_ring_L_02
+    100166: CENTAUR_ring_L_03
+    100168: CENTAUR_ring_R_01
+    100170: CENTAUR_ring_R_02
+    100172: CENTAUR_ring_R_03
+    100174: CENTAUR_Thumb_L_01
+    100176: CENTAUR_Thumb_L_02
+    100178: CENTAUR_Thumb_L_03
+    100180: CENTAUR_thumb_R_01
+    100182: CENTAUR_thumb_R_02
+    100184: CENTAUR_thumb_R_03
+    100186: eye_l
+    100188: eye_r
+    100190: Goaty
+    100192: Mustaches
+    100194: ponytail_A_1
+    100196: ponytail_A_2
+    100198: ponytail_A_3
+    100200: ponytail_A_4
+    100202: ponytail_A_5
+    100204: ponytail_B_1
+    100206: ponytail_B_2
+    100208: ponytail_B_3
+    100210: ponytail_B_4
+    100212: ponytail_B_5
+    100214: ponytail_C_1
+    100216: ponytail_C_2
+    100218: ponytail_C_3
+    100220: ponytail_C_4
+    100222: ponytail_C_5
+    100224: ponytail_D_1
+    100226: ponytail_D_2
+    100228: ponytail_D_3
+    100230: ponytail_D_4
+    100232: ponytail_D_5
+    100234: PorkChops
+    100236: quiver_1
+    100238: quiver_2
+    100240: quiver_3
+    100242: quiver_4
+    100244: root
+    100246: sheath_1
+    100248: sheath_2
+    100250: Shoulder_Pad_Left
+    100252: Shoulder_Pad_Right
+    100254: SK_ArrowAction
+    100256: SK_BodyArmor
+    100258: SK_BowAction
+    100260: SK_BowIdle
+    100262: //RootNode
+    100264: SK_ShoudlerArmor
+    100266: SK_swordAction
+    100268: SK_swordIdle
+    100270: SK_SwordSheath
+    100272: SwordAction
+    100274: SwordAction_Socket
+    100276: SwordIdle
+    100278: SwordIdle_Socket
+    400000: ArrowAction
+    400002: ArrowActionSocket
+    400004: Beard
+    400006: Bow_Idle
+    400008: bowHoldster_1
+    400010: bowHoldster_2
+    400012: bowHoldster_3
+    400014: bowHoldster_4
+    400016: BowIdle_Socket
+    400018: CENTAUR_
+    400020: CENTAUR_ Footsteps
+    400022: CENTAUR_ Head
+    400024: CENTAUR_ L Calf
+    400026: CENTAUR_ L Clavicle
+    400028: CENTAUR_ L Finger0
+    400030: CENTAUR_ L Foot
+    400032: CENTAUR_ L Forearm
+    400034: CENTAUR_ L Hand
+    400036: CENTAUR_ L HorseLink
+    400038: CENTAUR_ L Thigh
+    400040: CENTAUR_ L UpperArm
+    400042: CENTAUR_ Neck
+    400044: CENTAUR_ Neck1
+    400046: CENTAUR_ Neck2
+    400048: CENTAUR_ Neck3
+    400050: CENTAUR_ Pelvis
+    400052: CENTAUR_ Queue de cheval 1
+    400054: CENTAUR_ R Calf
+    400056: CENTAUR_ R Clavicle
+    400058: CENTAUR_ R Finger0
+    400060: CENTAUR_ R Foot
+    400062: CENTAUR_ R Forearm
+    400064: CENTAUR_ R Hand
+    400066: CENTAUR_ R HorseLink
+    400068: CENTAUR_ R Thigh
+    400070: CENTAUR_ R UpperArm
+    400072: CENTAUR_ Spine
+    400074: CENTAUR_ Spine1
+    400076: CENTAUR_ Spine2
+    400078: CENTAUR_ Tail
+    400080: CENTAUR_ Tail1
+    400082: CENTAUR_ Tail2
+    400084: CENTAUR_ Tail3
+    400086: CENTAUR_ Tail4
+    400088: CENTAUR_ARM_L
+    400090: CENTAUR_ARM_R
+    400092: CENTAUR_BODY
+    400094: CENTAUR_BOW_BOTTOM_CURVE_1
+    400096: CENTAUR_BOW_BOTTOM_CURVE_2
+    400098: CENTAUR_BOW_BOTTOM_CURVE_3
+    400100: CENTAUR_BOW_HANDLE
+    400102: CENTAUR_BOW_ROOT_
+    400104: CENTAUR_BOW_STRING
+    400106: CENTAUR_BOW_UP_CURVE_1
+    400108: CENTAUR_BOW_UP_CURVE_2
+    400110: CENTAUR_BOW_UP_CURVE_3
+    400112: CENTAUR_CLAVICLE_L
+    400114: CENTAUR_CLAVICLE_R
+    400116: CENTAUR_FOREARM_L
+    400118: CENTAUR_FOREARM_R
+    400120: CENTAUR_HAND_L
+    400122: CENTAUR_HAND_R
+    400124: CENTAUR_index_L_01
+    400126: CENTAUR_index_L_02
+    400128: CENTAUR_index_L_03
+    400130: CENTAUR_index_R_01
+    400132: CENTAUR_index_R_02
+    400134: CENTAUR_index_R_03
+    400136: CENTAUR_MANE
+    400138: CENTAUR_middle_L_01
+    400140: CENTAUR_middle_L_02
+    400142: CENTAUR_middle_L_03
+    400144: CENTAUR_middle_R_01
+    400146: CENTAUR_middle_R_02
+    400148: CENTAUR_middle_R_03
+    400150: CENTAUR_pinky_L_01
+    400152: CENTAUR_pinky_L_02
+    400154: CENTAUR_pinky_L_03
+    400156: CENTAUR_pinky_R_01
+    400158: CENTAUR_pinky_R_02
+    400160: CENTAUR_pinky_R_03
+    400162: CENTAUR_ring_L_01
+    400164: CENTAUR_ring_L_02
+    400166: CENTAUR_ring_L_03
+    400168: CENTAUR_ring_R_01
+    400170: CENTAUR_ring_R_02
+    400172: CENTAUR_ring_R_03
+    400174: CENTAUR_Thumb_L_01
+    400176: CENTAUR_Thumb_L_02
+    400178: CENTAUR_Thumb_L_03
+    400180: CENTAUR_thumb_R_01
+    400182: CENTAUR_thumb_R_02
+    400184: CENTAUR_thumb_R_03
+    400186: eye_l
+    400188: eye_r
+    400190: Goaty
+    400192: Mustaches
+    400194: ponytail_A_1
+    400196: ponytail_A_2
+    400198: ponytail_A_3
+    400200: ponytail_A_4
+    400202: ponytail_A_5
+    400204: ponytail_B_1
+    400206: ponytail_B_2
+    400208: ponytail_B_3
+    400210: ponytail_B_4
+    400212: ponytail_B_5
+    400214: ponytail_C_1
+    400216: ponytail_C_2
+    400218: ponytail_C_3
+    400220: ponytail_C_4
+    400222: ponytail_C_5
+    400224: ponytail_D_1
+    400226: ponytail_D_2
+    400228: ponytail_D_3
+    400230: ponytail_D_4
+    400232: ponytail_D_5
+    400234: PorkChops
+    400236: quiver_1
+    400238: quiver_2
+    400240: quiver_3
+    400242: quiver_4
+    400244: root
+    400246: sheath_1
+    400248: sheath_2
+    400250: Shoulder_Pad_Left
+    400252: Shoulder_Pad_Right
+    400254: SK_ArrowAction
+    400256: SK_BodyArmor
+    400258: SK_BowAction
+    400260: SK_BowIdle
+    400262: //RootNode
+    400264: SK_ShoudlerArmor
+    400266: SK_swordAction
+    400268: SK_swordIdle
+    400270: SK_SwordSheath
+    400272: SwordAction
+    400274: SwordAction_Socket
+    400276: SwordIdle
+    400278: SwordIdle_Socket
+    2100000: CENTAUR_GEAR_Legacy
+    2100002: CENTAUR_HAIR_1
+    2100004: CENTAUR_BODY_Legacy_1
+    2100006: CENTAUR_EYES
+    2300000: SK_ArrowAction
+    3300000: SK_ArrowAction
+    4300000: SK_SwordSheath
+    4300002: SK_BowIdle
+    4300004: SK_ShoudlerArmor
+    4300006: SK_BodyArmor
+    4300008: SK_swordIdle
+    4300010: SK_swordAction
+    4300012: SK_ArrowAction
+    4300014: SK_BowAction
+    4300016: CENTAUR_MANE
+    4300018: CENTAUR_BODY
+    4300020: Mustaches
+    4300022: Beard
+    4300024: PorkChops
+    4300026: Goaty
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: Beard
+    13700002: CENTAUR_BODY
+    13700004: CENTAUR_MANE
+    13700006: Goaty
+    13700008: Mustaches
+    13700010: PorkChops
+    13700012: SK_BodyArmor
+    13700014: SK_BowAction
+    13700016: SK_BowIdle
+    13700018: SK_ShoudlerArmor
+    13700020: SK_swordAction
+    13700022: SK_swordIdle
+    13700024: SK_SwordSheath
+    13700026: SK_ArrowAction
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CENTAUR_EYES
+    second: {fileID: 2100000, guid: b932307cd9929294ea9b224f7d9c86d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CentaurBody
+    second: {fileID: 2100000, guid: aac5be669defb0443a78bcd6d7b0f11a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CentaurGear
+    second: {fileID: 2100000, guid: f4efe8d67b92e7946916c7ac974056ab, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_CentaurHair
+    second: {fileID: 2100000, guid: 424f6c92149929d41a390a99ef27cf60, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 18165
+  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 2
+  packageVersion: 2.31
+  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK Vol 2/Centaur/FBX Files/SK_Centaur.FBX
+  uploadId: 626737
