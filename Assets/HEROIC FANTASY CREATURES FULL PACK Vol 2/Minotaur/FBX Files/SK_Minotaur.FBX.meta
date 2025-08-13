@@ -1,0 +1,400 @@
+fileFormatVersion: 2
+guid: 266acee4b83c1cd45ab24891eef8bdeb
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: default
+    100002: MINOTAUR
+    100004: MINOTAUR_
+    100006: MINOTAUR_ Head
+    100008: MINOTAUR_ L Calf
+    100010: MINOTAUR_ L Clavicle
+    100012: MINOTAUR_ L Finger0
+    100014: MINOTAUR_ L Finger01
+    100016: MINOTAUR_ L Finger02
+    100018: MINOTAUR_ L Finger1
+    100020: MINOTAUR_ L Finger11
+    100022: MINOTAUR_ L Finger12
+    100024: MINOTAUR_ L Finger2
+    100026: MINOTAUR_ L Finger21
+    100028: MINOTAUR_ L Finger22
+    100030: MINOTAUR_ L Finger3
+    100032: MINOTAUR_ L Finger31
+    100034: MINOTAUR_ L Finger32
+    100036: MINOTAUR_ L Finger4
+    100038: MINOTAUR_ L Finger41
+    100040: MINOTAUR_ L Finger42
+    100042: MINOTAUR_ L Foot
+    100044: MINOTAUR_ L Forearm
+    100046: MINOTAUR_ L Hand
+    100048: MINOTAUR_ L HorseLink
+    100050: MINOTAUR_ L Thigh
+    100052: MINOTAUR_ L Toe0
+    100054: MINOTAUR_ L UpperArm
+    100056: MINOTAUR_ Neck
+    100058: MINOTAUR_ Neck1
+    100060: MINOTAUR_ Pelvis
+    100062: MINOTAUR_ Queue de cheval 1
+    100064: MINOTAUR_ R Calf
+    100066: MINOTAUR_ R Clavicle
+    100068: MINOTAUR_ R Finger0
+    100070: MINOTAUR_ R Finger01
+    100072: MINOTAUR_ R Finger02
+    100074: MINOTAUR_ R Finger1
+    100076: MINOTAUR_ R Finger11
+    100078: MINOTAUR_ R Finger12
+    100080: MINOTAUR_ R Finger2
+    100082: MINOTAUR_ R Finger21
+    100084: MINOTAUR_ R Finger22
+    100086: MINOTAUR_ R Finger3
+    100088: MINOTAUR_ R Finger31
+    100090: MINOTAUR_ R Finger32
+    100092: MINOTAUR_ R Finger4
+    100094: MINOTAUR_ R Finger41
+    100096: MINOTAUR_ R Finger42
+    100098: MINOTAUR_ R Foot
+    100100: MINOTAUR_ R Forearm
+    100102: MINOTAUR_ R Hand
+    100104: MINOTAUR_ R HorseLink
+    100106: MINOTAUR_ R Thigh
+    100108: MINOTAUR_ R Toe0
+    100110: MINOTAUR_ R UpperArm
+    100112: MINOTAUR_ Spine
+    100114: MINOTAUR_ Spine1
+    100116: MINOTAUR_ARMOR
+    100118: MINOTAUR_SHOULDER_PAD
+    100120: MINOTAUR_SKIRT
+    100122: MINOTAUR_SKIRT_BACK_1
+    100124: MINOTAUR_SKIRT_BACK_2
+    100126: MINOTAUR_SKIRT_BACK_3
+    100128: MINOTAUR_SKIRT_BACK_4
+    100130: MINOTAUR_SKIRT_FRONT_1
+    100132: MINOTAUR_SKIRT_FRONT_2
+    100134: MINOTAUR_SKIRT_FRONT_3
+    100136: MINOTAUR_SKIRT_FRONT_4
+    100138: //RootNode
+    100140: Minotaur_
+    100142: Minotaur_ Head
+    100144: Minotaur_ L Calf
+    100146: Minotaur_ L Clavicle
+    100148: Minotaur_ L Finger0
+    100150: Minotaur_ L Finger01
+    100152: Minotaur_ L Finger02
+    100154: Minotaur_ L Finger1
+    100156: Minotaur_ L Finger11
+    100158: Minotaur_ L Finger12
+    100160: Minotaur_ L Finger2
+    100162: Minotaur_ L Finger21
+    100164: Minotaur_ L Finger22
+    100166: Minotaur_ L Finger3
+    100168: Minotaur_ L Finger31
+    100170: Minotaur_ L Finger32
+    100172: Minotaur_ L Finger4
+    100174: Minotaur_ L Finger41
+    100176: Minotaur_ L Finger42
+    100178: Minotaur_ L Foot
+    100180: Minotaur_ L Forearm
+    100182: Minotaur_ L Hand
+    100184: Minotaur_ L HorseLink
+    100186: Minotaur_ L Thigh
+    100188: Minotaur_ L Toe0
+    100190: Minotaur_ L UpperArm
+    100192: Minotaur_ Neck
+    100194: Minotaur_ Neck1
+    100196: Minotaur_ Pelvis
+    100198: Minotaur_ Ponytail1
+    100200: Minotaur_ R Calf
+    100202: Minotaur_ R Clavicle
+    100204: Minotaur_ R Finger0
+    100206: Minotaur_ R Finger01
+    100208: Minotaur_ R Finger02
+    100210: Minotaur_ R Finger1
+    100212: Minotaur_ R Finger11
+    100214: Minotaur_ R Finger12
+    100216: Minotaur_ R Finger2
+    100218: Minotaur_ R Finger21
+    100220: Minotaur_ R Finger22
+    100222: Minotaur_ R Finger3
+    100224: Minotaur_ R Finger31
+    100226: Minotaur_ R Finger32
+    100228: Minotaur_ R Finger4
+    100230: Minotaur_ R Finger41
+    100232: Minotaur_ R Finger42
+    100234: Minotaur_ R Foot
+    100236: Minotaur_ R Forearm
+    100238: Minotaur_ R Hand
+    100240: Minotaur_ R HorseLink
+    100242: Minotaur_ R Thigh
+    100244: Minotaur_ R Toe0
+    100246: Minotaur_ R UpperArm
+    100248: Minotaur_ Spine
+    100250: Minotaur_ Spine1
+    100252: MINOTAUR_WARHAMMER_POSITION
+    100254: root
+    100256: SK_Minotaur
+    100258: SK_MinotaurArmor
+    100260: SK_MinotaurSkirt
+    100262: SM_Warhammer
+    400000: default
+    400002: MINOTAUR
+    400004: MINOTAUR_
+    400006: MINOTAUR_ Head
+    400008: MINOTAUR_ L Calf
+    400010: MINOTAUR_ L Clavicle
+    400012: MINOTAUR_ L Finger0
+    400014: MINOTAUR_ L Finger01
+    400016: MINOTAUR_ L Finger02
+    400018: MINOTAUR_ L Finger1
+    400020: MINOTAUR_ L Finger11
+    400022: MINOTAUR_ L Finger12
+    400024: MINOTAUR_ L Finger2
+    400026: MINOTAUR_ L Finger21
+    400028: MINOTAUR_ L Finger22
+    400030: MINOTAUR_ L Finger3
+    400032: MINOTAUR_ L Finger31
+    400034: MINOTAUR_ L Finger32
+    400036: MINOTAUR_ L Finger4
+    400038: MINOTAUR_ L Finger41
+    400040: MINOTAUR_ L Finger42
+    400042: MINOTAUR_ L Foot
+    400044: MINOTAUR_ L Forearm
+    400046: MINOTAUR_ L Hand
+    400048: MINOTAUR_ L HorseLink
+    400050: MINOTAUR_ L Thigh
+    400052: MINOTAUR_ L Toe0
+    400054: MINOTAUR_ L UpperArm
+    400056: MINOTAUR_ Neck
+    400058: MINOTAUR_ Neck1
+    400060: MINOTAUR_ Pelvis
+    400062: MINOTAUR_ Queue de cheval 1
+    400064: MINOTAUR_ R Calf
+    400066: MINOTAUR_ R Clavicle
+    400068: MINOTAUR_ R Finger0
+    400070: MINOTAUR_ R Finger01
+    400072: MINOTAUR_ R Finger02
+    400074: MINOTAUR_ R Finger1
+    400076: MINOTAUR_ R Finger11
+    400078: MINOTAUR_ R Finger12
+    400080: MINOTAUR_ R Finger2
+    400082: MINOTAUR_ R Finger21
+    400084: MINOTAUR_ R Finger22
+    400086: MINOTAUR_ R Finger3
+    400088: MINOTAUR_ R Finger31
+    400090: MINOTAUR_ R Finger32
+    400092: MINOTAUR_ R Finger4
+    400094: MINOTAUR_ R Finger41
+    400096: MINOTAUR_ R Finger42
+    400098: MINOTAUR_ R Foot
+    400100: MINOTAUR_ R Forearm
+    400102: MINOTAUR_ R Hand
+    400104: MINOTAUR_ R HorseLink
+    400106: MINOTAUR_ R Thigh
+    400108: MINOTAUR_ R Toe0
+    400110: MINOTAUR_ R UpperArm
+    400112: MINOTAUR_ Spine
+    400114: MINOTAUR_ Spine1
+    400116: MINOTAUR_ARMOR
+    400118: MINOTAUR_SHOULDER_PAD
+    400120: MINOTAUR_SKIRT
+    400122: MINOTAUR_SKIRT_BACK_1
+    400124: MINOTAUR_SKIRT_BACK_2
+    400126: MINOTAUR_SKIRT_BACK_3
+    400128: MINOTAUR_SKIRT_BACK_4
+    400130: MINOTAUR_SKIRT_FRONT_1
+    400132: MINOTAUR_SKIRT_FRONT_2
+    400134: MINOTAUR_SKIRT_FRONT_3
+    400136: MINOTAUR_SKIRT_FRONT_4
+    400138: //RootNode
+    400140: Minotaur_
+    400142: Minotaur_ Head
+    400144: Minotaur_ L Calf
+    400146: Minotaur_ L Clavicle
+    400148: Minotaur_ L Finger0
+    400150: Minotaur_ L Finger01
+    400152: Minotaur_ L Finger02
+    400154: Minotaur_ L Finger1
+    400156: Minotaur_ L Finger11
+    400158: Minotaur_ L Finger12
+    400160: Minotaur_ L Finger2
+    400162: Minotaur_ L Finger21
+    400164: Minotaur_ L Finger22
+    400166: Minotaur_ L Finger3
+    400168: Minotaur_ L Finger31
+    400170: Minotaur_ L Finger32
+    400172: Minotaur_ L Finger4
+    400174: Minotaur_ L Finger41
+    400176: Minotaur_ L Finger42
+    400178: Minotaur_ L Foot
+    400180: Minotaur_ L Forearm
+    400182: Minotaur_ L Hand
+    400184: Minotaur_ L HorseLink
+    400186: Minotaur_ L Thigh
+    400188: Minotaur_ L Toe0
+    400190: Minotaur_ L UpperArm
+    400192: Minotaur_ Neck
+    400194: Minotaur_ Neck1
+    400196: Minotaur_ Pelvis
+    400198: Minotaur_ Ponytail1
+    400200: Minotaur_ R Calf
+    400202: Minotaur_ R Clavicle
+    400204: Minotaur_ R Finger0
+    400206: Minotaur_ R Finger01
+    400208: Minotaur_ R Finger02
+    400210: Minotaur_ R Finger1
+    400212: Minotaur_ R Finger11
+    400214: Minotaur_ R Finger12
+    400216: Minotaur_ R Finger2
+    400218: Minotaur_ R Finger21
+    400220: Minotaur_ R Finger22
+    400222: Minotaur_ R Finger3
+    400224: Minotaur_ R Finger31
+    400226: Minotaur_ R Finger32
+    400228: Minotaur_ R Finger4
+    400230: Minotaur_ R Finger41
+    400232: Minotaur_ R Finger42
+    400234: Minotaur_ R Foot
+    400236: Minotaur_ R Forearm
+    400238: Minotaur_ R Hand
+    400240: Minotaur_ R HorseLink
+    400242: Minotaur_ R Thigh
+    400244: Minotaur_ R Toe0
+    400246: Minotaur_ R UpperArm
+    400248: Minotaur_ Spine
+    400250: Minotaur_ Spine1
+    400252: MINOTAUR_WARHAMMER_POSITION
+    400254: root
+    400256: SK_Minotaur
+    400258: SK_MinotaurArmor
+    400260: SK_MinotaurSkirt
+    400262: SM_Warhammer
+    2100000: MINOTAUR_WARHAMMER
+    2100002: 'Material #11'
+    2100004: MINOTAUR_GEAR
+    2300000: default
+    2300002: SM_Warhammer
+    3300000: default
+    3300002: SM_Warhammer
+    4300000: default
+    4300002: MINOTAUR
+    4300004: MINOTAUR_ARMOR
+    4300006: MINOTAUR_SKIRT
+    4300008: SK_Minotaur
+    4300010: SK_MinotaurArmor
+    4300012: SK_MinotaurSkirt
+    4300014: SM_Warhammer
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: MINOTAUR
+    13700002: MINOTAUR_ARMOR
+    13700004: MINOTAUR_SKIRT
+    13700006: SK_Minotaur
+    13700008: SK_MinotaurArmor
+    13700010: SK_MinotaurSkirt
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_MinotaurBody
+    second: {fileID: 2100000, guid: 2aa9e81b922f347479f2b6049a1b17c6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_MinotaurSkirt
+    second: {fileID: 2100000, guid: e237adb523c203440966d16d5dd137ea, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: M_MinotaurWarhammer
+    second: {fileID: 2100000, guid: 334b48b95b4f9e449a0038e58808e4d7, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 0
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: root
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 18165
+  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 2
+  packageVersion: 2.31
+  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK Vol 2/Minotaur/FBX Files/SK_Minotaur.FBX
+  uploadId: 626737
