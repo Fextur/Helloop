@@ -77,5 +77,14 @@ namespace Helloop.Generation.Data
         public Transform roomParent;
         public float complexityMultiplier;
         public int circleLevel;
+
+        public HashSet<int> usedMinibossIndices;
+        public HashSet<GameObject> usedMinibossPrefabs;
+
+        public MazeGenerationContext()
+        {
+            usedMinibossIndices = new HashSet<int>();
+            usedMinibossPrefabs = new HashSet<GameObject>();
+        }
     }
 }

@@ -16,9 +16,14 @@ MonoBehaviour:
   circleName: Gluttony
   nextCircle: {fileID: 0}
   entryRoom: {fileID: 7944020806768574695, guid: 1f845a556e3bb4f99a195acbb760733c, type: 3}
-  bossRoom:
-    roomPrefab: {fileID: 5418725456268238691, guid: d1b71c1ec14444ceab51de1525fc2e7c, type: 3}
+  bossRoomCollection:
+  - roomPrefab: {fileID: 5418725456268238691, guid: d1b71c1ec14444ceab51de1525fc2e7c, type: 3}
     roomType: 3
+  miniBossRoomCollection:
+  - roomPrefab: {fileID: 7944020806768574695, guid: 5fb6f79784a4449be8023537270bb5a3, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 4995004958087492251, guid: a048caf8c47894c2eab9c447d6f45af7, type: 3}
+    roomType: 2
   roomCollection:
   - roomPrefab: {fileID: 7944020806768574695, guid: 30e99c50ed834499c94457de69702131, type: 3}
     roomType: 0
@@ -26,5 +31,3 @@ MonoBehaviour:
     roomType: 2
   - roomPrefab: {fileID: 7944020806768574695, guid: f11220561262b49d5a834afcfc48904a, type: 3}
     roomType: 0
-  - roomPrefab: {fileID: 4995004958087492251, guid: a048caf8c47894c2eab9c447d6f45af7, type: 3}
-    roomType: 2

@@ -8,8 +8,24 @@ namespace Helloop.Generation.Services
 {
     public class GridBasedRoomPlacementService : IRoomPlacementService
     {
+        // --- Added: per-run tracking for miniboss uniqueness + chosen boss ---
+        private readonly HashSet<GameObject> _usedMinibossPrefabs = new HashSet<GameObject>();
+        private RoomData _selectedBoss; // chosen exactly once per generation run
+        // ---------------------------------------------------------------------
+
         public RoomLayout PlaceRooms(MazeGenerationContext context)
         {
+            // --- Added: reset uniqueness + select one boss once and expose via CircleData shim ---
+            _usedMinibossPrefabs.Clear();
+            var cd = context?.circleData;
+            if (cd != null && cd.bossRoomCollection != null && cd.bossRoomCollection.Count > 0)
+            {
+                if (_selectedBoss == null)
+                    _selectedBoss = cd.bossRoomCollection[Random.Range(0, cd.bossRoomCollection.Count)];
+                cd.__RuntimeSelectBoss(_selectedBoss);
+            }
+            // --------------------------------------------------------------------------------------
+
             var layout = new RoomLayout();
 
             var gridData = InitializeGrid(context);
@@ -298,11 +314,39 @@ namespace Helloop.Generation.Services
             if (isEntry) return circleData.entryRoom;
             if (isBoss) return circleData.bossRoom.roomPrefab;
 
-            var roomsOfType = circleData.roomCollection.Where(r => r.roomType == roomType).ToList();
-            if (roomsOfType.Count == 0)
-                return circleData.roomCollection[Random.Range(0, circleData.roomCollection.Count)].roomPrefab;
+            // --- Added: miniboss behave like regular but must be unique per prefab in this maze run ---
+            var regular = (circleData.roomCollection ?? new List<RoomData>())
+                .Where(r => r != null && r.roomPrefab != null && r.roomType == roomType)
+                .ToList();
 
-            return roomsOfType[Random.Range(0, roomsOfType.Count)].roomPrefab;
+            var mini = (circleData.miniBossRoomCollection ?? new List<RoomData>())
+                .Where(r => r != null && r.roomPrefab != null && r.roomType == roomType && !_usedMinibossPrefabs.Contains(r.roomPrefab))
+                .ToList();
+
+            List<RoomData> pool;
+            if (regular.Count == 0) pool = mini;
+            else if (mini.Count == 0) pool = regular;
+            else
+            {
+                pool = new List<RoomData>(regular.Count + mini.Count);
+                pool.AddRange(regular);
+                pool.AddRange(mini);
+            }
+
+            if (pool.Count == 0)
+                return null;
+
+            var chosen = pool[Random.Range(0, pool.Count)];
+
+            if (circleData.miniBossRoomCollection != null &&
+                circleData.miniBossRoomCollection.Contains(chosen) &&
+                chosen.roomPrefab != null)
+            {
+                _usedMinibossPrefabs.Add(chosen.roomPrefab);
+            }
+            // -----------------------------------------------------------------------------------------
+
+            return chosen.roomPrefab;
         }
 
         private RoomType GetRandomRoomType(CircleData circleData)
