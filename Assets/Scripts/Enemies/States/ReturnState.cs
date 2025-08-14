@@ -8,7 +8,7 @@ namespace Helloop.Enemies.States
     {
         public void OnEnter(Enemy enemy)
         {
-            if (enemy.Agent != null)
+            if (enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 enemy.Agent.isStopped = false;
             }
@@ -34,7 +34,7 @@ namespace Helloop.Enemies.States
 
         private void StartReturnMovement(Enemy enemy)
         {
-            if (enemy.ReturnPoint != null && enemy.Agent != null)
+            if (enemy.ReturnPoint != null && enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 enemy.Agent.SetDestination(enemy.ReturnPoint.position);
             }
@@ -42,7 +42,7 @@ namespace Helloop.Enemies.States
 
         private void UpdateReturnMovement(Enemy enemy)
         {
-            if (enemy.ReturnPoint != null && enemy.Agent != null)
+            if (enemy.ReturnPoint != null && enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 if (Vector3.Distance(enemy.transform.position, enemy.ReturnPoint.position) < 1f)
                 {
@@ -53,7 +53,7 @@ namespace Helloop.Enemies.States
 
         private void UpdateAnimation(Enemy enemy)
         {
-            if (enemy.Animator != null && enemy.Agent != null)
+            if (enemy.Animator != null && enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 float speed = enemy.Agent.velocity.magnitude;
                 enemy.Animator.SetFloat("Speed", speed);

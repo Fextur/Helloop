@@ -12,7 +12,7 @@ namespace Helloop.Enemies.States
         {
             idleStartTime = Time.time;
 
-            if (enemy.Agent != null)
+            if (enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 enemy.Agent.isStopped = true;
             }
@@ -35,7 +35,7 @@ namespace Helloop.Enemies.States
 
         public void OnExit(Enemy enemy)
         {
-            if (enemy.Agent != null)
+            if (enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 enemy.Agent.isStopped = false;
             }

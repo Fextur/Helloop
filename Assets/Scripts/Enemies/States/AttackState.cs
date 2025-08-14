@@ -14,7 +14,7 @@ namespace Helloop.Enemies.States
 
         public void OnEnter(Enemy enemy)
         {
-            if (enemy.Agent != null)
+            if (enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 enemy.Agent.isStopped = true;
                 enemy.Agent.ResetPath();
@@ -58,7 +58,7 @@ namespace Helloop.Enemies.States
                 enemy.Animator.ResetTrigger("Attack");
             }
 
-            if (enemy.Agent != null)
+            if (enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 enemy.Agent.updateRotation = true;
             }

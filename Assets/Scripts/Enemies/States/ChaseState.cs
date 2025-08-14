@@ -11,7 +11,7 @@ namespace Helloop.Enemies.States
 
         public void OnEnter(Enemy enemy)
         {
-            if (enemy.Agent != null)
+            if (enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 enemy.Agent.isStopped = false;
             }
@@ -50,7 +50,7 @@ namespace Helloop.Enemies.States
 
         private void HandleChaseMovement(Enemy enemy)
         {
-            if (enemy.Agent == null) return;
+            if (enemy.Agent == null && !enemy.Agent.isActiveAndEnabled) return;
 
             Vector3 targetPosition = enemy.CanSeePlayer() ?
                 enemy.Player.position : lastKnownPlayerPosition;
@@ -60,7 +60,7 @@ namespace Helloop.Enemies.States
 
         private void UpdateAnimation(Enemy enemy)
         {
-            if (enemy.Animator != null && enemy.Agent != null)
+            if (enemy.Animator != null && enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
             {
                 float speed = enemy.Agent.velocity.magnitude;
                 enemy.Animator.SetFloat("Speed", speed);

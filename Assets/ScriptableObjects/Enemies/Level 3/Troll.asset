@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
   m_Name: Troll
   m_EditorClassIdentifier: 
-  enemyName: Blob
-  enemyPrefab: {fileID: 5761452541654237855, guid: c7f522d2c726a419a9b2bfa03cfd4b8a, type: 3}
+  enemyName: Blobsous Troll
+  enemyPrefab: {fileID: 8130983425760456392, guid: b27bc126cd9774e2a9d785b471df11e5, type: 3}
   maxHealth: 350
   damage: 15
-  attackRange: 4
+  attackRange: 5
+  attackDetectionRange: 4
   enemyType: 0
   sightRange: 10
   pursueDistance: 15
-  moveSpeed: 1.5
+  moveSpeed: 2
   attackCooldown: 2
-  attackDamageDelay: 1
+  attackDamageDelay: 0.6
   attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: f74126c19e17d4806bd2548e5f288274, type: 3}
   deathSound: {fileID: 8300000, guid: 1320d6fce3ec544c28e1ef20e1744333, type: 3}
-  animatorController: {fileID: 22100000, guid: a8411861fa6e845178207d408c4e3300, type: 2}
