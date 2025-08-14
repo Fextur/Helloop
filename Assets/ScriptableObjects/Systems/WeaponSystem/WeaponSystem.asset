@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cde3c90e05dcd4ef99b84b332b49c89b, type: 3}
   m_Name: WeaponSystem
   m_EditorClassIdentifier: 
-  currentLeftWeapon: {fileID: 11400000, guid: c8a8464cb17424f1593b615febaf337c, type: 2}
-  currentRightWeapon: {fileID: 11400000, guid: bb37bb68242904fc08364d2085bcbb9a, type: 2}
+  currentLeftWeapon: {fileID: 11400000, guid: 7b51cf9fcbbda43beb06b408324795a6, type: 2}
+  currentRightWeapon: {fileID: 11400000, guid: ce939afd4da224bcea54a83172447806, type: 2}
   leftWeaponLevel: 2
   rightWeaponLevel: 3
-  currentAmmo: 6
-  currentClipAmmo: 2
-  currentDurability: 47
-  maxDurability: 100
+  currentAmmo: 65
+  currentClipAmmo: 3
+  currentDurability: 98
+  maxDurability: 110
   OnWeaponEquipped: {fileID: 11400000, guid: c74a50d6e6283449199be7fc9a3cf1fd, type: 2}
   OnAmmoChanged: {fileID: 11400000, guid: 5eb3ef7c111af4e14bbe704dccf50b70, type: 2}
   OnDurabilityChanged: {fileID: 11400000, guid: ccdc62bcb2db142ba9533d12e6d4d6dc, type: 2}

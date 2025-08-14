@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: GiantWorm
   m_EditorClassIdentifier: 
   enemyName: Giant Destroyer Worm
-  enemyPrefab: {fileID: 234865374625609565, guid: c0489d3644c814ebdb241075c12b5285, type: 3}
-  maxHealth: 1000
-  damage: 20
+  enemyPrefab: {fileID: 4770909611296752843, guid: 2ab6a01b5337a40d596f147cc87c4c7f, type: 3}
+  maxHealth: 1700
+  damage: 12
   attackRange: 7
   attackDetectionRange: 6.5
   enemyType: 0
   sightRange: 60
   pursueDistance: 60
-  moveSpeed: 8
+  moveSpeed: 5
   attackCooldown: 4
-  attackDamageDelay: 1.2
-  attackAnimationDuration: 1.2
+  attackDamageDelay: 0.5
+  attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 04b091570c7e44974adbdfeb679d8937, type: 3}
