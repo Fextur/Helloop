@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: BeetleFlyingh
+  m_Name: Brain
   m_EditorClassIdentifier: 
-  enemyName: Maw-Mad Beetle
-  enemyPrefab: {fileID: 1647370912339057890, guid: c774a08218555482c8cf3f3268c04812, type: 3}
-  maxHealth: 120
+  enemyName: Brain Legs
+  enemyPrefab: {fileID: 7778442487378474681, guid: 53fca9cb9895c4aebb757c7cf5e625e9, type: 3}
+  maxHealth: 400
   damage: 10
-  attackRange: 2.5
+  attackRange: 2
   attackDetectionRange: 2
-  enemyType: 0
-  sightRange: 20
-  pursueDistance: 20
-  moveSpeed: 4
+  enemyType: 1
+  sightRange: 10
+  pursueDistance: 15
+  moveSpeed: 0.25
   attackCooldown: 1
-  attackDamageDelay: 0.4
-  attackAnimationDuration: 0.7
+  attackDamageDelay: 0.5
+  attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
-  gettingHitSound: {fileID: 8300000, guid: 50824761f0a0548f79a05ba8fd7322f2, type: 3}
-  deathSound: {fileID: 8300000, guid: c69a2847b442841bcb9ce6cdedd7f8d7, type: 3}
+  gettingHitSound: {fileID: 8300000, guid: 3ac764aa607554316a0fb70ac9f097fd, type: 3}
+  deathSound: {fileID: 8300000, guid: 36f41c64129ff47afb5854c6059fe796, type: 3}

@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: Fungoid
   m_EditorClassIdentifier: 
   enemyName: Maw-Mad Fungoid
-  enemyPrefab: {fileID: 8870550170499143607, guid: 8f47e98244de14ed4a6beccf04df90eb, type: 3}
-  maxHealth: 175
-  damage: 10
+  enemyPrefab: {fileID: 3199817723695311983, guid: 432d14dabae7f4452be9c3875cca6fbe, type: 3}
+  maxHealth: 350
+  damage: 15
   attackRange: 4
-  attackDetectionRange: 2.5
+  attackDetectionRange: 3
   enemyType: 0
   sightRange: 20
   pursueDistance: 20
-  moveSpeed: 3
+  moveSpeed: 4.5
   attackCooldown: 1
-  attackDamageDelay: 0.4
-  attackAnimationDuration: 0.7
+  attackDamageDelay: 0.5
+  attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 50824761f0a0548f79a05ba8fd7322f2, type: 3}
