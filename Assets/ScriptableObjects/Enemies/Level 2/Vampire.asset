@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: WereCrab
+  m_Name: Vampire
   m_EditorClassIdentifier: 
-  enemyName: Lusty WereCrab
-  enemyPrefab: {fileID: 3231045618830689907, guid: 7902180b8345444d79b9ede6b17a272a, type: 3}
-  maxHealth: 160
-  damage: 10
-  attackRange: 3.5
-  attackDetectionRange: 3
+  enemyName: Vampire Empress
+  enemyPrefab: {fileID: 8359957612263182248, guid: 78e933d314f994ac79c9cf08723363d4, type: 3}
+  maxHealth: 150
+  damage: 15
+  attackRange: 2
   enemyType: 0
   sightRange: 10
   pursueDistance: 15
-  moveSpeed: 2
-  attackCooldown: 1.5
+  moveSpeed: 3
+  attackCooldown: 1
   attackDamageDelay: 0.5
-  attackAnimationDuration: 1.5
+  attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 181482d0f07c04190a134fcf52be6cf1, type: 3}
   deathSound: {fileID: 8300000, guid: ff50048f4130344d48f8a2769b15ee6f, type: 3}
+  animatorController: {fileID: 22100000, guid: 8ec97db9ae27041e9a6d786d7c874ec7, type: 2}
