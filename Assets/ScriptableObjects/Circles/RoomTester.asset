@@ -13,9 +13,11 @@ MonoBehaviour:
   m_Name: RoomTester
   m_EditorClassIdentifier: 
   circleLevel: 2
-  circleName: Lust
+  circleName: Tester
   nextCircle: {fileID: 0}
-  entryRoom: {fileID: 0}
+  entryRoom: {fileID: 7944020806768574695, guid: c9d89727e7dbc49d7a969c65e125c5e1, type: 3}
   bossRoomCollection: []
   miniBossRoomCollection: []
-  roomCollection: []
+  roomCollection:
+  - roomPrefab: {fileID: 7944020806768574695, guid: 6f11834c44e5d4b52899bae5ea187c6b, type: 3}
+    roomType: 0

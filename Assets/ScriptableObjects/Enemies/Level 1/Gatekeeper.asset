@@ -16,7 +16,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8159833792369501761, guid: 8e7fee09f2c334c56b08977c66c4fdb4, type: 3}
   maxHealth: 500
   damage: 20
-  attackRange: 4
+  attackRange: 5
+  attackDetectionRange: 4.5
   enemyType: 1
   sightRange: 500
   pursueDistance: 500
@@ -28,4 +29,3 @@ MonoBehaviour:
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 50824761f0a0548f79a05ba8fd7322f2, type: 3}
   deathSound: {fileID: 8300000, guid: c69a2847b442841bcb9ce6cdedd7f8d7, type: 3}
-  animatorController: {fileID: 22100000, guid: 7d2d49b5e3c964067b399868ab250604, type: 2}

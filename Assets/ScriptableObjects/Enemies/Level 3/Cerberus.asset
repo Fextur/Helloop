@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Cerberus
   m_EditorClassIdentifier: 
   enemyName: Cerberus The Hound of Hades
-  enemyPrefab: {fileID: 3503175514617325689, guid: 3dce23436f24c48f6bd23d22a7950ece, type: 3}
+  enemyPrefab: {fileID: 5708493539616971045, guid: da9404369852448d4b5ae54425f09372, type: 3}
   maxHealth: 1250
   damage: 20
-  attackRange: 10
+  attackRange: 8
+  attackDetectionRange: 7.5
   enemyType: 0
   sightRange: 60
   pursueDistance: 60
   moveSpeed: 7
   attackCooldown: 4
-  attackDamageDelay: 2
-  attackAnimationDuration: 2
+  attackDamageDelay: 0.75
+  attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 04b091570c7e44974adbdfeb679d8937, type: 3}

@@ -16,9 +16,10 @@ MonoBehaviour:
   circleName: Lust
   nextCircle: {fileID: 11400000, guid: 72bd866fc8b5f4ae6a3b04b097805192, type: 2}
   entryRoom: {fileID: 7944020806768574695, guid: c9d89727e7dbc49d7a969c65e125c5e1, type: 3}
-  bossRoom:
-    roomPrefab: {fileID: 7944020806768574695, guid: 19be08040d78e419589ffd33fe2c3ed5, type: 3}
+  bossRoomCollection:
+  - roomPrefab: {fileID: 7944020806768574695, guid: 19be08040d78e419589ffd33fe2c3ed5, type: 3}
     roomType: 0
+  miniBossRoomCollection: []
   roomCollection:
   - roomPrefab: {fileID: 7944020806768574695, guid: e662270cd733b4b1e902ed62776e18f8, type: 3}
     roomType: 0
@@ -26,4 +27,3 @@ MonoBehaviour:
     roomType: 0
   - roomPrefab: {fileID: 7944020806768574695, guid: 1c66c986bfaaf4d4fbb2e70937fd8b2d, type: 3}
     roomType: 0
-  complexity: 2

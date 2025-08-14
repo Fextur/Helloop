@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyName: Thrum-Gut The Ogre
   enemyPrefab: {fileID: 3128185092694788406, guid: b98fd64891f114cdfb43d4697368196d, type: 3}
-  maxHealth: 600
+  maxHealth: 800
   damage: 20
-  attackRange: 5
+  attackRange: 6.25
+  attackDetectionRange: 5.5
   enemyType: 1
   sightRange: 30
   pursueDistance: 15
   moveSpeed: 1.75
   attackCooldown: 2
-  attackDamageDelay: 1
+  attackDamageDelay: 0.7
   attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}

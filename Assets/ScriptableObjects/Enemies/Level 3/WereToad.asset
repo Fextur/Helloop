@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: Ghoul
+  m_Name: WereToad
   m_EditorClassIdentifier: 
-  enemyName: Starving Ghoul
-  enemyPrefab: {fileID: 8760367624311094505, guid: 12f6a131c816f4fdab36edfdb3f7f449, type: 3}
-  maxHealth: 100
+  enemyName: Gluttonous Toad
+  enemyPrefab: {fileID: 8870550170499143607, guid: 8f47e98244de14ed4a6beccf04df90eb, type: 3}
+  maxHealth: 175
   damage: 10
-  attackRange: 3.25
+  attackRange: 4
   attackDetectionRange: 2.5
   enemyType: 0
-  sightRange: 50
-  pursueDistance: 50
-  moveSpeed: 3.5
+  sightRange: 20
+  pursueDistance: 20
+  moveSpeed: 3
   attackCooldown: 1
-  attackDamageDelay: 0.75
-  attackAnimationDuration: 1
+  attackDamageDelay: 0.4
+  attackAnimationDuration: 0.7
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
-  gettingHitSound: {fileID: 8300000, guid: 1bace12422ec5488289b51c9ed469e98, type: 3}
-  deathSound: {fileID: 8300000, guid: 82e0c4dfaae2b48eaa026a0fcfbb84d6, type: 3}
+  gettingHitSound: {fileID: 8300000, guid: 50824761f0a0548f79a05ba8fd7322f2, type: 3}
+  deathSound: {fileID: 8300000, guid: c69a2847b442841bcb9ce6cdedd7f8d7, type: 3}

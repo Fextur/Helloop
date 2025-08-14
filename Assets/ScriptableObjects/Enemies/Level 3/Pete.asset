@@ -16,16 +16,16 @@ MonoBehaviour:
   enemyPrefab: {fileID: 8534677934666138494, guid: 7486c2d4e57cb43e1985936e5069bc68, type: 3}
   maxHealth: 375
   damage: 15
-  attackRange: 2
+  attackRange: 3
+  attackDetectionRange: 2.5
   enemyType: 0
   sightRange: 70
   pursueDistance: 70
   moveSpeed: 6
   attackCooldown: 1
-  attackDamageDelay: 0.3
-  attackAnimationDuration: 0.5
+  attackDamageDelay: 0.5
+  attackAnimationDuration: 0.75
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 50824761f0a0548f79a05ba8fd7322f2, type: 3}
   deathSound: {fileID: 8300000, guid: c69a2847b442841bcb9ce6cdedd7f8d7, type: 3}
-  animatorController: {fileID: 22100000, guid: 1372b2f7ef6d54ad7adb72fe20d77bc1, type: 2}
