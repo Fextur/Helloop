@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 6752427855285674250}
   - component: {fileID: 1203460680430792668}
   m_Layer: 0
-  m_Name: ForestDragonRoom
+  m_Name: GiantWormRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,36 +159,60 @@ MonoBehaviour:
   roomSystem: {fileID: 11400000, guid: 18a00f6018c0b41cf94539d2c00bc4ae, type: 2}
   enemySpawns:
   - spawnPoint: {fileID: 1791846812852611447}
-    enemyData: {fileID: 11400000, guid: 1bac0dcb9405b4f3992e255d1b0dbbd7, type: 2}
+    enemyData: {fileID: 11400000, guid: eb4f11c855aed4fbc891ba2acf98d112, type: 2}
     patrolPoints:
     - {fileID: 1951842419957321199}
     - {fileID: 1048057664626601065}
     - {fileID: 793932805293422074}
     - {fileID: 2204997023627924604}
+  - spawnPoint: {fileID: 5208423816254746176}
+    enemyData: {fileID: 11400000, guid: 0d27362a77f144fea9332bc0c3bec8f9, type: 2}
+    patrolPoints:
+    - {fileID: 1893389119511213261}
+    - {fileID: 5208423816254746176}
+    - {fileID: 4908724123402049990}
   - spawnPoint: {fileID: 1893389119511213261}
-    enemyData: {fileID: 11400000, guid: 13c79c6b908374576b46f487f409ad94, type: 2}
+    enemyData: {fileID: 11400000, guid: 0d27362a77f144fea9332bc0c3bec8f9, type: 2}
     patrolPoints:
     - {fileID: 1095008651651804641}
     - {fileID: 4908724123402049990}
     - {fileID: 6943826517342984146}
   - spawnPoint: {fileID: 1142665179430376779}
-    enemyData: {fileID: 11400000, guid: 13c79c6b908374576b46f487f409ad94, type: 2}
+    enemyData: {fileID: 11400000, guid: 0d27362a77f144fea9332bc0c3bec8f9, type: 2}
     patrolPoints:
     - {fileID: 6761360373966016454}
     - {fileID: 5873377979923232832}
     - {fileID: 5998077645422087193}
   - spawnPoint: {fileID: 744326110981737688}
-    enemyData: {fileID: 11400000, guid: 13c79c6b908374576b46f487f409ad94, type: 2}
+    enemyData: {fileID: 11400000, guid: 0d27362a77f144fea9332bc0c3bec8f9, type: 2}
     patrolPoints:
     - {fileID: 6366614489283892821}
     - {fileID: 6247227828717409674}
     - {fileID: 3791748242738492704}
   - spawnPoint: {fileID: 2290436746056609118}
-    enemyData: {fileID: 11400000, guid: 13c79c6b908374576b46f487f409ad94, type: 2}
+    enemyData: {fileID: 11400000, guid: 0d27362a77f144fea9332bc0c3bec8f9, type: 2}
     patrolPoints:
     - {fileID: 773968068737365106}
     - {fileID: 2290436746056609118}
     - {fileID: 7337069850227904065}
+  - spawnPoint: {fileID: 2290436746056609118}
+    enemyData: {fileID: 11400000, guid: 0d27362a77f144fea9332bc0c3bec8f9, type: 2}
+    patrolPoints:
+    - {fileID: 379814689720679825}
+    - {fileID: 5998077645422087193}
+    - {fileID: 5873377979923232832}
+  - spawnPoint: {fileID: 2290436746056609118}
+    enemyData: {fileID: 11400000, guid: 0d27362a77f144fea9332bc0c3bec8f9, type: 2}
+    patrolPoints:
+    - {fileID: 6366614489283892821}
+    - {fileID: 2242945900936435188}
+    - {fileID: 8092870216775233479}
+  - spawnPoint: {fileID: 2290436746056609118}
+    enemyData: {fileID: 11400000, guid: 0d27362a77f144fea9332bc0c3bec8f9, type: 2}
+    patrolPoints:
+    - {fileID: 4841290633203889164}
+    - {fileID: 1537861119494178180}
+    - {fileID: 5394054066406811978}
   connectedDoors: []
   bossRewardSpawnPoints:
   - {fileID: 5572786467996980095}
@@ -394,9 +418,19 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4661944894341218739, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
   m_PrefabInstance: {fileID: 5455569441207923785}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1537861119494178180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6836894187216531917, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 5455569441207923785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2204997023627924604 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6138312405103304757, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 5455569441207923785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2242945900936435188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6095227275225113021, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
   m_PrefabInstance: {fileID: 5455569441207923785}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &2290436746056609118 stripped
@@ -414,6 +448,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9162834505307717993, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
   m_PrefabInstance: {fileID: 5455569441207923785}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &4841290633203889164 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 619715188629143621, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 5455569441207923785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5394054066406811978 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 102901198671142147, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 5455569441207923785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6247227828717409674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2090953477815427523, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
@@ -427,6 +471,11 @@ Transform:
 --- !u!4 &7337069850227904065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3342956973044578824, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 5455569441207923785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8092870216775233479 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4321684423173299086, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
   m_PrefabInstance: {fileID: 5455569441207923785}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6603640966203034716
@@ -578,6 +627,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+--- !u!4 &379814689720679825 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6836894187216531917, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 6603640966203034716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1048057664626601065 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6138312405103304757, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
@@ -611,6 +665,11 @@ Transform:
 --- !u!4 &4908724123402049990 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2286582785470289306, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 6603640966203034716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5208423816254746176 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1435752888112751132, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
   m_PrefabInstance: {fileID: 6603640966203034716}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &5572786467996980095 stripped
