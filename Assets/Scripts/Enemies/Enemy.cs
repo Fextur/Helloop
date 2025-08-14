@@ -25,7 +25,7 @@ namespace Helloop.Enemies
         public ScalingSystem scalingSystem;
 
         [Header("Line of Sight Settings")]
-        public LayerMask wallLayers = -1;
+        public LayerMask wallLayers = 8;
 
         [Header("Patrol Settings")]
         public float patrolDelay = 7.5f;
