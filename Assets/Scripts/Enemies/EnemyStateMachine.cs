@@ -42,11 +42,10 @@ namespace Helloop.Enemies
             ));
 
             transitionValidator.AddTransition(new StateTransition<Enemy>(
-                typeof(EnemyAttackState), typeof(EnemyChaseState),
-                enemy => !enemy.IsCurrentlyAttacking && !enemy.IsInAttackRange() && enemy.CanSeePlayer(),
-                "Attack to Chase"
-            ));
-
+        typeof(EnemyAttackState), typeof(EnemyChaseState),
+        enemy => !enemy.IsCurrentlyAttacking && !enemy.IsInAttackRange() && enemy.CanSeePlayer(),
+        "Attack to Chase"
+    ));
             transitionValidator.AddTransition(new StateTransition<Enemy>(
                 typeof(EnemyChaseState), typeof(EnemyReturnState),
                 enemy => enemy.ShouldReturn(),

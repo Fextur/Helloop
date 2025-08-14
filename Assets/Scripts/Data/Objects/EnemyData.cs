@@ -19,7 +19,9 @@ namespace Helloop.Data
         [Header("Stats")]
         public float maxHealth = 100f;
         public float damage = 10f;
-        public float attackRange = 2f;
+        public float attackRange = 2.5f;
+        [Tooltip("Range at which enemy will start attacking (should be larger than attackRange)")]
+        public float attackDetectionRange = 2f;
 
         [Header("Behavior")]
         public EnemyType enemyType = EnemyType.Aggressive;
@@ -41,5 +43,13 @@ namespace Helloop.Data
         public AudioClip hittingSound;
         public AudioClip gettingHitSound;
         public AudioClip deathSound;
+
+        private void OnValidate()
+        {
+            if (attackRange < attackDetectionRange)
+            {
+                attackRange = attackDetectionRange + 0.5f;
+            }
+        }
     }
 }

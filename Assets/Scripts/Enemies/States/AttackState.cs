@@ -100,10 +100,10 @@ namespace Helloop.Enemies.States
 
         private void DealDamage(Enemy enemy)
         {
-            float distanceToPlayer = Vector3.Distance(enemy.transform.position, enemy.Player.position);
             bool canStillSeePlayer = enemy.CanSeePlayer();
+            bool isInDamageRange = enemy.IsInDamageRange();
 
-            if (distanceToPlayer <= enemy.EnemyData.attackRange && canStillSeePlayer && !enemy.IsDead)
+            if (isInDamageRange && canStillSeePlayer && !enemy.IsDead)
             {
                 if (enemy.PlayerSystem != null)
                 {

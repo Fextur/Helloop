@@ -61,6 +61,9 @@ namespace Helloop.Enemies
         private AudioSource audioSource;
         private float hitSfxEndsAt = 0f;
 
+        public float AttackDetectionRange => enemyData?.attackDetectionRange ?? 0f;
+        public float DamageRange => enemyData?.attackRange ?? 0f;
+
         private bool wasDetectingPlayer = false;
 
         void Start()
@@ -88,6 +91,29 @@ namespace Helloop.Enemies
                 audioSource = gameObject.AddComponent<AudioSource>();
             }
             audioSource.playOnAwake = false;
+
+            RandomizeAnimationTiming(); // ADD THIS LINE
+        }
+
+        private void RandomizeAnimationTiming()
+        {
+            if (Animator != null)
+            {
+                float speedVariation = Random.Range(0.9f, 1.1f);
+                Animator.speed = speedVariation;
+
+                Invoke(nameof(ApplyRandomOffset), 0.1f);
+            }
+        }
+
+        private void ApplyRandomOffset()
+        {
+            if (Animator != null)
+            {
+                float randomOffset = Random.Range(0f, 1f);
+                AnimatorStateInfo currentState = Animator.GetCurrentAnimatorStateInfo(0);
+                Animator.Play(currentState.fullPathHash, 0, randomOffset);
+            }
         }
 
         private void InitializeStateMachine()
@@ -145,6 +171,10 @@ namespace Helloop.Enemies
             stealthCacheValid = false;
             lastLineOfSightCheck = 0f;
         }
+        public bool IsInDamageRange()
+        {
+            return Player != null && Vector3.Distance(transform.position, Player.position) <= DamageRange;
+        }
 
         private void SetReturnPoint()
         {
@@ -195,7 +225,7 @@ namespace Helloop.Enemies
 
         public bool IsInAttackRange()
         {
-            return Player != null && Vector3.Distance(transform.position, Player.position) <= enemyData.attackRange;
+            return Player != null && Vector3.Distance(transform.position, Player.position) <= enemyData.attackDetectionRange;
         }
 
         public bool ShouldReturn()
