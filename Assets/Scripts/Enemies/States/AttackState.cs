@@ -17,6 +17,8 @@ namespace Helloop.Enemies.States
             if (enemy.Agent != null)
             {
                 enemy.Agent.isStopped = true;
+                enemy.Agent.ResetPath();
+                enemy.Agent.updateRotation = false;
             }
 
             StartAttack(enemy);
@@ -26,9 +28,12 @@ namespace Helloop.Enemies.States
         {
             if (enemy.IsDead) return;
 
-            FacePlayer(enemy);
-            UpdateAnimation(enemy);
+            if (!isAttacking)
+            {
+                FacePlayer(enemy);
+            }
 
+            UpdateAnimation(enemy);
             enemy.SetAttackingStatus(isAttacking);
 
             if (!isAttacking && CanAttackAgain(enemy))
@@ -51,6 +56,11 @@ namespace Helloop.Enemies.States
             if (enemy.Animator != null)
             {
                 enemy.Animator.ResetTrigger("Attack");
+            }
+
+            if (enemy.Agent != null)
+            {
+                enemy.Agent.updateRotation = true;
             }
         }
 
