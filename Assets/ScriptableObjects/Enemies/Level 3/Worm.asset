@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Worm
   m_EditorClassIdentifier: 
   enemyName: Gut Worm
-  enemyPrefab: {fileID: 6175673990245402509, guid: ffb9c9c4f0e5f4170bae04622434ab7c, type: 3}
+  enemyPrefab: {fileID: 4770909611296752843, guid: 89dcc9c4f559b4e50b906b19d1a9b87f, type: 3}
   maxHealth: 25
   damage: 5
-  attackRange: 0.6
+  attackRange: 1.6
+  attackDetectionRange: 1.1
   enemyType: 0
   sightRange: 40
   pursueDistance: 40
@@ -28,4 +29,3 @@ MonoBehaviour:
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 2488940b9b507431e8061485d3e2833e, type: 3}
   deathSound: {fileID: 8300000, guid: 085150d82bdfa4995a282fdcde93ea39, type: 3}
-  animatorController: {fileID: 22100000, guid: 809cd26a7da6d49379beef47b34c5f3b, type: 2}

@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Brain
   m_EditorClassIdentifier: 
   enemyName: Brain Legs
-  enemyPrefab: {fileID: 7778442487378474681, guid: 53fca9cb9895c4aebb757c7cf5e625e9, type: 3}
-  maxHealth: 400
-  damage: 10
+  enemyPrefab: {fileID: 4037139914043794334, guid: b50257096c2d54c0d81cf980ed0b749f, type: 3}
+  maxHealth: 50
+  damage: 3
   attackRange: 2
   attackDetectionRange: 2
   enemyType: 1
   sightRange: 10
   pursueDistance: 15
-  moveSpeed: 0.25
+  moveSpeed: 1
   attackCooldown: 1
   attackDamageDelay: 0.5
   attackAnimationDuration: 1
