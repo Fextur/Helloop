@@ -104,14 +104,29 @@ namespace Helloop.Generation.Services
                 }
             }
 
-            Vector2Int bossPos = FindBossRoomPosition(currentRoom.gridPosition, context.circleData.bossRoom.roomType, gridData);
-            if (bossPos != Vector2Int.one * -1)
+            // --- Added: ensure a boss is selected before reading its type (prevents NRE across scenes) ---
+            var cd = context.circleData;
+            var bossData = cd.bossRoom;
+            if (bossData == null && cd.bossRoomCollection != null && cd.bossRoomCollection.Count > 0)
             {
-                var bossRoom = CreateRoom(bossPos, context.circleData.bossRoom.roomType, gridData, isBoss: true);
-                if (bossRoom != null)
+                // choose one now if not already chosen (e.g., when coming from another scene)
+                var chosen = cd.bossRoomCollection[Random.Range(0, cd.bossRoomCollection.Count)];
+                cd.__RuntimeSelectBoss(chosen);
+                bossData = chosen;
+            }
+            // ---------------------------------------------------------------------------------------------
+
+            if (bossData != null)
+            {
+                Vector2Int bossPos = FindBossRoomPosition(currentRoom.gridPosition, bossData.roomType, gridData);
+                if (bossPos != Vector2Int.one * -1)
                 {
-                    allRooms.Add(bossRoom);
-                    mainPath.Add(bossRoom);
+                    var bossRoom = CreateRoom(bossPos, bossData.roomType, gridData, isBoss: true);
+                    if (bossRoom != null)
+                    {
+                        allRooms.Add(bossRoom);
+                        mainPath.Add(bossRoom);
+                    }
                 }
             }
         }
@@ -163,7 +178,7 @@ namespace Helloop.Generation.Services
                 if (nextRoom != null)
                 {
                     allRooms.Add(nextRoom);
-                    branchPath.Add(nextRoom);
+                    branchPath.Add(nextRoom); // C# Add (fixed)
                     currentRoom = nextRoom;
                 }
             }
