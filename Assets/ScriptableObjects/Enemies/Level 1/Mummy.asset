@@ -10,20 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: Skull
+  m_Name: Mummy
   m_EditorClassIdentifier: 
-  enemyName: Flying Skull
-  enemyPrefab: {fileID: 716730083345886195, guid: a1bba9c4120dd46ae9bf64673abf2cd4, type: 3}
-  maxHealth: 10
-  damage: 7
-  attackRange: 2
-  attackDetectionRange: 1.5
+  enemyName: Restless Mummy
+  enemyPrefab: {fileID: 4422564418002508504, guid: 6ab3b9538bc3c43b1956194eec03234e, type: 3}
+  maxHealth: 30
+  damage: 8
+  attackRange: 3.5
+  attackDetectionRange: 2
   enemyType: 0
   sightRange: 8
   pursueDistance: 15
-  moveSpeed: 2
+  moveSpeed: 0.5
   attackCooldown: 1
-  attackDamageDelay: 0.4
+  attackDamageDelay: 0.6
   attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
