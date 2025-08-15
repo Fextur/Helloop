@@ -559,11 +559,11 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4037139914043794334}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 4fa2206131745b9489136bf5a95c88e1, type: 3}
-  m_Controller: {fileID: 22100000, guid: b85532063aa2d49228ea5af9413589f0, type: 2}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c344d2f48d3346468ab3144515050c0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -594,6 +594,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   patrolDelay: 7.5
+  animatorReference: {fileID: 4037139914045314537}
+  angularTurnSpeed: 120
 --- !u!1 &4037139914045314535
 GameObject:
   m_ObjectHideFlags: 0
@@ -637,7 +639,7 @@ Animator:
   m_GameObject: {fileID: 4037139914045314535}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3c344d2f48d3346468ab3144515050c0, type: 2}
+  m_Controller: {fileID: 22100000, guid: b85532063aa2d49228ea5af9413589f0, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

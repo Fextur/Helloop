@@ -38,6 +38,9 @@ namespace Helloop.Enemies
         public ScalingSystem ScalingSystem => scalingSystem;
         public RoomController AssignedRoomController { get; private set; }
 
+        [Header("Animation")]
+        [Tooltip("Optional: assign an Animator component (e.g., a child like 'joints'). If null, uses Animator on this GameObject.")]
+        [SerializeField] private Animator animatorReference;
         public bool IsDead { get; private set; }
         public bool HasSeenPlayer { get; set; }
         public bool IsReturning { get; set; }
@@ -99,7 +102,7 @@ namespace Helloop.Enemies
         private void InitializeComponents()
         {
             Agent = GetComponent<NavMeshAgent>();
-            Animator = GetComponent<Animator>();
+            Animator = animatorReference != null ? animatorReference : GetComponent<Animator>();
             SetReturnPoint();
 
             audioSource = GetComponent<AudioSource>();

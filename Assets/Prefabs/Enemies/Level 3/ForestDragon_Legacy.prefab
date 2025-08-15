@@ -1013,8 +1013,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 3.102676, y: 3.9578276, z: 6.5225563}
-  m_Center: {x: 0.11295152, y: 2.3029876, z: 0.66243553}
+  m_Size: {x: 3.1026757, y: 2.796994, z: 4.381625}
+  m_Center: {x: 0.112951495, y: 2.883387, z: -0.4080256}
 --- !u!195 &3902673999533795800
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1071,6 +1071,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   patrolDelay: 7.5
+  angularTurnSpeed: 200
 --- !u!1 &6821284801506775872
 GameObject:
   m_ObjectHideFlags: 0

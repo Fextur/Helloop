@@ -16,12 +16,13 @@ MonoBehaviour:
   enemyPrefab: {fileID: 3503795968619001052, guid: 3e72fb6ee7f3e4a098419294d0334a94, type: 3}
   maxHealth: 300
   damage: 20
-  attackRange: 2.5
-  attackDetectionRange: 2
+  attackRange: 2
+  attackDetectionRange: 1.5
+  attackConeDegrees: 110
   enemyType: 1
   sightRange: 500
   pursueDistance: 500
-  moveSpeed: 2.5
+  moveSpeed: 3
   attackCooldown: 1
   attackDamageDelay: 0.5
   attackAnimationDuration: 1
