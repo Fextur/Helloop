@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: Griffin
+  m_Name: Undertaker
   m_EditorClassIdentifier: 
-  enemyName: The Griffin
-  enemyPrefab: {fileID: 6814674765717634577, guid: 291996a773eb14ceb82c865a027cddd8, type: 3}
-  maxHealth: 400
-  damage: 12
-  attackRange: 4
-  attackDetectionRange: 3.5
+  enemyName: UnderTaker The Humonculi King
+  enemyPrefab: {fileID: 3503795968619001052, guid: 3e72fb6ee7f3e4a098419294d0334a94, type: 3}
+  maxHealth: 300
+  damage: 20
+  attackRange: 2.5
+  attackDetectionRange: 2
   enemyType: 1
   sightRange: 500
   pursueDistance: 500
-  moveSpeed: 3.5
+  moveSpeed: 2.5
   attackCooldown: 1
   attackDamageDelay: 0.5
   attackAnimationDuration: 1
