@@ -1,284 +1,791 @@
 fileFormatVersion: 2
 guid: 8dfbf4bd404f9f54fb69ab6e6b723907
-timeCreated: 1533843375
-licenseType: Store
+AssetOrigin:
+  serializedVersion: 1
+  productId: 127490
+  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 3
+  packageVersion: 1.13
+  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK VOL3/Demons Pack Vol1/Demon
+    Bat/FBX Files/DemonBat@DeathHitTheGround.FBX
+  uploadId: 669994
 ModelImporter:
-  serializedVersion: 19
-  fileIDToRecycleName:
-    100000: BOW_ROOT
-    100002: //RootNode
-    100004: DemonBat_
-    100006: DemonBat_ Head
-    100008: DemonBat_ HeadNub
-    100010: DemonBat_ L Calf
-    100012: DemonBat_ L Clavicle
-    100014: DemonBat_ L Finger0
-    100016: DemonBat_ L Finger01
-    100018: DemonBat_ L Finger02
-    100020: DemonBat_ L Finger03
-    100022: DemonBat_ L Finger0Nub
-    100024: DemonBat_ L Finger1
-    100026: DemonBat_ L Finger11
-    100028: DemonBat_ L Finger12
-    100030: DemonBat_ L Finger13
-    100032: DemonBat_ L Finger1Nub
-    100034: DemonBat_ L Finger2
-    100036: DemonBat_ L Finger21
-    100038: DemonBat_ L Finger22
-    100040: DemonBat_ L Finger23
-    100042: DemonBat_ L Finger2Nub
-    100044: DemonBat_ L Finger3
-    100046: DemonBat_ L Finger31
-    100048: DemonBat_ L Finger32
-    100050: DemonBat_ L Finger33
-    100052: DemonBat_ L Finger3Nub
-    100054: DemonBat_ L Finger4
-    100056: DemonBat_ L Finger41
-    100058: DemonBat_ L Finger42
-    100060: DemonBat_ L Finger43
-    100062: DemonBat_ L Finger4Nub
-    100064: DemonBat_ L Foot
-    100066: DemonBat_ L Forearm
-    100068: DemonBat_ L Hand
-    100070: DemonBat_ L Thigh
-    100072: DemonBat_ L Toe0
-    100074: DemonBat_ L Toe01
-    100076: DemonBat_ L Toe0Nub
-    100078: DemonBat_ L Toe1
-    100080: DemonBat_ L Toe11
-    100082: DemonBat_ L Toe1Nub
-    100084: DemonBat_ L Toe2
-    100086: DemonBat_ L Toe21
-    100088: DemonBat_ L Toe2Nub
-    100090: DemonBat_ L Toe3
-    100092: DemonBat_ L Toe31
-    100094: DemonBat_ L Toe3Nub
-    100096: DemonBat_ L UpperArm
-    100098: DemonBat_ Neck
-    100100: DemonBat_ Pelvis
-    100102: DemonBat_ Ponytail1
-    100104: DemonBat_ Ponytail11
-    100106: DemonBat_ Ponytail12
-    100108: DemonBat_ Ponytail1Nub
-    100110: DemonBat_ R Calf
-    100112: DemonBat_ R Clavicle
-    100114: DemonBat_ R Finger0
-    100116: DemonBat_ R Finger01
-    100118: DemonBat_ R Finger02
-    100120: DemonBat_ R Finger03
-    100122: DemonBat_ R Finger0Nub
-    100124: DemonBat_ R Finger1
-    100126: DemonBat_ R Finger11
-    100128: DemonBat_ R Finger12
-    100130: DemonBat_ R Finger13
-    100132: DemonBat_ R Finger1Nub
-    100134: DemonBat_ R Finger2
-    100136: DemonBat_ R Finger21
-    100138: DemonBat_ R Finger22
-    100140: DemonBat_ R Finger23
-    100142: DemonBat_ R Finger2Nub
-    100144: DemonBat_ R Finger3
-    100146: DemonBat_ R Finger31
-    100148: DemonBat_ R Finger32
-    100150: DemonBat_ R Finger33
-    100152: DemonBat_ R Finger3Nub
-    100154: DemonBat_ R Finger4
-    100156: DemonBat_ R Finger41
-    100158: DemonBat_ R Finger42
-    100160: DemonBat_ R Finger43
-    100162: DemonBat_ R Finger4Nub
-    100164: DemonBat_ R Foot
-    100166: DemonBat_ R Forearm
-    100168: DemonBat_ R Hand
-    100170: DemonBat_ R Thigh
-    100172: DemonBat_ R Toe0
-    100174: DemonBat_ R Toe01
-    100176: DemonBat_ R Toe0Nub
-    100178: DemonBat_ R Toe1
-    100180: DemonBat_ R Toe11
-    100182: DemonBat_ R Toe1Nub
-    100184: DemonBat_ R Toe2
-    100186: DemonBat_ R Toe21
-    100188: DemonBat_ R Toe2Nub
-    100190: DemonBat_ R Toe3
-    100192: DemonBat_ R Toe31
-    100194: DemonBat_ R Toe3Nub
-    100196: DemonBat_ R UpperArm
-    100198: DemonBat_ Spine
-    100200: DemonBat_ Spine1
-    100202: DemonBat_ Tail
-    100204: DemonBat_ Tail1
-    100206: DemonBat_ Tail2
-    100208: DemonBat_ Tail3
-    100210: DemonBat_ Tail4
-    100212: DemonBat_ Tail5
-    100214: DemonBat_ Tail6
-    100216: DemonBat_ Tail7
-    100218: DemonBat_ Tail8
-    100220: DemonBat_ TailNub
-    100222: DemonBat_JawLowerLeft
-    100224: DemonBat_JawLowerRight
-    100226: DemonBat_JawUpperLeft
-    100228: DemonBat_JawUpperRight
-    100230: DemonBat_Mirrored
-    100232: nub
-    100234: nub 1
-    100236: nub 2
-    100238: nub 3
-    100240: nub 4
-    100242: root
-    400000: BOW_ROOT
-    400002: //RootNode
-    400004: DemonBat_
-    400006: DemonBat_ Head
-    400008: DemonBat_ HeadNub
-    400010: DemonBat_ L Calf
-    400012: DemonBat_ L Clavicle
-    400014: DemonBat_ L Finger0
-    400016: DemonBat_ L Finger01
-    400018: DemonBat_ L Finger02
-    400020: DemonBat_ L Finger03
-    400022: DemonBat_ L Finger0Nub
-    400024: DemonBat_ L Finger1
-    400026: DemonBat_ L Finger11
-    400028: DemonBat_ L Finger12
-    400030: DemonBat_ L Finger13
-    400032: DemonBat_ L Finger1Nub
-    400034: DemonBat_ L Finger2
-    400036: DemonBat_ L Finger21
-    400038: DemonBat_ L Finger22
-    400040: DemonBat_ L Finger23
-    400042: DemonBat_ L Finger2Nub
-    400044: DemonBat_ L Finger3
-    400046: DemonBat_ L Finger31
-    400048: DemonBat_ L Finger32
-    400050: DemonBat_ L Finger33
-    400052: DemonBat_ L Finger3Nub
-    400054: DemonBat_ L Finger4
-    400056: DemonBat_ L Finger41
-    400058: DemonBat_ L Finger42
-    400060: DemonBat_ L Finger43
-    400062: DemonBat_ L Finger4Nub
-    400064: DemonBat_ L Foot
-    400066: DemonBat_ L Forearm
-    400068: DemonBat_ L Hand
-    400070: DemonBat_ L Thigh
-    400072: DemonBat_ L Toe0
-    400074: DemonBat_ L Toe01
-    400076: DemonBat_ L Toe0Nub
-    400078: DemonBat_ L Toe1
-    400080: DemonBat_ L Toe11
-    400082: DemonBat_ L Toe1Nub
-    400084: DemonBat_ L Toe2
-    400086: DemonBat_ L Toe21
-    400088: DemonBat_ L Toe2Nub
-    400090: DemonBat_ L Toe3
-    400092: DemonBat_ L Toe31
-    400094: DemonBat_ L Toe3Nub
-    400096: DemonBat_ L UpperArm
-    400098: DemonBat_ Neck
-    400100: DemonBat_ Pelvis
-    400102: DemonBat_ Ponytail1
-    400104: DemonBat_ Ponytail11
-    400106: DemonBat_ Ponytail12
-    400108: DemonBat_ Ponytail1Nub
-    400110: DemonBat_ R Calf
-    400112: DemonBat_ R Clavicle
-    400114: DemonBat_ R Finger0
-    400116: DemonBat_ R Finger01
-    400118: DemonBat_ R Finger02
-    400120: DemonBat_ R Finger03
-    400122: DemonBat_ R Finger0Nub
-    400124: DemonBat_ R Finger1
-    400126: DemonBat_ R Finger11
-    400128: DemonBat_ R Finger12
-    400130: DemonBat_ R Finger13
-    400132: DemonBat_ R Finger1Nub
-    400134: DemonBat_ R Finger2
-    400136: DemonBat_ R Finger21
-    400138: DemonBat_ R Finger22
-    400140: DemonBat_ R Finger23
-    400142: DemonBat_ R Finger2Nub
-    400144: DemonBat_ R Finger3
-    400146: DemonBat_ R Finger31
-    400148: DemonBat_ R Finger32
-    400150: DemonBat_ R Finger33
-    400152: DemonBat_ R Finger3Nub
-    400154: DemonBat_ R Finger4
-    400156: DemonBat_ R Finger41
-    400158: DemonBat_ R Finger42
-    400160: DemonBat_ R Finger43
-    400162: DemonBat_ R Finger4Nub
-    400164: DemonBat_ R Foot
-    400166: DemonBat_ R Forearm
-    400168: DemonBat_ R Hand
-    400170: DemonBat_ R Thigh
-    400172: DemonBat_ R Toe0
-    400174: DemonBat_ R Toe01
-    400176: DemonBat_ R Toe0Nub
-    400178: DemonBat_ R Toe1
-    400180: DemonBat_ R Toe11
-    400182: DemonBat_ R Toe1Nub
-    400184: DemonBat_ R Toe2
-    400186: DemonBat_ R Toe21
-    400188: DemonBat_ R Toe2Nub
-    400190: DemonBat_ R Toe3
-    400192: DemonBat_ R Toe31
-    400194: DemonBat_ R Toe3Nub
-    400196: DemonBat_ R UpperArm
-    400198: DemonBat_ Spine
-    400200: DemonBat_ Spine1
-    400202: DemonBat_ Tail
-    400204: DemonBat_ Tail1
-    400206: DemonBat_ Tail2
-    400208: DemonBat_ Tail3
-    400210: DemonBat_ Tail4
-    400212: DemonBat_ Tail5
-    400214: DemonBat_ Tail6
-    400216: DemonBat_ Tail7
-    400218: DemonBat_ Tail8
-    400220: DemonBat_ TailNub
-    400222: DemonBat_JawLowerLeft
-    400224: DemonBat_JawLowerRight
-    400226: DemonBat_JawUpperLeft
-    400228: DemonBat_JawUpperRight
-    400230: DemonBat_Mirrored
-    400232: nub
-    400234: nub 1
-    400236: nub 2
-    400238: nub 3
-    400240: nub 4
-    400242: root
-    4300000: DemonBat_Mirrored
-    7400000: DeathHitTheGround
-    9500000: //RootNode
-    13700000: DemonBat_Mirrored
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: BOW_ROOT
+  - first:
+      1: 100002
+    second: //RootNode
+  - first:
+      1: 100004
+    second: DemonBat_
+  - first:
+      1: 100006
+    second: DemonBat_ Head
+  - first:
+      1: 100008
+    second: DemonBat_ HeadNub
+  - first:
+      1: 100010
+    second: DemonBat_ L Calf
+  - first:
+      1: 100012
+    second: DemonBat_ L Clavicle
+  - first:
+      1: 100014
+    second: DemonBat_ L Finger0
+  - first:
+      1: 100016
+    second: DemonBat_ L Finger01
+  - first:
+      1: 100018
+    second: DemonBat_ L Finger02
+  - first:
+      1: 100020
+    second: DemonBat_ L Finger03
+  - first:
+      1: 100022
+    second: DemonBat_ L Finger0Nub
+  - first:
+      1: 100024
+    second: DemonBat_ L Finger1
+  - first:
+      1: 100026
+    second: DemonBat_ L Finger11
+  - first:
+      1: 100028
+    second: DemonBat_ L Finger12
+  - first:
+      1: 100030
+    second: DemonBat_ L Finger13
+  - first:
+      1: 100032
+    second: DemonBat_ L Finger1Nub
+  - first:
+      1: 100034
+    second: DemonBat_ L Finger2
+  - first:
+      1: 100036
+    second: DemonBat_ L Finger21
+  - first:
+      1: 100038
+    second: DemonBat_ L Finger22
+  - first:
+      1: 100040
+    second: DemonBat_ L Finger23
+  - first:
+      1: 100042
+    second: DemonBat_ L Finger2Nub
+  - first:
+      1: 100044
+    second: DemonBat_ L Finger3
+  - first:
+      1: 100046
+    second: DemonBat_ L Finger31
+  - first:
+      1: 100048
+    second: DemonBat_ L Finger32
+  - first:
+      1: 100050
+    second: DemonBat_ L Finger33
+  - first:
+      1: 100052
+    second: DemonBat_ L Finger3Nub
+  - first:
+      1: 100054
+    second: DemonBat_ L Finger4
+  - first:
+      1: 100056
+    second: DemonBat_ L Finger41
+  - first:
+      1: 100058
+    second: DemonBat_ L Finger42
+  - first:
+      1: 100060
+    second: DemonBat_ L Finger43
+  - first:
+      1: 100062
+    second: DemonBat_ L Finger4Nub
+  - first:
+      1: 100064
+    second: DemonBat_ L Foot
+  - first:
+      1: 100066
+    second: DemonBat_ L Forearm
+  - first:
+      1: 100068
+    second: DemonBat_ L Hand
+  - first:
+      1: 100070
+    second: DemonBat_ L Thigh
+  - first:
+      1: 100072
+    second: DemonBat_ L Toe0
+  - first:
+      1: 100074
+    second: DemonBat_ L Toe01
+  - first:
+      1: 100076
+    second: DemonBat_ L Toe0Nub
+  - first:
+      1: 100078
+    second: DemonBat_ L Toe1
+  - first:
+      1: 100080
+    second: DemonBat_ L Toe11
+  - first:
+      1: 100082
+    second: DemonBat_ L Toe1Nub
+  - first:
+      1: 100084
+    second: DemonBat_ L Toe2
+  - first:
+      1: 100086
+    second: DemonBat_ L Toe21
+  - first:
+      1: 100088
+    second: DemonBat_ L Toe2Nub
+  - first:
+      1: 100090
+    second: DemonBat_ L Toe3
+  - first:
+      1: 100092
+    second: DemonBat_ L Toe31
+  - first:
+      1: 100094
+    second: DemonBat_ L Toe3Nub
+  - first:
+      1: 100096
+    second: DemonBat_ L UpperArm
+  - first:
+      1: 100098
+    second: DemonBat_ Neck
+  - first:
+      1: 100100
+    second: DemonBat_ Pelvis
+  - first:
+      1: 100102
+    second: DemonBat_ Ponytail1
+  - first:
+      1: 100104
+    second: DemonBat_ Ponytail11
+  - first:
+      1: 100106
+    second: DemonBat_ Ponytail12
+  - first:
+      1: 100108
+    second: DemonBat_ Ponytail1Nub
+  - first:
+      1: 100110
+    second: DemonBat_ R Calf
+  - first:
+      1: 100112
+    second: DemonBat_ R Clavicle
+  - first:
+      1: 100114
+    second: DemonBat_ R Finger0
+  - first:
+      1: 100116
+    second: DemonBat_ R Finger01
+  - first:
+      1: 100118
+    second: DemonBat_ R Finger02
+  - first:
+      1: 100120
+    second: DemonBat_ R Finger03
+  - first:
+      1: 100122
+    second: DemonBat_ R Finger0Nub
+  - first:
+      1: 100124
+    second: DemonBat_ R Finger1
+  - first:
+      1: 100126
+    second: DemonBat_ R Finger11
+  - first:
+      1: 100128
+    second: DemonBat_ R Finger12
+  - first:
+      1: 100130
+    second: DemonBat_ R Finger13
+  - first:
+      1: 100132
+    second: DemonBat_ R Finger1Nub
+  - first:
+      1: 100134
+    second: DemonBat_ R Finger2
+  - first:
+      1: 100136
+    second: DemonBat_ R Finger21
+  - first:
+      1: 100138
+    second: DemonBat_ R Finger22
+  - first:
+      1: 100140
+    second: DemonBat_ R Finger23
+  - first:
+      1: 100142
+    second: DemonBat_ R Finger2Nub
+  - first:
+      1: 100144
+    second: DemonBat_ R Finger3
+  - first:
+      1: 100146
+    second: DemonBat_ R Finger31
+  - first:
+      1: 100148
+    second: DemonBat_ R Finger32
+  - first:
+      1: 100150
+    second: DemonBat_ R Finger33
+  - first:
+      1: 100152
+    second: DemonBat_ R Finger3Nub
+  - first:
+      1: 100154
+    second: DemonBat_ R Finger4
+  - first:
+      1: 100156
+    second: DemonBat_ R Finger41
+  - first:
+      1: 100158
+    second: DemonBat_ R Finger42
+  - first:
+      1: 100160
+    second: DemonBat_ R Finger43
+  - first:
+      1: 100162
+    second: DemonBat_ R Finger4Nub
+  - first:
+      1: 100164
+    second: DemonBat_ R Foot
+  - first:
+      1: 100166
+    second: DemonBat_ R Forearm
+  - first:
+      1: 100168
+    second: DemonBat_ R Hand
+  - first:
+      1: 100170
+    second: DemonBat_ R Thigh
+  - first:
+      1: 100172
+    second: DemonBat_ R Toe0
+  - first:
+      1: 100174
+    second: DemonBat_ R Toe01
+  - first:
+      1: 100176
+    second: DemonBat_ R Toe0Nub
+  - first:
+      1: 100178
+    second: DemonBat_ R Toe1
+  - first:
+      1: 100180
+    second: DemonBat_ R Toe11
+  - first:
+      1: 100182
+    second: DemonBat_ R Toe1Nub
+  - first:
+      1: 100184
+    second: DemonBat_ R Toe2
+  - first:
+      1: 100186
+    second: DemonBat_ R Toe21
+  - first:
+      1: 100188
+    second: DemonBat_ R Toe2Nub
+  - first:
+      1: 100190
+    second: DemonBat_ R Toe3
+  - first:
+      1: 100192
+    second: DemonBat_ R Toe31
+  - first:
+      1: 100194
+    second: DemonBat_ R Toe3Nub
+  - first:
+      1: 100196
+    second: DemonBat_ R UpperArm
+  - first:
+      1: 100198
+    second: DemonBat_ Spine
+  - first:
+      1: 100200
+    second: DemonBat_ Spine1
+  - first:
+      1: 100202
+    second: DemonBat_ Tail
+  - first:
+      1: 100204
+    second: DemonBat_ Tail1
+  - first:
+      1: 100206
+    second: DemonBat_ Tail2
+  - first:
+      1: 100208
+    second: DemonBat_ Tail3
+  - first:
+      1: 100210
+    second: DemonBat_ Tail4
+  - first:
+      1: 100212
+    second: DemonBat_ Tail5
+  - first:
+      1: 100214
+    second: DemonBat_ Tail6
+  - first:
+      1: 100216
+    second: DemonBat_ Tail7
+  - first:
+      1: 100218
+    second: DemonBat_ Tail8
+  - first:
+      1: 100220
+    second: DemonBat_ TailNub
+  - first:
+      1: 100222
+    second: DemonBat_JawLowerLeft
+  - first:
+      1: 100224
+    second: DemonBat_JawLowerRight
+  - first:
+      1: 100226
+    second: DemonBat_JawUpperLeft
+  - first:
+      1: 100228
+    second: DemonBat_JawUpperRight
+  - first:
+      1: 100230
+    second: DemonBat_Mirrored
+  - first:
+      1: 100232
+    second: nub
+  - first:
+      1: 100234
+    second: nub 1
+  - first:
+      1: 100236
+    second: nub 2
+  - first:
+      1: 100238
+    second: nub 3
+  - first:
+      1: 100240
+    second: nub 4
+  - first:
+      1: 100242
+    second: root
+  - first:
+      4: 400000
+    second: BOW_ROOT
+  - first:
+      4: 400002
+    second: //RootNode
+  - first:
+      4: 400004
+    second: DemonBat_
+  - first:
+      4: 400006
+    second: DemonBat_ Head
+  - first:
+      4: 400008
+    second: DemonBat_ HeadNub
+  - first:
+      4: 400010
+    second: DemonBat_ L Calf
+  - first:
+      4: 400012
+    second: DemonBat_ L Clavicle
+  - first:
+      4: 400014
+    second: DemonBat_ L Finger0
+  - first:
+      4: 400016
+    second: DemonBat_ L Finger01
+  - first:
+      4: 400018
+    second: DemonBat_ L Finger02
+  - first:
+      4: 400020
+    second: DemonBat_ L Finger03
+  - first:
+      4: 400022
+    second: DemonBat_ L Finger0Nub
+  - first:
+      4: 400024
+    second: DemonBat_ L Finger1
+  - first:
+      4: 400026
+    second: DemonBat_ L Finger11
+  - first:
+      4: 400028
+    second: DemonBat_ L Finger12
+  - first:
+      4: 400030
+    second: DemonBat_ L Finger13
+  - first:
+      4: 400032
+    second: DemonBat_ L Finger1Nub
+  - first:
+      4: 400034
+    second: DemonBat_ L Finger2
+  - first:
+      4: 400036
+    second: DemonBat_ L Finger21
+  - first:
+      4: 400038
+    second: DemonBat_ L Finger22
+  - first:
+      4: 400040
+    second: DemonBat_ L Finger23
+  - first:
+      4: 400042
+    second: DemonBat_ L Finger2Nub
+  - first:
+      4: 400044
+    second: DemonBat_ L Finger3
+  - first:
+      4: 400046
+    second: DemonBat_ L Finger31
+  - first:
+      4: 400048
+    second: DemonBat_ L Finger32
+  - first:
+      4: 400050
+    second: DemonBat_ L Finger33
+  - first:
+      4: 400052
+    second: DemonBat_ L Finger3Nub
+  - first:
+      4: 400054
+    second: DemonBat_ L Finger4
+  - first:
+      4: 400056
+    second: DemonBat_ L Finger41
+  - first:
+      4: 400058
+    second: DemonBat_ L Finger42
+  - first:
+      4: 400060
+    second: DemonBat_ L Finger43
+  - first:
+      4: 400062
+    second: DemonBat_ L Finger4Nub
+  - first:
+      4: 400064
+    second: DemonBat_ L Foot
+  - first:
+      4: 400066
+    second: DemonBat_ L Forearm
+  - first:
+      4: 400068
+    second: DemonBat_ L Hand
+  - first:
+      4: 400070
+    second: DemonBat_ L Thigh
+  - first:
+      4: 400072
+    second: DemonBat_ L Toe0
+  - first:
+      4: 400074
+    second: DemonBat_ L Toe01
+  - first:
+      4: 400076
+    second: DemonBat_ L Toe0Nub
+  - first:
+      4: 400078
+    second: DemonBat_ L Toe1
+  - first:
+      4: 400080
+    second: DemonBat_ L Toe11
+  - first:
+      4: 400082
+    second: DemonBat_ L Toe1Nub
+  - first:
+      4: 400084
+    second: DemonBat_ L Toe2
+  - first:
+      4: 400086
+    second: DemonBat_ L Toe21
+  - first:
+      4: 400088
+    second: DemonBat_ L Toe2Nub
+  - first:
+      4: 400090
+    second: DemonBat_ L Toe3
+  - first:
+      4: 400092
+    second: DemonBat_ L Toe31
+  - first:
+      4: 400094
+    second: DemonBat_ L Toe3Nub
+  - first:
+      4: 400096
+    second: DemonBat_ L UpperArm
+  - first:
+      4: 400098
+    second: DemonBat_ Neck
+  - first:
+      4: 400100
+    second: DemonBat_ Pelvis
+  - first:
+      4: 400102
+    second: DemonBat_ Ponytail1
+  - first:
+      4: 400104
+    second: DemonBat_ Ponytail11
+  - first:
+      4: 400106
+    second: DemonBat_ Ponytail12
+  - first:
+      4: 400108
+    second: DemonBat_ Ponytail1Nub
+  - first:
+      4: 400110
+    second: DemonBat_ R Calf
+  - first:
+      4: 400112
+    second: DemonBat_ R Clavicle
+  - first:
+      4: 400114
+    second: DemonBat_ R Finger0
+  - first:
+      4: 400116
+    second: DemonBat_ R Finger01
+  - first:
+      4: 400118
+    second: DemonBat_ R Finger02
+  - first:
+      4: 400120
+    second: DemonBat_ R Finger03
+  - first:
+      4: 400122
+    second: DemonBat_ R Finger0Nub
+  - first:
+      4: 400124
+    second: DemonBat_ R Finger1
+  - first:
+      4: 400126
+    second: DemonBat_ R Finger11
+  - first:
+      4: 400128
+    second: DemonBat_ R Finger12
+  - first:
+      4: 400130
+    second: DemonBat_ R Finger13
+  - first:
+      4: 400132
+    second: DemonBat_ R Finger1Nub
+  - first:
+      4: 400134
+    second: DemonBat_ R Finger2
+  - first:
+      4: 400136
+    second: DemonBat_ R Finger21
+  - first:
+      4: 400138
+    second: DemonBat_ R Finger22
+  - first:
+      4: 400140
+    second: DemonBat_ R Finger23
+  - first:
+      4: 400142
+    second: DemonBat_ R Finger2Nub
+  - first:
+      4: 400144
+    second: DemonBat_ R Finger3
+  - first:
+      4: 400146
+    second: DemonBat_ R Finger31
+  - first:
+      4: 400148
+    second: DemonBat_ R Finger32
+  - first:
+      4: 400150
+    second: DemonBat_ R Finger33
+  - first:
+      4: 400152
+    second: DemonBat_ R Finger3Nub
+  - first:
+      4: 400154
+    second: DemonBat_ R Finger4
+  - first:
+      4: 400156
+    second: DemonBat_ R Finger41
+  - first:
+      4: 400158
+    second: DemonBat_ R Finger42
+  - first:
+      4: 400160
+    second: DemonBat_ R Finger43
+  - first:
+      4: 400162
+    second: DemonBat_ R Finger4Nub
+  - first:
+      4: 400164
+    second: DemonBat_ R Foot
+  - first:
+      4: 400166
+    second: DemonBat_ R Forearm
+  - first:
+      4: 400168
+    second: DemonBat_ R Hand
+  - first:
+      4: 400170
+    second: DemonBat_ R Thigh
+  - first:
+      4: 400172
+    second: DemonBat_ R Toe0
+  - first:
+      4: 400174
+    second: DemonBat_ R Toe01
+  - first:
+      4: 400176
+    second: DemonBat_ R Toe0Nub
+  - first:
+      4: 400178
+    second: DemonBat_ R Toe1
+  - first:
+      4: 400180
+    second: DemonBat_ R Toe11
+  - first:
+      4: 400182
+    second: DemonBat_ R Toe1Nub
+  - first:
+      4: 400184
+    second: DemonBat_ R Toe2
+  - first:
+      4: 400186
+    second: DemonBat_ R Toe21
+  - first:
+      4: 400188
+    second: DemonBat_ R Toe2Nub
+  - first:
+      4: 400190
+    second: DemonBat_ R Toe3
+  - first:
+      4: 400192
+    second: DemonBat_ R Toe31
+  - first:
+      4: 400194
+    second: DemonBat_ R Toe3Nub
+  - first:
+      4: 400196
+    second: DemonBat_ R UpperArm
+  - first:
+      4: 400198
+    second: DemonBat_ Spine
+  - first:
+      4: 400200
+    second: DemonBat_ Spine1
+  - first:
+      4: 400202
+    second: DemonBat_ Tail
+  - first:
+      4: 400204
+    second: DemonBat_ Tail1
+  - first:
+      4: 400206
+    second: DemonBat_ Tail2
+  - first:
+      4: 400208
+    second: DemonBat_ Tail3
+  - first:
+      4: 400210
+    second: DemonBat_ Tail4
+  - first:
+      4: 400212
+    second: DemonBat_ Tail5
+  - first:
+      4: 400214
+    second: DemonBat_ Tail6
+  - first:
+      4: 400216
+    second: DemonBat_ Tail7
+  - first:
+      4: 400218
+    second: DemonBat_ Tail8
+  - first:
+      4: 400220
+    second: DemonBat_ TailNub
+  - first:
+      4: 400222
+    second: DemonBat_JawLowerLeft
+  - first:
+      4: 400224
+    second: DemonBat_JawLowerRight
+  - first:
+      4: 400226
+    second: DemonBat_JawUpperLeft
+  - first:
+      4: 400228
+    second: DemonBat_JawUpperRight
+  - first:
+      4: 400230
+    second: DemonBat_Mirrored
+  - first:
+      4: 400232
+    second: nub
+  - first:
+      4: 400234
+    second: nub 1
+  - first:
+      4: 400236
+    second: nub 2
+  - first:
+      4: 400238
+    second: nub 3
+  - first:
+      4: 400240
+    second: nub 4
+  - first:
+      4: 400242
+    second: root
+  - first:
+      43: 4300000
+    second: DemonBat_Mirrored
+  - first:
+      74: 7400000
+    second: DeathHitTheGround
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: DemonBat_Mirrored
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
+    extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
       name: DeathHitTheGround
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 18
       wrapMode: 0
@@ -726,26 +1233,49 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 0
+    importVisibility: 0
     importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -755,24 +1285,20 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: root
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 22ca6c38bbc25704fa4e8cb36888a425,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 22ca6c38bbc25704fa4e8cb36888a425, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 127490
-  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 3
-  packageVersion: 1.13
-  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK VOL3/Demons Pack Vol1/Demon
-    Bat/FBX Files/DemonBat@DeathHitTheGround.FBX
-  uploadId: 669994

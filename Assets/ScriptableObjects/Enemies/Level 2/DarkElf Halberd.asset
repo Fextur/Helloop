@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: GiantBat
+  m_Name: DarkElf Halberd
   m_EditorClassIdentifier: 
-  enemyName: Alpha Blood Sucker
-  enemyPrefab: {fileID: 9079283737560077453, guid: b87fa0b59de0f4dbc9e5b23da5551a1c, type: 3}
-  maxHealth: 200
-  damage: 10
-  attackRange: 3.5
-  attackDetectionRange: 2.5
+  enemyName: Deprived Elf
+  enemyPrefab: {fileID: 3526507286444841824, guid: 0378f021b41c641979e88d353662ecf8, type: 3}
+  maxHealth: 90
+  damage: 15
+  attackRange: 4
+  attackDetectionRange: 3
   enemyType: 0
   sightRange: 10
   pursueDistance: 15
-  moveSpeed: 4
-  attackCooldown: 0.8
-  attackDamageDelay: 0.4
-  attackAnimationDuration: 0.8
+  moveSpeed: 2.5
+  attackCooldown: 1
+  attackDamageDelay: 0.6
+  attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 181482d0f07c04190a134fcf52be6cf1, type: 3}
