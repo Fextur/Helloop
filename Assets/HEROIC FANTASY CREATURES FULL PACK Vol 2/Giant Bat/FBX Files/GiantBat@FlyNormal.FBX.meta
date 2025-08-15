@@ -1,125 +1,360 @@
 fileFormatVersion: 2
 guid: 62311cedf6f3e4b4682caa48067725af
+AssetOrigin:
+  serializedVersion: 1
+  productId: 18165
+  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 2
+  packageVersion: 2.31
+  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK Vol 2/Giant Bat/FBX Files/GiantBat@FlyNormal.FBX
+  uploadId: 626737
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: GIANT_BAT_
-    100002: GIANT_BAT_ Head
-    100004: GIANT_BAT_ L Calf
-    100006: GIANT_BAT_ L Clavicle
-    100008: GIANT_BAT_ L Finger0
-    100010: GIANT_BAT_ L Finger01
-    100012: GIANT_BAT_ L Finger02
-    100014: GIANT_BAT_ L Finger1
-    100016: GIANT_BAT_ L Finger11
-    100018: GIANT_BAT_ L Finger12
-    100020: GIANT_BAT_ L Finger2
-    100022: GIANT_BAT_ L Finger21
-    100024: GIANT_BAT_ L Finger22
-    100026: GIANT_BAT_ L Finger3
-    100028: GIANT_BAT_ L Finger31
-    100030: GIANT_BAT_ L Finger32
-    100032: GIANT_BAT_ L Foot
-    100034: GIANT_BAT_ L Forearm
-    100036: GIANT_BAT_ L Hand
-    100038: GIANT_BAT_ L Thigh
-    100040: GIANT_BAT_ L Toe0
-    100042: GIANT_BAT_ L Toe01
-    100044: GIANT_BAT_ L Toe1
-    100046: GIANT_BAT_ L Toe11
-    100048: GIANT_BAT_ L UpperArm
-    100050: GIANT_BAT_ Neck
-    100052: GIANT_BAT_ Neck1
-    100054: GIANT_BAT_ Pelvis
-    100056: GIANT_BAT_ Queue de cheval 1
-    100058: GIANT_BAT_ R Calf
-    100060: GIANT_BAT_ R Clavicle
-    100062: GIANT_BAT_ R Finger0
-    100064: GIANT_BAT_ R Finger01
-    100066: GIANT_BAT_ R Finger02
-    100068: GIANT_BAT_ R Finger1
-    100070: GIANT_BAT_ R Finger11
-    100072: GIANT_BAT_ R Finger12
-    100074: GIANT_BAT_ R Finger2
-    100076: GIANT_BAT_ R Finger21
-    100078: GIANT_BAT_ R Finger22
-    100080: GIANT_BAT_ R Finger3
-    100082: GIANT_BAT_ R Finger31
-    100084: GIANT_BAT_ R Finger32
-    100086: GIANT_BAT_ R Foot
-    100088: GIANT_BAT_ R Forearm
-    100090: GIANT_BAT_ R Hand
-    100092: GIANT_BAT_ R Thigh
-    100094: GIANT_BAT_ R Toe0
-    100096: GIANT_BAT_ R Toe01
-    100098: GIANT_BAT_ R Toe1
-    100100: GIANT_BAT_ R Toe11
-    100102: GIANT_BAT_ R UpperArm
-    100104: GIANT_BAT_ Spine
-    100106: GIANT_BAT_ Spine1
-    100108: //RootNode
-    100110: root
-    400000: GIANT_BAT_
-    400002: GIANT_BAT_ Head
-    400004: GIANT_BAT_ L Calf
-    400006: GIANT_BAT_ L Clavicle
-    400008: GIANT_BAT_ L Finger0
-    400010: GIANT_BAT_ L Finger01
-    400012: GIANT_BAT_ L Finger02
-    400014: GIANT_BAT_ L Finger1
-    400016: GIANT_BAT_ L Finger11
-    400018: GIANT_BAT_ L Finger12
-    400020: GIANT_BAT_ L Finger2
-    400022: GIANT_BAT_ L Finger21
-    400024: GIANT_BAT_ L Finger22
-    400026: GIANT_BAT_ L Finger3
-    400028: GIANT_BAT_ L Finger31
-    400030: GIANT_BAT_ L Finger32
-    400032: GIANT_BAT_ L Foot
-    400034: GIANT_BAT_ L Forearm
-    400036: GIANT_BAT_ L Hand
-    400038: GIANT_BAT_ L Thigh
-    400040: GIANT_BAT_ L Toe0
-    400042: GIANT_BAT_ L Toe01
-    400044: GIANT_BAT_ L Toe1
-    400046: GIANT_BAT_ L Toe11
-    400048: GIANT_BAT_ L UpperArm
-    400050: GIANT_BAT_ Neck
-    400052: GIANT_BAT_ Neck1
-    400054: GIANT_BAT_ Pelvis
-    400056: GIANT_BAT_ Queue de cheval 1
-    400058: GIANT_BAT_ R Calf
-    400060: GIANT_BAT_ R Clavicle
-    400062: GIANT_BAT_ R Finger0
-    400064: GIANT_BAT_ R Finger01
-    400066: GIANT_BAT_ R Finger02
-    400068: GIANT_BAT_ R Finger1
-    400070: GIANT_BAT_ R Finger11
-    400072: GIANT_BAT_ R Finger12
-    400074: GIANT_BAT_ R Finger2
-    400076: GIANT_BAT_ R Finger21
-    400078: GIANT_BAT_ R Finger22
-    400080: GIANT_BAT_ R Finger3
-    400082: GIANT_BAT_ R Finger31
-    400084: GIANT_BAT_ R Finger32
-    400086: GIANT_BAT_ R Foot
-    400088: GIANT_BAT_ R Forearm
-    400090: GIANT_BAT_ R Hand
-    400092: GIANT_BAT_ R Thigh
-    400094: GIANT_BAT_ R Toe0
-    400096: GIANT_BAT_ R Toe01
-    400098: GIANT_BAT_ R Toe1
-    400100: GIANT_BAT_ R Toe11
-    400102: GIANT_BAT_ R UpperArm
-    400104: GIANT_BAT_ Spine
-    400106: GIANT_BAT_ Spine1
-    400108: //RootNode
-    400110: root
-    7400000: FlyNormal
-    9500000: //RootNode
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: GIANT_BAT_
+  - first:
+      1: 100002
+    second: GIANT_BAT_ Head
+  - first:
+      1: 100004
+    second: GIANT_BAT_ L Calf
+  - first:
+      1: 100006
+    second: GIANT_BAT_ L Clavicle
+  - first:
+      1: 100008
+    second: GIANT_BAT_ L Finger0
+  - first:
+      1: 100010
+    second: GIANT_BAT_ L Finger01
+  - first:
+      1: 100012
+    second: GIANT_BAT_ L Finger02
+  - first:
+      1: 100014
+    second: GIANT_BAT_ L Finger1
+  - first:
+      1: 100016
+    second: GIANT_BAT_ L Finger11
+  - first:
+      1: 100018
+    second: GIANT_BAT_ L Finger12
+  - first:
+      1: 100020
+    second: GIANT_BAT_ L Finger2
+  - first:
+      1: 100022
+    second: GIANT_BAT_ L Finger21
+  - first:
+      1: 100024
+    second: GIANT_BAT_ L Finger22
+  - first:
+      1: 100026
+    second: GIANT_BAT_ L Finger3
+  - first:
+      1: 100028
+    second: GIANT_BAT_ L Finger31
+  - first:
+      1: 100030
+    second: GIANT_BAT_ L Finger32
+  - first:
+      1: 100032
+    second: GIANT_BAT_ L Foot
+  - first:
+      1: 100034
+    second: GIANT_BAT_ L Forearm
+  - first:
+      1: 100036
+    second: GIANT_BAT_ L Hand
+  - first:
+      1: 100038
+    second: GIANT_BAT_ L Thigh
+  - first:
+      1: 100040
+    second: GIANT_BAT_ L Toe0
+  - first:
+      1: 100042
+    second: GIANT_BAT_ L Toe01
+  - first:
+      1: 100044
+    second: GIANT_BAT_ L Toe1
+  - first:
+      1: 100046
+    second: GIANT_BAT_ L Toe11
+  - first:
+      1: 100048
+    second: GIANT_BAT_ L UpperArm
+  - first:
+      1: 100050
+    second: GIANT_BAT_ Neck
+  - first:
+      1: 100052
+    second: GIANT_BAT_ Neck1
+  - first:
+      1: 100054
+    second: GIANT_BAT_ Pelvis
+  - first:
+      1: 100056
+    second: GIANT_BAT_ Queue de cheval 1
+  - first:
+      1: 100058
+    second: GIANT_BAT_ R Calf
+  - first:
+      1: 100060
+    second: GIANT_BAT_ R Clavicle
+  - first:
+      1: 100062
+    second: GIANT_BAT_ R Finger0
+  - first:
+      1: 100064
+    second: GIANT_BAT_ R Finger01
+  - first:
+      1: 100066
+    second: GIANT_BAT_ R Finger02
+  - first:
+      1: 100068
+    second: GIANT_BAT_ R Finger1
+  - first:
+      1: 100070
+    second: GIANT_BAT_ R Finger11
+  - first:
+      1: 100072
+    second: GIANT_BAT_ R Finger12
+  - first:
+      1: 100074
+    second: GIANT_BAT_ R Finger2
+  - first:
+      1: 100076
+    second: GIANT_BAT_ R Finger21
+  - first:
+      1: 100078
+    second: GIANT_BAT_ R Finger22
+  - first:
+      1: 100080
+    second: GIANT_BAT_ R Finger3
+  - first:
+      1: 100082
+    second: GIANT_BAT_ R Finger31
+  - first:
+      1: 100084
+    second: GIANT_BAT_ R Finger32
+  - first:
+      1: 100086
+    second: GIANT_BAT_ R Foot
+  - first:
+      1: 100088
+    second: GIANT_BAT_ R Forearm
+  - first:
+      1: 100090
+    second: GIANT_BAT_ R Hand
+  - first:
+      1: 100092
+    second: GIANT_BAT_ R Thigh
+  - first:
+      1: 100094
+    second: GIANT_BAT_ R Toe0
+  - first:
+      1: 100096
+    second: GIANT_BAT_ R Toe01
+  - first:
+      1: 100098
+    second: GIANT_BAT_ R Toe1
+  - first:
+      1: 100100
+    second: GIANT_BAT_ R Toe11
+  - first:
+      1: 100102
+    second: GIANT_BAT_ R UpperArm
+  - first:
+      1: 100104
+    second: GIANT_BAT_ Spine
+  - first:
+      1: 100106
+    second: GIANT_BAT_ Spine1
+  - first:
+      1: 100108
+    second: //RootNode
+  - first:
+      1: 100110
+    second: root
+  - first:
+      4: 400000
+    second: GIANT_BAT_
+  - first:
+      4: 400002
+    second: GIANT_BAT_ Head
+  - first:
+      4: 400004
+    second: GIANT_BAT_ L Calf
+  - first:
+      4: 400006
+    second: GIANT_BAT_ L Clavicle
+  - first:
+      4: 400008
+    second: GIANT_BAT_ L Finger0
+  - first:
+      4: 400010
+    second: GIANT_BAT_ L Finger01
+  - first:
+      4: 400012
+    second: GIANT_BAT_ L Finger02
+  - first:
+      4: 400014
+    second: GIANT_BAT_ L Finger1
+  - first:
+      4: 400016
+    second: GIANT_BAT_ L Finger11
+  - first:
+      4: 400018
+    second: GIANT_BAT_ L Finger12
+  - first:
+      4: 400020
+    second: GIANT_BAT_ L Finger2
+  - first:
+      4: 400022
+    second: GIANT_BAT_ L Finger21
+  - first:
+      4: 400024
+    second: GIANT_BAT_ L Finger22
+  - first:
+      4: 400026
+    second: GIANT_BAT_ L Finger3
+  - first:
+      4: 400028
+    second: GIANT_BAT_ L Finger31
+  - first:
+      4: 400030
+    second: GIANT_BAT_ L Finger32
+  - first:
+      4: 400032
+    second: GIANT_BAT_ L Foot
+  - first:
+      4: 400034
+    second: GIANT_BAT_ L Forearm
+  - first:
+      4: 400036
+    second: GIANT_BAT_ L Hand
+  - first:
+      4: 400038
+    second: GIANT_BAT_ L Thigh
+  - first:
+      4: 400040
+    second: GIANT_BAT_ L Toe0
+  - first:
+      4: 400042
+    second: GIANT_BAT_ L Toe01
+  - first:
+      4: 400044
+    second: GIANT_BAT_ L Toe1
+  - first:
+      4: 400046
+    second: GIANT_BAT_ L Toe11
+  - first:
+      4: 400048
+    second: GIANT_BAT_ L UpperArm
+  - first:
+      4: 400050
+    second: GIANT_BAT_ Neck
+  - first:
+      4: 400052
+    second: GIANT_BAT_ Neck1
+  - first:
+      4: 400054
+    second: GIANT_BAT_ Pelvis
+  - first:
+      4: 400056
+    second: GIANT_BAT_ Queue de cheval 1
+  - first:
+      4: 400058
+    second: GIANT_BAT_ R Calf
+  - first:
+      4: 400060
+    second: GIANT_BAT_ R Clavicle
+  - first:
+      4: 400062
+    second: GIANT_BAT_ R Finger0
+  - first:
+      4: 400064
+    second: GIANT_BAT_ R Finger01
+  - first:
+      4: 400066
+    second: GIANT_BAT_ R Finger02
+  - first:
+      4: 400068
+    second: GIANT_BAT_ R Finger1
+  - first:
+      4: 400070
+    second: GIANT_BAT_ R Finger11
+  - first:
+      4: 400072
+    second: GIANT_BAT_ R Finger12
+  - first:
+      4: 400074
+    second: GIANT_BAT_ R Finger2
+  - first:
+      4: 400076
+    second: GIANT_BAT_ R Finger21
+  - first:
+      4: 400078
+    second: GIANT_BAT_ R Finger22
+  - first:
+      4: 400080
+    second: GIANT_BAT_ R Finger3
+  - first:
+      4: 400082
+    second: GIANT_BAT_ R Finger31
+  - first:
+      4: 400084
+    second: GIANT_BAT_ R Finger32
+  - first:
+      4: 400086
+    second: GIANT_BAT_ R Foot
+  - first:
+      4: 400088
+    second: GIANT_BAT_ R Forearm
+  - first:
+      4: 400090
+    second: GIANT_BAT_ R Hand
+  - first:
+      4: 400092
+    second: GIANT_BAT_ R Thigh
+  - first:
+      4: 400094
+    second: GIANT_BAT_ R Toe0
+  - first:
+      4: 400096
+    second: GIANT_BAT_ R Toe01
+  - first:
+      4: 400098
+    second: GIANT_BAT_ R Toe1
+  - first:
+      4: 400100
+    second: GIANT_BAT_ R Toe11
+  - first:
+      4: 400102
+    second: GIANT_BAT_ R UpperArm
+  - first:
+      4: 400104
+    second: GIANT_BAT_ Spine
+  - first:
+      4: 400106
+    second: GIANT_BAT_ Spine1
+  - first:
+      4: 400108
+    second: //RootNode
+  - first:
+      4: 400110
+    second: root
+  - first:
+      74: 7400000
+    second: FlyNormal
+  - first:
+      95: 9500000
+    second: //RootNode
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -128,9 +363,8 @@ ModelImporter:
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -148,11 +382,12 @@ ModelImporter:
     - serializedVersion: 16
       name: FlyNormal
       takeName: Take 001
+      internalID: 0
       firstFrame: 0
       lastFrame: 15
       wrapMode: 0
       orientationOffsetY: 0
-      level: 0
+      level: -3
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
@@ -180,25 +415,36 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -207,10 +453,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 1
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -220,22 +466,20 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: root
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
-  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 9a92fdff6052b1541bb400a4c6e76552,
-    type: 3}
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 9a92fdff6052b1541bb400a4c6e76552, type: 3}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 2
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  importBlendShapeDeformPercent: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 18165
-  packageName: HEROIC FANTASY CREATURES FULL PACK Volume 2
-  packageVersion: 2.31
-  assetPath: Assets/HEROIC FANTASY CREATURES FULL PACK Vol 2/Giant Bat/FBX Files/GiantBat@FlyNormal.FBX
-  uploadId: 626737
