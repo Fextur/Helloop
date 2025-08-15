@@ -10,7 +10,8 @@ namespace Helloop.UI
     public class UniversalScreen : MonoBehaviour
     {
         [Header("UI References")]
-        public Button primaryButton;
+        public Button startButton;
+        public Button startTutorialButton;
         public Button exitButton;
         public TextMeshProUGUI titleText;
         public TextMeshProUGUI subtitleText;
@@ -33,6 +34,7 @@ namespace Helloop.UI
 
         [Header("Scene Settings")]
         public string limboSceneName = "Limbo";
+        public string circleSceneName = "Circle";
 
         private AudioSource audioSource;
         private bool isTransitioning = false;
@@ -62,8 +64,10 @@ namespace Helloop.UI
 
         void SetupButtons()
         {
-            if (primaryButton != null)
-                primaryButton.onClick.AddListener(HandlePrimaryAction);
+            if (startButton != null)
+                startButton.onClick.AddListener(HandleStartAction);
+            if (startTutorialButton != null)
+                startButton.onClick.AddListener(HandleStartTutorialAction);
             if (exitButton != null)
                 exitButton.onClick.AddListener(ExitGame);
         }
@@ -93,11 +97,18 @@ namespace Helloop.UI
             }
         }
 
-        void HandlePrimaryAction()
+        void HandleStartTutorialAction()
         {
             PlayButtonSound();
             StartCoroutine(TransitionWithFade(() =>
                 GameRestartManager.PerformFullRestartAndLoadScene(limboSceneName)));
+        }
+
+        void HandleStartAction()
+        {
+            PlayButtonSound();
+            StartCoroutine(TransitionWithFade(() =>
+                GameRestartManager.PerformFullRestartAndLoadScene(circleSceneName)));
         }
 
         void ExitGame()
@@ -130,7 +141,7 @@ namespace Helloop.UI
 
         void SetButtonsInteractable(bool interactable)
         {
-            if (primaryButton != null) primaryButton.interactable = interactable;
+            if (startButton != null) startButton.interactable = interactable;
             if (exitButton != null) exitButton.interactable = interactable;
         }
 

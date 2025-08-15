@@ -781,7 +781,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e4afbd3cf3d14d25aa080feaf4bf9af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryButton: {fileID: 54771194}
+  startButton: {fileID: 54771194}
+  startTutorialButton: {fileID: 0}
   exitButton: {fileID: 771117886}
   titleText: {fileID: 240307155}
   subtitleText: {fileID: 593735878}
@@ -804,6 +805,7 @@ MonoBehaviour:
   fadeInDuration: 3
   fadeOutDuration: 1.5
   limboSceneName: Limbo
+  circleSceneName: Circle
 --- !u!1 &884582269
 GameObject:
   m_ObjectHideFlags: 0
