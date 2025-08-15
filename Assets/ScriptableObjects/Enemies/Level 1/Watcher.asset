@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: Humonculi
+  m_Name: Watcher
   m_EditorClassIdentifier: 
-  enemyName: Humonculi
-  enemyPrefab: {fileID: 5175299000169249918, guid: 2d41f58d564ec498383a608ba8d8baf1, type: 3}
-  maxHealth: 15
+  enemyName: Evil Watcher
+  enemyPrefab: {fileID: 4996598729569998311, guid: b504241c0a0124ef1ac45385cc3182bc, type: 3}
+  maxHealth: 50
   damage: 10
-  attackRange: 2.5
-  attackDetectionRange: 2
+  attackRange: 3
+  attackDetectionRange: 2.5
   enemyType: 0
   sightRange: 8
   pursueDistance: 15
-  moveSpeed: 0.5
+  moveSpeed: 1.5
   attackCooldown: 1
   attackDamageDelay: 0.6
   attackAnimationDuration: 1

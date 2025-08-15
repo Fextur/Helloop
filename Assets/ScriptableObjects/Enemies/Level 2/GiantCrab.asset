@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: Gatekeeper
+  m_Name: GiantCrab
   m_EditorClassIdentifier: 
-  enemyName: The One Eyed Gatekeeper
-  enemyPrefab: {fileID: 8159833792369501761, guid: 8e7fee09f2c334c56b08977c66c4fdb4, type: 3}
-  maxHealth: 500
-  damage: 20
-  attackRange: 5
-  attackDetectionRange: 4.5
+  enemyName: King Crab The Lustful
+  enemyPrefab: {fileID: 7495986282750475877, guid: 3ac9e36fff95c44fa8892cad8f438497, type: 3}
+  maxHealth: 1000
+  damage: 30
+  attackRange: 4
+  attackDetectionRange: 3.5
   enemyType: 1
-  sightRange: 500
-  pursueDistance: 500
-  moveSpeed: 2
+  sightRange: 20
+  pursueDistance: 50
+  moveSpeed: 2.25
   attackCooldown: 3
-  attackDamageDelay: 1.2
-  attackAnimationDuration: 3
+  attackDamageDelay: 0.75
+  attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 50824761f0a0548f79a05ba8fd7322f2, type: 3}

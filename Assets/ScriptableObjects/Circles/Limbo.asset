@@ -15,17 +15,13 @@ MonoBehaviour:
   circleLevel: 1
   circleName: Limbo
   nextCircle: {fileID: 11400000, guid: ddea087fb72f0474cba2a6a12a90bf40, type: 2}
-  entryRoom: {fileID: 0}
-  bossRoom:
-    roomPrefab: {fileID: 0}
+  entryRoom: {fileID: 7944020806768574695, guid: e30d8a81e33c240d9947f7ad18602c62, type: 3}
+  bossRoomCollection:
+  - roomPrefab: {fileID: 7944020806768574695, guid: 68dff4b29442b4bffb4351ca0610404c, type: 3}
     roomType: 0
+  miniBossRoomCollection: []
   roomCollection:
-  - roomPrefab: {fileID: 5418725456268238691, guid: 3dee4c110ee7c40479089c91bfa6e17d, type: 3}
-    roomType: 3
-  - roomPrefab: {fileID: 7944020806768574695, guid: b0b34d2451cfd4e7ca04ff2eb8182eec, type: 3}
+  - roomPrefab: {fileID: 7944020806768574695, guid: 7a709c11dbeb4464c9bde19ae55aee49, type: 3}
     roomType: 0
-  - roomPrefab: {fileID: 4995004958087492251, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
-    roomType: 2
-  - roomPrefab: {fileID: 3057455555076390991, guid: 1a4b6e8e8772b402ebe1ce5bd002e4d2, type: 3}
-    roomType: 1
-  complexity: 1
+  - roomPrefab: {fileID: 7944020806768574695, guid: 6bc6b0d25df8949f58d0b85ab67569ea, type: 3}
+    roomType: 0
