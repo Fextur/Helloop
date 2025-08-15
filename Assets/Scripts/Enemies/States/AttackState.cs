@@ -12,6 +12,9 @@ namespace Helloop.Enemies.States
         private float lastAttackTime;
         private Coroutine attackCoroutine;
 
+        private Vector3 committedForwardXZ;
+
+
         public void OnEnter(Enemy enemy)
         {
             if (enemy.Agent != null && enemy.Agent.isActiveAndEnabled)
@@ -36,10 +39,33 @@ namespace Helloop.Enemies.States
             UpdateAnimation(enemy);
             enemy.SetAttackingStatus(isAttacking);
 
-            if (!isAttacking && CanAttackAgain(enemy))
+            if (!isAttacking && CanAttackAgain(enemy)
+        && enemy.IsInAttackRange()
+        && enemy.CanSeePlayer()
+        && IsWithinCurrentFacingCone(enemy, enemy.EnemyData.attackConeDegrees))
             {
                 StartAttack(enemy);
             }
+        }
+
+        private bool IsWithinCurrentFacingCone(Enemy enemy, float coneDegrees)
+        {
+            if (enemy.Player == null) return false;
+
+            Vector3 toPlayer = enemy.Player.position - enemy.transform.position;
+            toPlayer.y = 0f;
+            float sqrMag = toPlayer.sqrMagnitude;
+
+            if (sqrMag < 0.0001f) return true;              // overlap counts as inside
+            if (coneDegrees >= 359.9f) return true;         // omnidirectional
+
+            Vector3 forward = enemy.transform.forward;      // current facing (not committed)
+            forward.y = 0f;
+            if (forward.sqrMagnitude < 0.0001f) return true;
+
+            float cosHalf = Mathf.Cos(0.5f * coneDegrees * Mathf.Deg2Rad);
+            float dot = Vector3.Dot(forward.normalized, toPlayer.normalized);
+            return dot >= cosHalf;
         }
 
         public void OnExit(Enemy enemy)
@@ -75,7 +101,9 @@ namespace Helloop.Enemies.States
             {
                 enemy.Animator.SetTrigger("Attack");
             }
-
+            Vector3 fwd = enemy.transform.forward;
+            fwd.y = 0f;
+            committedForwardXZ = fwd.sqrMagnitude > 0.0001f ? fwd.normalized : Vector3.forward;
             attackCoroutine = enemy.StartCoroutine(AttackSequence(enemy));
         }
 
@@ -110,16 +138,37 @@ namespace Helloop.Enemies.States
 
         private void DealDamage(Enemy enemy)
         {
+            if (enemy.IsDead) return;
+
             bool canStillSeePlayer = enemy.CanSeePlayer();
             bool isInDamageRange = enemy.IsInDamageRange();
 
-            if (isInDamageRange && canStillSeePlayer && !enemy.IsDead)
+            if (isInDamageRange && canStillSeePlayer && IsInsideCommittedCone(enemy))
             {
                 if (enemy.PlayerSystem != null)
                 {
                     enemy.PlayerSystem.TakeDamage(enemy.ScaledDamage);
                 }
             }
+        }
+
+        private bool IsInsideCommittedCone(Enemy enemy)
+        {
+            if (enemy.Player == null) return false;
+
+            Vector3 toPlayer = enemy.Player.position - enemy.transform.position;
+            toPlayer.y = 0f;
+            float sqrMag = toPlayer.sqrMagnitude;
+
+            if (sqrMag < 0.0001f) return true;              // overlap counts as inside
+
+            float cone = Mathf.Clamp(enemy.EnemyData.attackConeDegrees, 0f, 360f);
+            if (cone >= 359.9f) return true;                // omnidirectional
+
+            Vector3 dir = toPlayer.normalized;
+            float cosHalf = Mathf.Cos(0.5f * cone * Mathf.Deg2Rad);
+            float dot = Vector3.Dot(committedForwardXZ, dir);
+            return dot >= cosHalf;
         }
 
         private void FacePlayer(Enemy enemy)

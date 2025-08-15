@@ -22,6 +22,8 @@ namespace Helloop.Data
         public float attackRange = 2.5f;
         [Tooltip("Range at which enemy will start attacking (should be larger than attackRange)")]
         public float attackDetectionRange = 2f;
+        [Range(0f, 360f)]
+        public float attackConeDegrees = 110f;
 
         [Header("Behavior")]
         public EnemyType enemyType = EnemyType.Aggressive;

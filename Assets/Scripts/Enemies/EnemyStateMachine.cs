@@ -36,17 +36,20 @@ namespace Helloop.Enemies
             ));
 
             transitionValidator.AddTransition(new StateTransition<Enemy>(
-                typeof(EnemyChaseState), typeof(EnemyAttackState),
-                enemy => enemy.IsInAttackRange(),
-                "Chase to Attack"
-            ));
-
+     typeof(EnemyChaseState), typeof(EnemyAttackState),
+     enemy => enemy.IsInAttackRange()
+         && enemy.CanSeePlayer()
+         && IsWithinFacingCone(enemy, enemy.EnemyData.attackConeDegrees),
+     "Chase to Attack"
+ ));
             transitionValidator.AddTransition(new StateTransition<Enemy>(
        typeof(EnemyAttackState), typeof(EnemyChaseState),
-       enemy => !enemy.IsCurrentlyAttacking &&
-                 enemy.Player != null &&
-                 Vector3.Distance(enemy.transform.position, enemy.Player.position) > enemy.AttackDetectionRange + 0.5f &&
-                 enemy.CanSeePlayer(),
+enemy => !enemy.IsCurrentlyAttacking && (
+             enemy.Player == null
+          || !enemy.CanSeePlayer()
+          || !IsWithinFacingCone(enemy, enemy.EnemyData.attackConeDegrees)
+          || Vector3.Distance(enemy.transform.position, enemy.Player.position) > enemy.AttackDetectionRange + 0.5f
+       ),
        "Attack to Chase"
    ));
             transitionValidator.AddTransition(new StateTransition<Enemy>(
@@ -72,6 +75,32 @@ namespace Helloop.Enemies
                 enemy => enemy.CanSeePlayer() && !enemy.ShouldReturn(),
                 "Return to Chase"
             ));
+
+            transitionValidator.AddTransition(new StateTransition<Enemy>(
+    typeof(EnemyIdleState), typeof(EnemyChaseState),
+    enemy => enemy.CanSeePlayer(),
+    "Idle to Chase (LOS)"
+));
+        }
+
+        private bool IsWithinFacingCone(Enemy enemy, float coneDegrees)
+        {
+            if (enemy.Player == null) return false;
+
+            Vector3 toPlayer = enemy.Player.position - enemy.transform.position;
+            toPlayer.y = 0f;
+            if (toPlayer.sqrMagnitude < 0.0001f) return true;   // overlap counts as inside
+
+            float cone = Mathf.Clamp(coneDegrees, 0f, 360f);
+            if (cone >= 359.9f) return true;                    // omnidirectional
+
+            Vector3 forward = enemy.transform.forward;
+            forward.y = 0f;
+            if (forward.sqrMagnitude < 0.0001f) return true;
+
+            float cosHalf = Mathf.Cos(0.5f * cone * Mathf.Deg2Rad);
+            float dot = Vector3.Dot(forward.normalized, toPlayer.normalized);
+            return dot >= cosHalf;
         }
 
         public void Initialize()

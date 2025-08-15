@@ -66,6 +66,9 @@ namespace Helloop.Enemies
 
         private bool wasDetectingPlayer = false;
 
+        [SerializeField] private float angularTurnSpeed = 200f;
+
+
         void Start()
         {
             InitializeComponents();
@@ -77,6 +80,20 @@ namespace Helloop.Enemies
         void Update()
         {
             stateMachine?.Update();
+
+            if (Agent != null && Agent.isActiveAndEnabled)
+            {
+                if (IsCurrentlyAttacking || IsDead)
+                {
+                    if (!Agent.isStopped) Agent.isStopped = true;
+                    Agent.updateRotation = false;
+                }
+                else
+                {
+                    if (Agent.isStopped) Agent.isStopped = false;
+                    Agent.updateRotation = true;
+                }
+            }
         }
 
         private void InitializeComponents()
@@ -131,6 +148,7 @@ namespace Helloop.Enemies
             if (Agent != null)
             {
                 Agent.speed = ScaledMoveSpeed;
+                Agent.angularSpeed = angularTurnSpeed;
             }
         }
 
