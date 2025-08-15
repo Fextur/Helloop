@@ -67,7 +67,7 @@ namespace Helloop.UI
             if (startButton != null)
                 startButton.onClick.AddListener(HandleStartAction);
             if (startTutorialButton != null)
-                startButton.onClick.AddListener(HandleStartTutorialAction);
+                startTutorialButton.onClick.AddListener(HandleStartTutorialAction);
             if (exitButton != null)
                 exitButton.onClick.AddListener(ExitGame);
         }

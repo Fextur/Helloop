@@ -14,6 +14,7 @@ namespace Helloop.UI
 
         [Header("System Reference")]
         public GameStateSystem gameStateSystem;
+        public ProgressionSystem progressionSystem;
 
         [Header("UI References")]
         public GameObject pausePanel;
@@ -214,7 +215,9 @@ namespace Helloop.UI
                 gameStateSystem.ResetToDefaults();
             }
 
-            GameRestartManager.PerformFullRestartAndLoadScene(gameStateSystem?.limboSceneName ?? "Limbo");
+            string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+            GameRestartManager.PerformFullRestartAndLoadScene(currentSceneName == progressionSystem.circleSceneName ? progressionSystem.circleSceneName : gameStateSystem.limboSceneName);
         }
 
         public void GoToMainMenu()
