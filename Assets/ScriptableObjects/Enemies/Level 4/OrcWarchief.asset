@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
+  m_Name: OrcWarchief
+  m_EditorClassIdentifier: 
+  enemyName: Orc Warchief
+  enemyPrefab: {fileID: 3215223407726181419, guid: abf3da050297442e094efe70d0c5a151, type: 3}
+  maxHealth: 250
+  damage: 15
+  attackRange: 4
+  attackDetectionRange: 3.5
+  attackConeDegrees: 150
+  enemyType: 0
+  sightRange: 10
+  pursueDistance: 15
+  moveSpeed: 2
+  attackCooldown: 1.5
+  attackDamageDelay: 0.5
+  attackAnimationDuration: 1.5
+  idleSound: {fileID: 0}
+  hittingSound: {fileID: 0}
+  gettingHitSound: {fileID: 8300000, guid: 181482d0f07c04190a134fcf52be6cf1, type: 3}
+  deathSound: {fileID: 8300000, guid: ff50048f4130344d48f8a2769b15ee6f, type: 3}

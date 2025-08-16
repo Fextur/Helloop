@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ce00b083d9f44cd6a2b54e53ed0d8bb, type: 3}
   m_Name: RoomTester
   m_EditorClassIdentifier: 
-  circleLevel: 3
+  circleLevel: 4
   circleName: Tester
   nextCircle: {fileID: 0}
   entryRoom: {fileID: 7944020806768574695, guid: e05ca4a542f1548a0a598df296ac353d, type: 3}
   bossRoomCollection: []
   miniBossRoomCollection: []
   roomCollection:
-  - roomPrefab: {fileID: 7944020806768574695, guid: 3eee314df168d47929b065235f8b915b, type: 3}
+  - roomPrefab: {fileID: 4995004958087492251, guid: 2641afea92b2b4380a353f5fb0f2c9aa, type: 3}
+    roomType: 2
+  - roomPrefab: {fileID: 7944020806768574695, guid: e05ca4a542f1548a0a598df296ac353d, type: 3}
     roomType: 0

@@ -18,12 +18,13 @@ MonoBehaviour:
   damage: 3
   attackRange: 2
   attackDetectionRange: 2
+  attackConeDegrees: 60
   enemyType: 1
   sightRange: 10
   pursueDistance: 15
   moveSpeed: 1
   attackCooldown: 1
-  attackDamageDelay: 0.5
+  attackDamageDelay: 0.6
   attackAnimationDuration: 1
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
