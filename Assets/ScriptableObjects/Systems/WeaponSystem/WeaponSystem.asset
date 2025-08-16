@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: WeaponSystem
   m_EditorClassIdentifier: 
   currentLeftWeapon: {fileID: 11400000, guid: c8a8464cb17424f1593b615febaf337c, type: 2}
-  currentRightWeapon: {fileID: 11400000, guid: bb37bb68242904fc08364d2085bcbb9a, type: 2}
+  currentRightWeapon: {fileID: 11400000, guid: ce939afd4da224bcea54a83172447806, type: 2}
   leftWeaponLevel: 5
-  rightWeaponLevel: 3
+  rightWeaponLevel: 4
   currentAmmo: 210
   currentClipAmmo: 30
-  currentDurability: 100
-  maxDurability: 100
+  currentDurability: 125
+  maxDurability: 125
   OnWeaponEquipped: {fileID: 11400000, guid: c74a50d6e6283449199be7fc9a3cf1fd, type: 2}
   OnAmmoChanged: {fileID: 11400000, guid: 5eb3ef7c111af4e14bbe704dccf50b70, type: 2}
   OnDurabilityChanged: {fileID: 11400000, guid: ccdc62bcb2db142ba9533d12e6d4d6dc, type: 2}
