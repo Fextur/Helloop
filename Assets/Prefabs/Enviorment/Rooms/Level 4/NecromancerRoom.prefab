@@ -119,7 +119,7 @@ GameObject:
   - component: {fileID: 6752427855285674250}
   - component: {fileID: 3677242712774642980}
   m_Layer: 0
-  m_Name: Wyvern3Room
+  m_Name: NecromancerRoom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -159,19 +159,52 @@ MonoBehaviour:
   roomSystem: {fileID: 11400000, guid: 18a00f6018c0b41cf94539d2c00bc4ae, type: 2}
   enemySpawns:
   - spawnPoint: {fileID: 1791846812852611447}
-    enemyData: {fileID: 11400000, guid: b4f2d029b58c5468db12f313c7c7549d, type: 2}
+    enemyData: {fileID: 11400000, guid: f6806aeb0b35a4bb48b6101be894327a, type: 2}
     patrolPoints: []
   - spawnPoint: {fileID: 1893389119511213261}
-    enemyData: {fileID: 11400000, guid: f76fcc8b665be4c65a667cdb36b70277, type: 2}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
     patrolPoints: []
   - spawnPoint: {fileID: 1142665179430376779}
-    enemyData: {fileID: 11400000, guid: f76fcc8b665be4c65a667cdb36b70277, type: 2}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
     patrolPoints: []
   - spawnPoint: {fileID: 744326110981737688}
-    enemyData: {fileID: 11400000, guid: f76fcc8b665be4c65a667cdb36b70277, type: 2}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
     patrolPoints: []
   - spawnPoint: {fileID: 2290436746056609118}
-    enemyData: {fileID: 11400000, guid: f76fcc8b665be4c65a667cdb36b70277, type: 2}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 1095008651651804641}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 2242945900936435188}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 2242945900936435188}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 1095008651651804641}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 5208423816254746176}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 3535626584324648115}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 5998077645422087193}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 5998077645422087193}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 2242945900936435188}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 1537861119494178180}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
+    patrolPoints: []
+  - spawnPoint: {fileID: 4841290633203889164}
+    enemyData: {fileID: 11400000, guid: 9d10e72b23aea4e9ca237f5808132167, type: 2}
     patrolPoints: []
   connectedDoors: []
   bossRewardSpawnPoints:
@@ -368,6 +401,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4747483572782364817, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
   m_PrefabInstance: {fileID: 5455569441207923785}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1537861119494178180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6836894187216531917, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 5455569441207923785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2242945900936435188 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6095227275225113021, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 5455569441207923785}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2290436746056609118 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6088681521568815383, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
@@ -376,6 +419,11 @@ Transform:
 --- !u!4 &3529638366829650103 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8884996116569134334, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 5455569441207923785}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4841290633203889164 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 619715188629143621, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
   m_PrefabInstance: {fileID: 5455569441207923785}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6603640966203034716
@@ -527,6 +575,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+--- !u!4 &1095008651651804641 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6095227275225113021, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 6603640966203034716}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1142665179430376779 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6088681521568815383, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
@@ -540,5 +593,20 @@ Transform:
 --- !u!4 &2371427349614549154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8884996116569134334, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 6603640966203034716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3535626584324648115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7689273893179547887, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 6603640966203034716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5208423816254746176 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1435752888112751132, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
+  m_PrefabInstance: {fileID: 6603640966203034716}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5998077645422087193 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 619715188629143621, guid: 73235ed51dd124e6bb5c29bd7df1d3b5, type: 3}
   m_PrefabInstance: {fileID: 6603640966203034716}
   m_PrefabAsset: {fileID: 0}
