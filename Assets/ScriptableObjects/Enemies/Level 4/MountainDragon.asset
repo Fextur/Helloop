@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: Hobgoblin
+  m_Name: MountainDragon
   m_EditorClassIdentifier: 
-  enemyName: Kaftzuz The Hobgoblin
-  enemyPrefab: {fileID: 8371063391618466106, guid: b2848726568d54ea7b6c0079acaf84f4, type: 3}
-  maxHealth: 1000
+  enemyName: Mountain Dragon
+  enemyPrefab: {fileID: 3609675603529095603, guid: ebfac8f224e5e4a18b08237325020c5b, type: 3}
+  maxHealth: 1250
   damage: 35
-  attackRange: 5.5
-  attackDetectionRange: 5
-  attackConeDegrees: 121
+  attackRange: 4.5
+  attackDetectionRange: 4
+  attackConeDegrees: 100
   enemyType: 0
   sightRange: 50
   pursueDistance: 50

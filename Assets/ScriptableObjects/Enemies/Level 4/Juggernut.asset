@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
-  m_Name: Hobgoblin
+  m_Name: Juggernut
   m_EditorClassIdentifier: 
-  enemyName: Kaftzuz The Hobgoblin
-  enemyPrefab: {fileID: 8371063391618466106, guid: b2848726568d54ea7b6c0079acaf84f4, type: 3}
-  maxHealth: 1000
-  damage: 35
-  attackRange: 5.5
-  attackDetectionRange: 5
-  attackConeDegrees: 121
+  enemyName: Vault Guardian
+  enemyPrefab: {fileID: 3869103605487135003, guid: 44c16c611569c4004b57befe4047c0c9, type: 3}
+  maxHealth: 450
+  damage: 15
+  attackRange: 2
+  attackDetectionRange: 1.5
+  attackConeDegrees: 90
   enemyType: 0
   sightRange: 50
   pursueDistance: 50
-  moveSpeed: 4
-  attackCooldown: 1
-  attackDamageDelay: 0.5
-  attackAnimationDuration: 1
+  moveSpeed: 2.5
+  attackCooldown: 1.5
+  attackDamageDelay: 1.2
+  attackAnimationDuration: 1.5
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 181482d0f07c04190a134fcf52be6cf1, type: 3}

@@ -16,8 +16,16 @@ MonoBehaviour:
   circleName: Greed
   nextCircle: {fileID: 0}
   entryRoom: {fileID: 7944020806768574695, guid: e05ca4a542f1548a0a598df296ac353d, type: 3}
-  bossRoomCollection: []
-  miniBossRoomCollection: []
+  bossRoomCollection:
+  - roomPrefab: {fileID: 5418725456268238691, guid: 63f45b13cc8334bad97600efbd099d37, type: 3}
+    roomType: 3
+  - roomPrefab: {fileID: 5418725456268238691, guid: 63f45b13cc8334bad97600efbd099d37, type: 3}
+    roomType: 3
+  miniBossRoomCollection:
+  - roomPrefab: {fileID: 4995004958087492251, guid: b35adf310b7b74febae1920aa2eb5c6b, type: 3}
+    roomType: 2
+  - roomPrefab: {fileID: 4995004958087492251, guid: 956df8d73495b4f0ab5b917de69f542d, type: 3}
+    roomType: 2
   roomCollection:
   - roomPrefab: {fileID: 7944020806768574695, guid: d8675d78a50cd4debbbca30c7ce699e1, type: 3}
     roomType: 0

@@ -16,10 +16,12 @@ MonoBehaviour:
   circleName: Tester
   nextCircle: {fileID: 0}
   entryRoom: {fileID: 7944020806768574695, guid: e05ca4a542f1548a0a598df296ac353d, type: 3}
-  bossRoomCollection: []
+  bossRoomCollection:
+  - roomPrefab: {fileID: 5418725456268238691, guid: 466de5448ac3e43ffacd25ddaf0ba558, type: 3}
+    roomType: 3
   miniBossRoomCollection: []
   roomCollection:
-  - roomPrefab: {fileID: 4995004958087492251, guid: 2641afea92b2b4380a353f5fb0f2c9aa, type: 3}
-    roomType: 2
+  - roomPrefab: {fileID: 5418725456268238691, guid: 466de5448ac3e43ffacd25ddaf0ba558, type: 3}
+    roomType: 3
   - roomPrefab: {fileID: 7944020806768574695, guid: e05ca4a542f1548a0a598df296ac353d, type: 3}
     roomType: 0
