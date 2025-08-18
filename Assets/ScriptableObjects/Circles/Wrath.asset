@@ -14,8 +14,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleLevel: 5
   circleName: Wrath
-  nextCircle: {fileID: 0}
+  nextCircle: {fileID: 11400000, guid: abd7f973769ba482ea51e39adaec5f5e, type: 2}
   entryRoom: {fileID: 7944020806768574695, guid: 8fa80c79535504c4eb82e36938a9f654, type: 3}
-  bossRoomCollection: []
-  miniBossRoomCollection: []
-  roomCollection: []
+  bossRoomCollection:
+  - roomPrefab: {fileID: 5418725456268238691, guid: 2143a27b913684ec89f1d2bc6e6a901a, type: 3}
+    roomType: 3
+  - roomPrefab: {fileID: 5418725456268238691, guid: ecfeb153327914247a2f0a5321425fbc, type: 3}
+    roomType: 3
+  - roomPrefab: {fileID: 5418725456268238691, guid: 643250dda0985485dbafa0b1ddd223e3, type: 3}
+    roomType: 3
+  - roomPrefab: {fileID: 5418725456268238691, guid: bbdb1065602564a3d8b73f570051c6b0, type: 3}
+    roomType: 3
+  miniBossRoomCollection:
+  - roomPrefab: {fileID: 5229333002451773178, guid: 7d79dab15c2fe4a46b37f1f443f4a6ab, type: 3}
+    roomType: 1
+  - roomPrefab: {fileID: 4995004958087492251, guid: d0a141226ad67489fa17b6f6a4b3c17a, type: 3}
+    roomType: 2
+  roomCollection:
+  - roomPrefab: {fileID: 5229333002451773178, guid: 5d6a0658201bf48b4a02246d1e38c048, type: 3}
+    roomType: 1
+  - roomPrefab: {fileID: 5229333002451773178, guid: 5e394c5772fd84ceb80a17f76569c148, type: 3}
+    roomType: 1
+  - roomPrefab: {fileID: 4995004958087492251, guid: 04df2d3c4d41040a5814688ba98e489b, type: 3}
+    roomType: 2
+  - roomPrefab: {fileID: 4995004958087492251, guid: 48ce8b6c6a28f4710aa48b384dbc8588, type: 3}
+    roomType: 2
+  - roomPrefab: {fileID: 7944020806768574695, guid: 76e0e8d5bb4144679b2a23a264c6e751, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 7944020806768574695, guid: 68df78162c41349e59f32e9c6797a7f3, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 7944020806768574695, guid: 2ceae2a2bc1624705ba0239a843881b7, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 7944020806768574695, guid: 56d3dad2372fe4e5180c39ce03140ce2, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 7944020806768574695, guid: 6e48c80d5f68a45e6a615f8a5034370c, type: 3}
+    roomType: 0
