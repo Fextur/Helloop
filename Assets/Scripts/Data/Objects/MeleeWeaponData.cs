@@ -6,7 +6,6 @@ public enum MeleeAnimationType
     Slash,
     Overhead,
     Thrust,
-    Punch,
     Swing
 }
 
@@ -14,15 +13,33 @@ public enum MeleeAnimationType
 public class MeleeWeaponData : WeaponData
 {
     [Header("Melee Stats")]
-    public int durability;
-    public float range;
-    public float swingTime;
+    [Tooltip("Base durability before scaling")]
+    public int durability = 100;
+
+    [Tooltip("Base melee range in meters for hit detection")]
+    public float range = 2.0f;
+
+    [Tooltip("Light attack total time (windup+recovery) in seconds")]
+    public float swingTime = 0.36f;
+
+    [Tooltip("Heavy attack total time (windup+recovery) in seconds")]
+    public float swipeTime = 0.58f;
+
+    [Header("Angles (degrees)")]
+    [Tooltip("Light attack arc width")]
+    public float swingAngleDegrees = 75f;
+
+    [Tooltip("Heavy attack arc width")]
+    public float swipeAngleDegrees = 150f;
+
+    [Tooltip("Dash attack arc width (narrow)")]
+    public float dashAngleDegrees = 25f;
 
     [Header("Animation")]
     public MeleeAnimationType animationType = MeleeAnimationType.Slash;
 
     [Header("Slash Settings (Only for Slash type)")]
-    [Tooltip("Use wider arc for katanas/longswords, narrower for knives")]
+    [Tooltip("Use wider arc visuals for katanas/longswords, narrower for knives")]
     public bool useWideSlash = false;
 
     [Header("Hit Detection")]
@@ -32,5 +49,4 @@ public class MeleeWeaponData : WeaponData
     [Header("Audio")]
     public AudioClip swingSound;
     public AudioClip breakSound;
-
 }

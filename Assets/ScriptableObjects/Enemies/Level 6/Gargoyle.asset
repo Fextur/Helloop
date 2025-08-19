@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gargoyle
   m_EditorClassIdentifier: 
   enemyName: Stone Gargoyle
-  enemyPrefab: {fileID: 3737551247605368591, guid: 4a6c6feeb10384248a6db4539734d032, type: 3}
+  enemyPrefab: {fileID: 6429834179745716656, guid: 7e381a92b30fb4a03ae1e23313516710, type: 3}
   maxHealth: 700
   damage: 20
   attackRange: 4
@@ -23,9 +23,9 @@ MonoBehaviour:
   sightRange: 70
   pursueDistance: 70
   moveSpeed: 7.5
-  attackCooldown: 1.25
-  attackDamageDelay: 0.7
-  attackAnimationDuration: 1.25
+  attackCooldown: 0.8
+  attackDamageDelay: 0.5
+  attackAnimationDuration: 0.8
   idleSound: {fileID: 0}
   hittingSound: {fileID: 0}
   gettingHitSound: {fileID: 8300000, guid: 50824761f0a0548f79a05ba8fd7322f2, type: 3}

@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Fist
   m_EditorClassIdentifier: 
   weaponName: Fist
-  weaponType: 0
   weaponPrefab: {fileID: 4388135792413128302, guid: 7a9f5140d5f8546a8add68aeeb6e5f2e, type: 3}
   damage: 5
   durability: 200
   range: 1.75
   swingTime: 0.4
-  animationType: 3
+  swipeTime: 0.58
+  swingAngleDegrees: 75
+  swipeAngleDegrees: 150
+  dashAngleDegrees: 25
+  animationType: 2
   useWideSlash: 0
   ignoreLayers:
     serializedVersion: 2

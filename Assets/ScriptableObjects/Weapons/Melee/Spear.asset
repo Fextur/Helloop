@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: Spear
   m_EditorClassIdentifier: 
   weaponName: Spear
-  weaponType: 0
   weaponPrefab: {fileID: 6759676129131477953, guid: 1494f7c6725744c609664d8a8f63292d, type: 3}
   damage: 15
   durability: 60
   range: 7
   swingTime: 0.4
+  swipeTime: 0.58
+  swingAngleDegrees: 75
+  swipeAngleDegrees: 150
+  dashAngleDegrees: 25
   animationType: 2
   useWideSlash: 0
   ignoreLayers:

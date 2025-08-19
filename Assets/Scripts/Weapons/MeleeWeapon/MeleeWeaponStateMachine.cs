@@ -1,74 +1,210 @@
 using UnityEngine;
 using Helloop.StateMachines;
+using Helloop.Player;
 
 namespace Helloop.Weapons.States
 {
+    /// <summary>
+    /// Central melee controller: Skyrim-style routing (tap/hold) + dash overrides.
+    /// - External calls (e.g., WeaponManager -> rightWeapon.Use()) arm a press via HandleInput().
+    /// - Actual routing (Light/Heavy/Dash) occurs here during Update() while in MeleeReadyState.
+    ///
+    /// Behavior:
+    ///   Tap  (release < 0.45s)                -> Light
+    ///   Hold (>= 0.45s, auto-fire; no release)-> Heavy
+    ///   Dash overrides (highest priority):
+    ///      * Press while dashing                 -> Dash
+    ///      * Dash starts during hold (pre-heavy) -> Dash
+    ///      * Press within 0.25s after dash start -> Dash
+    ///
+    /// Notes:
+    /// - Only a fresh press arms a decision; re-entering Ready while holding does not resume an old press.
+    /// - Attack states ignore input; all reads happen here while Ready.
+    /// </summary>
     public class MeleeWeaponStateMachine
     {
-        private StateMachine<MeleeWeapon> stateMachine;
-        private MeleeWeapon owner;
+        private readonly StateMachine<MeleeWeapon> stateMachine;
+        private readonly MeleeWeapon owner;
 
+        // Cooldown tracking (uses owner's scaled timing)
         private float lastSwingTime = -1f;
+
+        // Tap/Hold routing
+        private bool pressArmed;
+        private float pressStartTime;
+        private const float HoldToHeavySeconds = 0.45f; // fixed threshold
+
+        // Dash tracking (movement state is source of truth)
+        private PlayerMovement playerMovement;
+        private bool wasDashing;
+        private bool dashStartedThisFrame;
+        private float lastDashStartTime = -999f;
+        private const float DashGraceSeconds = 0.25f; // press within grace after dash start -> dash
+
+        private enum MeleeAttackMode { Light, Heavy, Dash }
 
         public MeleeWeaponStateMachine(MeleeWeapon weapon)
         {
             owner = weapon;
             stateMachine = new StateMachine<MeleeWeapon>(weapon);
+            playerMovement = owner.GetComponentInParent<PlayerMovement>();
+
+            wasDashing = IsPlayerDashing();
+            if (wasDashing) lastDashStartTime = Time.time;
+
+            pressArmed = false;
         }
 
         public void Initialize()
         {
-            if (owner.CanAttack())
-                stateMachine.ChangeState(new MeleeReadyState());
-            else
-                stateMachine.ChangeState(new MeleeBrokenState());
+            ChangeState(new MeleeReadyState());
         }
 
         public void Update()
         {
-            CheckStateTransitions();
+            TrackDashEdge();
             stateMachine.Update();
+            RouteInputWhileReady();
+            EnforceOwnerTransitions();
+            dashStartedThisFrame = false; // reset dash edge each frame
         }
 
+        /// <summary>
+        /// Back-compat for existing input path (e.g., WeaponManager -> rightWeapon.Use() on press).
+        /// Treat as "press armed" instead of firing Light immediately.
+        /// Also applies dash override if within grace or already dashing.
+        /// </summary>
         public void HandleInput()
         {
-            if (Time.time - lastSwingTime < owner.ScaledSwingTime)
-                return;
+            if (!(stateMachine.CurrentState is MeleeReadyState)) return;
+            if (!CanSwingNow()) return;
 
-            if (stateMachine.CurrentState is IMeleeInputHandler inputHandler)
+            // Immediate dash override if currently dashing or inside grace
+            if (IsPlayerDashing() || (Time.time - lastDashStartTime) <= DashGraceSeconds)
             {
-                inputHandler.HandleInput(owner);
+                FireAttack(MeleeAttackMode.Dash);
+                return;
+            }
+
+            if (!pressArmed)
+            {
+                pressArmed = true;
+                pressStartTime = Time.time;
             }
         }
 
-        private void CheckStateTransitions()
+        // ------------------------ Internal helpers ------------------------
+
+        private void RouteInputWhileReady()
         {
-            if (owner.GetCurrentDurability() <= 0 && !IsInState<MeleeBrokenState>())
+            if (!(stateMachine.CurrentState is MeleeReadyState)) return;
+            if (!CanSwingNow()) return;
+
+            // Legacy Input reads (Project: Active Input Handling = Both)
+            bool keyDown = Input.GetMouseButtonDown(1) || Input.GetKeyDown(KeyCode.V);
+            bool keyHeld = Input.GetMouseButton(1) || Input.GetKey(KeyCode.V);
+            bool keyUp = Input.GetMouseButtonUp(1) || Input.GetKeyUp(KeyCode.V);
+
+            // Dash started while holding (and heavy hasn't fired yet) -> Dash
+            if (dashStartedThisFrame && pressArmed && !HasReachedHeavyThreshold())
             {
-                stateMachine.ChangeState(new MeleeBrokenState());
+                pressArmed = false;
+                FireAttack(MeleeAttackMode.Dash);
                 return;
             }
 
-            if (owner.GetCurrentDurability() > 0 && IsInState<MeleeBrokenState>())
+            // Fresh keyDown arms the press (no pre-fire Light)
+            if (!pressArmed && keyDown)
             {
-                stateMachine.ChangeState(new MeleeReadyState());
+                if (IsPlayerDashing() || (Time.time - lastDashStartTime) <= DashGraceSeconds)
+                {
+                    FireAttack(MeleeAttackMode.Dash);
+                    return;
+                }
+
+                pressArmed = true;
+                pressStartTime = Time.time;
                 return;
+            }
+
+            // Hold path -> Heavy auto-fire at threshold (no release needed)
+            if (pressArmed && keyHeld)
+            {
+                if (HasReachedHeavyThreshold())
+                {
+                    pressArmed = false;
+                    FireAttack(MeleeAttackMode.Heavy);
+                }
+                return;
+            }
+
+            // Release before threshold -> Light
+            if (pressArmed && keyUp)
+            {
+                pressArmed = false;
+                FireAttack(MeleeAttackMode.Light);
             }
         }
 
-        public void ChangeState(IState<MeleeWeapon> newState)
+        private void FireAttack(MeleeAttackMode mode)
         {
-            stateMachine.ChangeState(newState);
+            MarkSwingTime();
+
+            switch (mode)
+            {
+                case MeleeAttackMode.Dash:
+                    ChangeState(new MeleeDashAttackState());
+                    break;
+                case MeleeAttackMode.Heavy:
+                    ChangeState(new MeleeSwipeHeavyState());
+                    break;
+                default:
+                    ChangeState(new MeleeSwingLightState());
+                    break;
+            }
         }
+
+        private void TrackDashEdge()
+        {
+            dashStartedThisFrame = false;
+            bool dashingNow = IsPlayerDashing();
+            if (dashingNow && !wasDashing)
+            {
+                lastDashStartTime = Time.time;
+                dashStartedThisFrame = true;
+            }
+            wasDashing = dashingNow;
+        }
+
+        private bool IsPlayerDashing()
+        {
+            return playerMovement != null && playerMovement.IsInState<Player.States.PlayerDashingState>();
+        }
+
+        private bool HasReachedHeavyThreshold()
+        {
+            return (Time.time - pressStartTime) >= HoldToHeavySeconds;
+        }
+
+        // Public so attack states/external code can transition safely (unchanged signature elsewhere)
+        public void ChangeState(IState<MeleeWeapon> next)
+        {
+            stateMachine.ChangeState(next);
+        }
+
+        private void EnforceOwnerTransitions()
+        {
+            if (owner.GetCurrentDurability() <= 0 && !(stateMachine.CurrentState is MeleeBrokenState))
+            {
+                ChangeState(new MeleeBrokenState());
+            }
+        }
+
+        public StateMachine<MeleeWeapon> GetInternalStateMachine() => stateMachine;
 
         public bool IsInState<T>() where T : class, IState<MeleeWeapon>
         {
             return stateMachine.IsInState<T>();
-        }
-
-        public T GetCurrentState<T>() where T : class, IState<MeleeWeapon>
-        {
-            return stateMachine.GetCurrentState<T>();
         }
 
         public void MarkSwingTime()
@@ -78,12 +214,8 @@ namespace Helloop.Weapons.States
 
         public bool CanSwingNow()
         {
-            return Time.time - lastSwingTime >= owner.ScaledSwingTime;
+            float gate = owner.ScaledSwingTime > 0f ? owner.ScaledSwingTime : Mathf.Max(0.001f, owner.Data.swingTime);
+            return Time.time - lastSwingTime >= gate;
         }
-    }
-
-    public interface IMeleeInputHandler
-    {
-        void HandleInput(MeleeWeapon weapon);
     }
 }

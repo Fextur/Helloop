@@ -1,36 +1,15 @@
-using UnityEngine;
 using Helloop.StateMachines;
 
 namespace Helloop.Weapons.States
 {
-    public class MeleeReadyState : IState<MeleeWeapon>, IMeleeInputHandler
+    /// <summary>
+    /// Idle/ready for melee. Input routing lives in MeleeWeaponStateMachine.Update().
+    /// This state intentionally does not read input or decide attacks.
+    /// </summary>
+    public class MeleeReadyState : IState<MeleeWeapon>
     {
-        public void OnEnter(MeleeWeapon weapon)
-        {
-            weapon.transform.localPosition = weapon.originalPosition;
-            weapon.transform.localRotation = weapon.originalRotation;
-
-            weapon.SetWeaponVisibility(true);
-        }
-
-        public void Update(MeleeWeapon weapon)
-        {
-        }
-
-        public void OnExit(MeleeWeapon weapon)
-        {
-        }
-
-        public void HandleInput(MeleeWeapon weapon)
-        {
-            if (!weapon.CanAttack())
-                return;
-
-            if (!weapon.GetStateMachine().CanSwingNow())
-                return;
-
-            weapon.GetStateMachine().MarkSwingTime();
-            weapon.GetStateMachine().ChangeState(new MeleeSwingingState());
-        }
+        public void OnEnter(MeleeWeapon weapon) { }
+        public void Update(MeleeWeapon weapon) { }
+        public void OnExit(MeleeWeapon weapon) { }
     }
 }
