@@ -14,18 +14,15 @@ namespace Helloop.Weapons.States
         private float durationSeconds;
         private float elapsed;
         private float angleDegrees;
-        private bool hitWindowProcessed;
+        private HashSet<GameObject> hitTargetsThisDash;
+        private float lastHitCheckTime;
 
-        private const float WindowStart = 0.65f;
-        private const float WindowEnd = 0.80f;
-        private const int MaxHitColliders = 96;
-        private static readonly Collider[] s_Overlap = new Collider[MaxHitColliders];
+        private const float HitCheckInterval = 0.05f;
 
         public void OnEnter(MeleeWeapon weapon)
         {
             owner = weapon;
 
-            // Get dash duration from player movement + a bit extra
             var playerMovement = owner.GetComponentInParent<PlayerMovement>();
             float dashDuration = playerMovement != null ? playerMovement.dashDuration : 0.5f;
             durationSeconds = Mathf.Max(0.001f, dashDuration + 0.2f);
@@ -35,7 +32,8 @@ namespace Helloop.Weapons.States
             if (owner.audioSource != null && owner.Data.swingSound != null)
                 owner.audioSource.PlayOneShot(owner.Data.swingSound);
 
-            hitWindowProcessed = false;
+            hitTargetsThisDash = new HashSet<GameObject>();
+            lastHitCheckTime = 0f;
             elapsed = 0f;
         }
 
@@ -51,10 +49,10 @@ namespace Helloop.Weapons.States
                 default: ApplySlashDash(t01); break;
             }
 
-            if (!hitWindowProcessed && t01 >= WindowStart && t01 <= WindowEnd)
+            if (elapsed - lastHitCheckTime >= HitCheckInterval)
             {
-                hitWindowProcessed = true;
-                ResolveExtendedReachHit();
+                lastHitCheckTime = elapsed;
+                ProcessContinuousHits();
             }
 
             if (t01 >= 1f)
@@ -63,76 +61,125 @@ namespace Helloop.Weapons.States
             }
         }
 
-        public void OnExit(MeleeWeapon weapon) { }
-
-        private void ResolveExtendedReachHit()
+        public void OnExit(MeleeWeapon weapon)
         {
-            Transform camT = owner.PlayerCamera != null ?
-                owner.PlayerCamera.transform : owner.transform;
-            Vector3 origin = camT.position;
-            Vector3 forward = camT.forward;
-            float extendedRange = owner.Data.range * 1.4f;
+            hitTargetsThisDash?.Clear();
+        }
 
-            int found = Physics.OverlapSphereNonAlloc(origin, extendedRange, s_Overlap, ~owner.Data.ignoreLayers);
-            HashSet<GameObject> hitTargets = new HashSet<GameObject>();
+        private void ProcessContinuousHits()
+        {
+            if (owner.PlayerCamera == null) return;
 
-            for (int i = 0; i < found; i++)
+            Vector3 rayOrigin = owner.PlayerCamera.transform.position;
+            Vector3 rayDirection = owner.PlayerCamera.transform.forward;
+            float rayDistance = owner.Data.range;
+
+            LayerMask effectiveHitMask = ~owner.Data.ignoreLayers;
+
+            RaycastHit hit;
+            if (Physics.Raycast(rayOrigin, rayDirection, out hit, rayDistance, effectiveHitMask))
             {
-                Collider col = s_Overlap[i];
-                Vector3 dir = (col.bounds.center - origin).normalized;
-
-                if (!WithinAngle(forward, dir, angleDegrees)) continue;
-
-                GameObject rootObj = col.transform.root.gameObject;
-                if (hitTargets.Contains(rootObj)) continue;
-
-                float distance = Vector3.Distance(origin, col.bounds.center);
-                if (distance > extendedRange) continue;
-
-                if (TryResolveEnemy(col, out EnemyHealth enemyHealth))
+                Vector3 hitDir = (hit.point - rayOrigin).normalized;
+                if (WithinAngle(rayDirection, hitDir, angleDegrees) && IsValidTarget(hit.collider))
                 {
-                    hitTargets.Add(rootObj);
-                    enemyHealth.TakeDamage(owner.ScaledDamage);
-                    owner.WeaponSystem.UseDurability(1);
-                    if (owner.GetCurrentDurability() <= 0) owner.SetWeaponVisibility(false);
-                    continue;
-                }
-
-                if (TryResolveDestructible(col, out DestructibleObject destructible))
-                {
-                    hitTargets.Add(rootObj);
-                    Vector3 hitPoint = col.ClosestPoint(origin);
-                    destructible.TakeDamage(owner.ScaledDamage, hitPoint, dir);
-                    owner.WeaponSystem.UseDurability(1);
-                    if (owner.GetCurrentDurability() <= 0) owner.SetWeaponVisibility(false);
+                    GameObject rootObj = hit.collider.transform.root.gameObject;
+                    if (!hitTargetsThisDash.Contains(rootObj))
+                    {
+                        hitTargetsThisDash.Add(rootObj);
+                        ProcessHit(hit.collider, hit.point, rayDirection);
+                    }
                 }
             }
+
+            RaycastHit sphereHit;
+            if (Physics.SphereCast(rayOrigin, 0.4f, rayDirection, out sphereHit, rayDistance, effectiveHitMask))
+            {
+                Vector3 hitDir = (sphereHit.point - rayOrigin).normalized;
+                if (WithinAngle(rayDirection, hitDir, angleDegrees) && IsValidTarget(sphereHit.collider))
+                {
+                    GameObject rootObj = sphereHit.collider.transform.root.gameObject;
+                    if (!hitTargetsThisDash.Contains(rootObj))
+                    {
+                        hitTargetsThisDash.Add(rootObj);
+                        ProcessHit(sphereHit.collider, sphereHit.point, rayDirection);
+                    }
+                }
+            }
+
+            Collider[] nearbyColliders = Physics.OverlapSphere(rayOrigin + rayDirection * (rayDistance * 0.6f), rayDistance * 0.4f, effectiveHitMask);
+
+            foreach (Collider col in nearbyColliders)
+            {
+                if (IsValidTarget(col))
+                {
+                    Vector3 dir = (col.bounds.center - rayOrigin).normalized;
+                    if (WithinAngle(rayDirection, dir, angleDegrees))
+                    {
+                        GameObject rootObj = col.transform.root.gameObject;
+                        if (!hitTargetsThisDash.Contains(rootObj))
+                        {
+                            hitTargetsThisDash.Add(rootObj);
+                            Vector3 targetPoint = col.bounds.center;
+                            ProcessHit(col, targetPoint, rayDirection);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void ProcessHit(Collider hitCollider, Vector3 hitPoint, Vector3 hitDirection)
+        {
+            if (hitCollider.TryGetComponent<EnemyHealth>(out var enemyHealth))
+            {
+                enemyHealth.TakeDamage(owner.ScaledDamage);
+                owner.WeaponSystem.UseDurability(1);
+
+                if (owner.OnEnemyHit != null)
+                {
+                    owner.OnEnemyHit.Raise(enemyHealth);
+                }
+
+                if (owner.GetCurrentDurability() <= 0)
+                {
+                    owner.SetWeaponVisibility(false);
+                    if (owner.Data.breakSound != null && owner.audioSource != null)
+                        owner.audioSource.PlayOneShot(owner.Data.breakSound);
+                    return;
+                }
+            }
+            else if (hitCollider.TryGetComponent<DestructibleObject>(out var destructible))
+            {
+                destructible.TakeDamage(owner.ScaledDamage, hitPoint, hitDirection);
+                owner.WeaponSystem.UseDurability(1);
+
+                if (owner.GetCurrentDurability() <= 0)
+                {
+                    owner.SetWeaponVisibility(false);
+                    if (owner.Data.breakSound != null && owner.audioSource != null)
+                        owner.audioSource.PlayOneShot(owner.Data.breakSound);
+                    return;
+                }
+            }
+        }
+
+        private bool IsValidTarget(Collider collider)
+        {
+            return collider.GetComponent<EnemyHealth>() != null ||
+                   collider.GetComponent<DestructibleObject>() != null;
         }
 
         private static bool WithinAngle(Vector3 forward, Vector3 dir, float angleDegrees)
             => Vector3.Angle(forward, dir) <= angleDegrees * 0.5f;
 
-        private static bool TryResolveEnemy(Collider col, out EnemyHealth enemyHealth)
-        {
-            if (col.TryGetComponent<EnemyHealth>(out enemyHealth)) return true;
-            enemyHealth = col.GetComponentInParent<EnemyHealth>();
-            return enemyHealth != null;
-        }
 
-        private static bool TryResolveDestructible(Collider col, out DestructibleObject destructible)
-        {
-            if (col.TryGetComponent<DestructibleObject>(out destructible)) return true;
-            destructible = col.GetComponentInParent<DestructibleObject>();
-            return destructible != null;
-        }
 
         private void ApplyThrustDash(float t01)
         {
             var phases = new MeleeAnimPhasesSimple.AnimationPhase[]
             {
                 new(){ timePercent=0.00f, pos=new Vector3(0.000f,  0.000f,  0.000f), rotEuler=new Vector3( 0f,  0f,  0f) },
-                new(){ timePercent=0.1f, pos=new Vector3(0.120f, -0.018f,  0.015f), rotEuler=new Vector3( 25f,  7f,  0f) },
-                new(){ timePercent=0.85f, pos=new Vector3(0.163f, -0.025f,  0.024f), rotEuler=new Vector3( 35f, 10f,  0f) },
+                new(){ timePercent=0.1f, pos=new Vector3(0.120f, -0.015f,  0.012f), rotEuler=new Vector3( 20f,  5f,  0f) },
+                new(){ timePercent=0.85f, pos=new Vector3(0.150f, -0.020f,  0.020f), rotEuler=new Vector3( 30f,  8f,  0f) },
                 new(){ timePercent=1.00f, pos=new Vector3(0.000f,  0.000f,  0.000f), rotEuler=new Vector3(  0f,  0f,  0f) }
             };
             MeleeAnimPhasesSimple.ApplyNormalized(owner.transform, owner.originalPosition, owner.originalRotation, t01, phases);

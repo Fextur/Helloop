@@ -14,17 +14,18 @@ namespace Helloop.Weapons.States
         private float elapsed;
         private float angleDegrees;
         private bool hitWindowProcessed;
-
-        private const float WindowStart = 0.50f;
-        private const float WindowEnd = 0.70f;
-        private const int MaxHitColliders = 96;
-        private static readonly Collider[] s_Overlap = new Collider[MaxHitColliders];
+        private float windowStart;
+        private float windowEnd;
 
         public void OnEnter(MeleeWeapon weapon)
         {
             owner = weapon;
-            durationSeconds = Mathf.Max(0.001f, owner.Data.swingTime * 1.5f);
+            durationSeconds = Mathf.Max(0.001f, owner.Data.swipeTime);
             angleDegrees = owner.Data.swipeAngleDegrees;
+
+            float damagePoint = GetDamagePointForAnimation();
+            windowStart = Mathf.Max(0f, damagePoint - 0.05f);
+            windowEnd = Mathf.Min(1f, damagePoint + 0.3f);
 
             if (owner.audioSource != null && owner.Data.swingSound != null)
                 owner.audioSource.PlayOneShot(owner.Data.swingSound);
@@ -45,7 +46,7 @@ namespace Helloop.Weapons.States
                 default: ApplySlashHeavy(t01); break;
             }
 
-            if (!hitWindowProcessed && t01 >= WindowStart && t01 <= WindowEnd)
+            if (!hitWindowProcessed && t01 >= windowStart && t01 <= windowEnd)
             {
                 hitWindowProcessed = true;
                 ResolveMultiHit();
@@ -61,60 +62,128 @@ namespace Helloop.Weapons.States
 
         private void ResolveMultiHit()
         {
-            Transform camT = owner.PlayerCamera != null ?
-                owner.PlayerCamera.transform : owner.transform;
-            Vector3 origin = camT.position;
-            Vector3 forward = camT.forward;
+            if (owner.PlayerCamera == null) return;
 
-            int found = Physics.OverlapSphereNonAlloc(origin, owner.Data.range, s_Overlap, ~owner.Data.ignoreLayers);
+            Vector3 rayOrigin = owner.PlayerCamera.transform.position;
+            Vector3 rayDirection = owner.PlayerCamera.transform.forward;
+            float rayDistance = owner.Data.range;
+
+            LayerMask effectiveHitMask = ~owner.Data.ignoreLayers;
             HashSet<GameObject> hitTargets = new HashSet<GameObject>();
 
-            for (int i = 0; i < found; i++)
+            RaycastHit hit;
+            if (Physics.Raycast(rayOrigin, rayDirection, out hit, rayDistance, effectiveHitMask))
             {
-                Collider col = s_Overlap[i];
-                Vector3 dir = (col.bounds.center - origin).normalized;
-
-                if (!WithinAngle(forward, dir, angleDegrees)) continue;
-
-                GameObject rootObj = col.transform.root.gameObject;
-                if (hitTargets.Contains(rootObj)) continue;
-
-                if (TryResolveEnemy(col, out EnemyHealth enemyHealth))
+                Vector3 hitDir = (hit.point - rayOrigin).normalized;
+                if (WithinAngle(rayDirection, hitDir, angleDegrees) && IsValidTarget(hit.collider))
                 {
-                    hitTargets.Add(rootObj);
-                    enemyHealth.TakeDamage(owner.ScaledDamage);
-                    owner.WeaponSystem.UseDurability(1);
-                    if (owner.GetCurrentDurability() <= 0) owner.SetWeaponVisibility(false);
-                    continue;
+                    GameObject rootObj = hit.collider.transform.root.gameObject;
+                    if (!hitTargets.Contains(rootObj))
+                    {
+                        hitTargets.Add(rootObj);
+                        ProcessHit(hit.collider, hit.point, rayDirection);
+                    }
+                }
+            }
+
+            RaycastHit sphereHit;
+            if (Physics.SphereCast(rayOrigin, 0.5f, rayDirection, out sphereHit, rayDistance, effectiveHitMask))
+            {
+                Vector3 hitDir = (sphereHit.point - rayOrigin).normalized;
+                if (WithinAngle(rayDirection, hitDir, angleDegrees) && IsValidTarget(sphereHit.collider))
+                {
+                    GameObject rootObj = sphereHit.collider.transform.root.gameObject;
+                    if (!hitTargets.Contains(rootObj))
+                    {
+                        hitTargets.Add(rootObj);
+                        ProcessHit(sphereHit.collider, sphereHit.point, rayDirection);
+                    }
+                }
+            }
+
+            Collider[] nearbyColliders = Physics.OverlapSphere(rayOrigin + rayDirection * (rayDistance * 0.7f), rayDistance * 0.8f, effectiveHitMask);
+
+            foreach (Collider col in nearbyColliders)
+            {
+                if (IsValidTarget(col))
+                {
+                    Vector3 dir = (col.bounds.center - rayOrigin).normalized;
+                    if (WithinAngle(rayDirection, dir, angleDegrees))
+                    {
+                        GameObject rootObj = col.transform.root.gameObject;
+                        if (!hitTargets.Contains(rootObj))
+                        {
+                            hitTargets.Add(rootObj);
+                            Vector3 targetPoint = col.bounds.center;
+                            ProcessHit(col, targetPoint, rayDirection);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void ProcessHit(Collider hitCollider, Vector3 hitPoint, Vector3 hitDirection)
+        {
+            if (hitCollider.TryGetComponent<EnemyHealth>(out var enemyHealth))
+            {
+                enemyHealth.TakeDamage(owner.ScaledDamage);
+                owner.WeaponSystem.UseDurability(1);
+
+                if (owner.OnEnemyHit != null)
+                {
+                    owner.OnEnemyHit.Raise(enemyHealth);
                 }
 
-                if (TryResolveDestructible(col, out DestructibleObject destructible))
+                if (owner.GetCurrentDurability() <= 0)
                 {
-                    hitTargets.Add(rootObj);
-                    Vector3 hitPoint = col.ClosestPoint(origin);
-                    destructible.TakeDamage(owner.ScaledDamage, hitPoint, dir);
-                    owner.WeaponSystem.UseDurability(1);
-                    if (owner.GetCurrentDurability() <= 0) owner.SetWeaponVisibility(false);
+                    owner.SetWeaponVisibility(false);
+                    if (owner.Data.breakSound != null && owner.audioSource != null)
+                        owner.audioSource.PlayOneShot(owner.Data.breakSound);
+                    return;
                 }
+            }
+            else if (hitCollider.TryGetComponent<DestructibleObject>(out var destructible))
+            {
+                destructible.TakeDamage(owner.ScaledDamage, hitPoint, hitDirection);
+                owner.WeaponSystem.UseDurability(1);
+
+                if (owner.GetCurrentDurability() <= 0)
+                {
+                    owner.SetWeaponVisibility(false);
+                    if (owner.Data.breakSound != null && owner.audioSource != null)
+                        owner.audioSource.PlayOneShot(owner.Data.breakSound);
+                    return;
+                }
+            }
+        }
+
+        private bool IsValidTarget(Collider collider)
+        {
+            return collider.GetComponent<EnemyHealth>() != null ||
+                   collider.GetComponent<DestructibleObject>() != null;
+        }
+
+        private float GetDamagePointForAnimation()
+        {
+            switch (owner.Data.animationType)
+            {
+                case MeleeAnimationType.Slash:
+                    return 0.5f;
+                case MeleeAnimationType.Overhead:
+                    return 0.65f;
+                case MeleeAnimationType.Thrust:
+                    return 0.45f;
+                case MeleeAnimationType.Swing:
+                    return 0.5f;
+                default:
+                    return 0.5f;
             }
         }
 
         private static bool WithinAngle(Vector3 forward, Vector3 dir, float angleDegrees)
             => Vector3.Angle(forward, dir) <= angleDegrees * 0.5f;
 
-        private static bool TryResolveEnemy(Collider col, out EnemyHealth enemyHealth)
-        {
-            if (col.TryGetComponent<EnemyHealth>(out enemyHealth)) return true;
-            enemyHealth = col.GetComponentInParent<EnemyHealth>();
-            return enemyHealth != null;
-        }
 
-        private static bool TryResolveDestructible(Collider col, out DestructibleObject destructible)
-        {
-            if (col.TryGetComponent<DestructibleObject>(out destructible)) return true;
-            destructible = col.GetComponentInParent<DestructibleObject>();
-            return destructible != null;
-        }
 
         private void ApplyThrustHeavy(float t01)
         {
