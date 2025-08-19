@@ -3,36 +3,27 @@ using System.Collections.Generic;
 using Helloop.StateMachines;
 using Helloop.Enemies;
 using Helloop.Environment;
-using Helloop.Weapons; // for MeleeAnimPhasesSimple
+using Helloop.Weapons;
 
 namespace Helloop.Weapons.States
 {
-    /// <summary>
-    /// Dash attack: animation + multi-hit cone. No routing in this state.
-    /// Thrust/Overhead pitch sits near +60° around impact.
-    /// </summary>
     public class MeleeDashAttackState : IState<MeleeWeapon>
     {
         private MeleeWeapon owner;
-
         private float durationSeconds;
         private float elapsed;
         private float angleDegrees;
-
         private bool hitWindowProcessed;
 
-        // Hit window (normalized)
         private const float WindowStart = 0.35f;
         private const float WindowEnd = 0.65f;
-
         private const int MaxHitColliders = 96;
         private static readonly Collider[] s_Overlap = new Collider[MaxHitColliders];
 
         public void OnEnter(MeleeWeapon weapon)
         {
             owner = weapon;
-
-            durationSeconds = Mathf.Max(0.001f, owner.Data.swingTime); // no separate dash time in data
+            durationSeconds = Mathf.Max(0.001f, owner.Data.swingTime * 0.8f);
             angleDegrees = owner.Data.dashAngleDegrees;
 
             if (owner.audioSource != null && owner.Data.swingSound != null)
@@ -57,7 +48,7 @@ namespace Helloop.Weapons.States
             if (!hitWindowProcessed && t01 >= WindowStart && t01 <= WindowEnd)
             {
                 hitWindowProcessed = true;
-                ResolveMultiHit();
+                ResolveExtendedReachHit();
             }
 
             if (t01 >= 1f)
@@ -68,54 +59,46 @@ namespace Helloop.Weapons.States
 
         public void OnExit(MeleeWeapon weapon) { }
 
-        private void ResolveMultiHit()
+        private void ResolveExtendedReachHit()
         {
             Transform camT = owner.PlayerCamera != null ? owner.PlayerCamera.transform : owner.transform;
             Vector3 origin = camT.position;
             Vector3 forward = camT.forward;
+            float extendedRange = owner.Data.range * 1.4f;
 
-            float maxDist = owner.Data.range;
-            int mask = ~owner.Data.ignoreLayers;
+            int found = Physics.OverlapSphereNonAlloc(origin, extendedRange, s_Overlap, ~owner.Data.ignoreLayers);
+            HashSet<GameObject> hitTargets = new HashSet<GameObject>();
 
-            Vector3 center = origin + forward * (maxDist * 0.6f);
-            int count = Physics.OverlapSphereNonAlloc(center, maxDist, s_Overlap, mask);
-
-            var uniqueEnemies = new HashSet<EnemyHealth>();
-            var uniqueDestructibles = new HashSet<DestructibleObject>();
-
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < found; i++)
             {
-                var col = s_Overlap[i];
-                if (col == null) continue;
+                Collider col = s_Overlap[i];
+                Vector3 dir = (col.bounds.center - origin).normalized;
 
-                Vector3 toCenter = col.bounds.center - origin;
-                float dist = toCenter.magnitude;
-                if (dist > maxDist) continue;
-
-                Vector3 dir = toCenter.normalized;
                 if (!WithinAngle(forward, dir, angleDegrees)) continue;
 
-                if (TryResolveEnemy(col, out var enemy)) { uniqueEnemies.Add(enemy); continue; }
-                if (TryResolveDestructible(col, out var d)) { uniqueDestructibles.Add(d); }
-            }
+                GameObject rootObj = col.transform.root.gameObject;
+                if (hitTargets.Contains(rootObj)) continue;
 
-            foreach (var enemy in uniqueEnemies)
-            {
-                enemy.TakeDamage(owner.ScaledDamage);
-                owner.WeaponSystem.UseDurability(1);
-                owner.OnEnemyHit?.Raise(enemy);
-                if (owner.GetCurrentDurability() <= 0) owner.SetWeaponVisibility(false);
-            }
+                float distance = Vector3.Distance(origin, col.bounds.center);
+                if (distance > extendedRange) continue;
 
-            foreach (var d in uniqueDestructibles)
-            {
-                var dCol = d.GetComponent<Collider>();
-                Vector3 hp = dCol != null ? dCol.ClosestPoint(origin) : d.transform.position;
-                Vector3 dir = (hp - origin).normalized;
+                if (TryResolveEnemy(col, out EnemyHealth enemyHealth))
+                {
+                    hitTargets.Add(rootObj);
+                    enemyHealth.TakeDamage(owner.ScaledDamage);
+                    owner.WeaponSystem.UseDurability(1);
+                    if (owner.GetCurrentDurability() <= 0) owner.SetWeaponVisibility(false);
+                    continue;
+                }
 
-                d.TakeDamage(owner.ScaledDamage, hp, dir);
-                owner.WeaponSystem.UseDurability(1);
-                if (owner.GetCurrentDurability() <= 0) owner.SetWeaponVisibility(false);
+                if (TryResolveDestructible(col, out DestructibleObject destructible))
+                {
+                    hitTargets.Add(rootObj);
+                    Vector3 hitPoint = col.ClosestPoint(origin);
+                    destructible.TakeDamage(owner.ScaledDamage, hitPoint, dir);
+                    owner.WeaponSystem.UseDurability(1);
+                    if (owner.GetCurrentDurability() <= 0) owner.SetWeaponVisibility(false);
+                }
             }
         }
 
@@ -136,18 +119,15 @@ namespace Helloop.Weapons.States
             return destructible != null;
         }
 
-        // ---------------- Animation (phase helper) ----------------
-
         private void ApplyThrustDash(float t01)
         {
-            // Lock pitch near +60° around impact
             var phases = new MeleeAnimPhasesSimple.AnimationPhase[]
             {
                 new(){ timePercent=0.00f, pos=new Vector3(0f,  0.00f, 0.00f), rotEuler=new Vector3( 0f,  0f, 0f) },
                 new(){ timePercent=0.22f, pos=new Vector3(0f, -0.01f, 0.16f), rotEuler=new Vector3(30f,  6f, 2f) },
-                new(){ timePercent=0.48f, pos=new Vector3(0f, -0.01f, 0.42f), rotEuler=new Vector3(60f, 10f, 4f) }, // impact
+                new(){ timePercent=0.48f, pos=new Vector3(0f, -0.01f, 0.42f), rotEuler=new Vector3(60f, 10f, 4f) },
                 new(){ timePercent=0.72f, pos=new Vector3(0f, -0.01f, 0.20f), rotEuler=new Vector3(36f,  6f, 2f) },
-                new(){ timePercent=1.00f, pos=new Vector3(0f,  0.00f, 0.00f), rotEuler=new Vector3( 0f,  0f, 0f) },
+                new(){ timePercent=1.00f, pos=new Vector3(0f,  0.00f, 0.00f), rotEuler=new Vector3( 0f,  0f, 0f) }
             };
             MeleeAnimPhasesSimple.ApplyNormalized(owner.transform, owner.originalPosition, owner.originalRotation, t01, phases);
         }
@@ -158,9 +138,9 @@ namespace Helloop.Weapons.States
             {
                 new(){ timePercent=0.00f, pos=new Vector3( 0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,  0f,  0f) },
                 new(){ timePercent=0.25f, pos=new Vector3(-0.02f, 0.04f, 0.08f), rotEuler=new Vector3( 38f,  8f, 20f) },
-                new(){ timePercent=0.50f, pos=new Vector3( 0.01f,-0.01f, 0.30f), rotEuler=new Vector3( 60f, 12f, 18f) }, // impact
+                new(){ timePercent=0.50f, pos=new Vector3( 0.01f,-0.01f, 0.30f), rotEuler=new Vector3( 60f, 12f, 18f) },
                 new(){ timePercent=0.75f, pos=new Vector3( 0.01f,-0.01f, 0.16f), rotEuler=new Vector3( 36f,  8f,  8f) },
-                new(){ timePercent=1.00f, pos=new Vector3( 0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,  0f,  0f) },
+                new(){ timePercent=1.00f, pos=new Vector3( 0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,  0f,  0f) }
             };
             MeleeAnimPhasesSimple.ApplyNormalized(owner.transform, owner.originalPosition, owner.originalRotation, t01, phases);
         }
@@ -171,9 +151,9 @@ namespace Helloop.Weapons.States
             {
                 new(){ timePercent=0.00f, pos=new Vector3(0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,   0f,  0f) },
                 new(){ timePercent=0.20f, pos=new Vector3(0.02f, 0.02f, 0.10f), rotEuler=new Vector3( 12f,  60f, 12f) },
-                new(){ timePercent=0.48f, pos=new Vector3(0.05f, 0.00f, 0.32f), rotEuler=new Vector3( 18f, 140f, 18f) }, // impact
+                new(){ timePercent=0.48f, pos=new Vector3(0.05f, 0.00f, 0.32f), rotEuler=new Vector3( 18f, 140f, 18f) },
                 new(){ timePercent=0.70f, pos=new Vector3(0.02f,-0.01f, 0.26f), rotEuler=new Vector3( 10f,  40f, 10f) },
-                new(){ timePercent=1.00f, pos=new Vector3(0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,   0f,  0f) },
+                new(){ timePercent=1.00f, pos=new Vector3(0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,   0f,  0f) }
             };
             MeleeAnimPhasesSimple.ApplyNormalized(owner.transform, owner.originalPosition, owner.originalRotation, t01, phases);
         }
