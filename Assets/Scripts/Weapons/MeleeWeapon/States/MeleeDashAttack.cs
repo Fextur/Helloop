@@ -4,6 +4,7 @@ using Helloop.StateMachines;
 using Helloop.Enemies;
 using Helloop.Environment;
 using Helloop.Weapons;
+using Helloop.Player;
 
 namespace Helloop.Weapons.States
 {
@@ -15,15 +16,20 @@ namespace Helloop.Weapons.States
         private float angleDegrees;
         private bool hitWindowProcessed;
 
-        private const float WindowStart = 0.35f;
-        private const float WindowEnd = 0.65f;
+        private const float WindowStart = 0.65f;
+        private const float WindowEnd = 0.80f;
         private const int MaxHitColliders = 96;
         private static readonly Collider[] s_Overlap = new Collider[MaxHitColliders];
 
         public void OnEnter(MeleeWeapon weapon)
         {
             owner = weapon;
-            durationSeconds = Mathf.Max(0.001f, owner.Data.swingTime * 0.8f);
+
+            // Get dash duration from player movement + a bit extra
+            var playerMovement = owner.GetComponentInParent<PlayerMovement>();
+            float dashDuration = playerMovement != null ? playerMovement.dashDuration : 0.5f;
+            durationSeconds = Mathf.Max(0.001f, dashDuration + 0.2f);
+
             angleDegrees = owner.Data.dashAngleDegrees;
 
             if (owner.audioSource != null && owner.Data.swingSound != null)
@@ -61,7 +67,8 @@ namespace Helloop.Weapons.States
 
         private void ResolveExtendedReachHit()
         {
-            Transform camT = owner.PlayerCamera != null ? owner.PlayerCamera.transform : owner.transform;
+            Transform camT = owner.PlayerCamera != null ?
+                owner.PlayerCamera.transform : owner.transform;
             Vector3 origin = camT.position;
             Vector3 forward = camT.forward;
             float extendedRange = owner.Data.range * 1.4f;
@@ -123,11 +130,10 @@ namespace Helloop.Weapons.States
         {
             var phases = new MeleeAnimPhasesSimple.AnimationPhase[]
             {
-                new(){ timePercent=0.00f, pos=new Vector3(0f,  0.00f, 0.00f), rotEuler=new Vector3( 0f,  0f, 0f) },
-                new(){ timePercent=0.22f, pos=new Vector3(0f, -0.01f, 0.16f), rotEuler=new Vector3(30f,  6f, 2f) },
-                new(){ timePercent=0.48f, pos=new Vector3(0f, -0.01f, 0.42f), rotEuler=new Vector3(60f, 10f, 4f) },
-                new(){ timePercent=0.72f, pos=new Vector3(0f, -0.01f, 0.20f), rotEuler=new Vector3(36f,  6f, 2f) },
-                new(){ timePercent=1.00f, pos=new Vector3(0f,  0.00f, 0.00f), rotEuler=new Vector3( 0f,  0f, 0f) }
+                new(){ timePercent=0.00f, pos=new Vector3(0.000f,  0.000f,  0.000f), rotEuler=new Vector3( 0f,  0f,  0f) },
+                new(){ timePercent=0.1f, pos=new Vector3(0.120f, -0.018f,  0.015f), rotEuler=new Vector3( 25f,  7f,  0f) },
+                new(){ timePercent=0.85f, pos=new Vector3(0.163f, -0.025f,  0.024f), rotEuler=new Vector3( 35f, 10f,  0f) },
+                new(){ timePercent=1.00f, pos=new Vector3(0.000f,  0.000f,  0.000f), rotEuler=new Vector3(  0f,  0f,  0f) }
             };
             MeleeAnimPhasesSimple.ApplyNormalized(owner.transform, owner.originalPosition, owner.originalRotation, t01, phases);
         }
@@ -136,11 +142,10 @@ namespace Helloop.Weapons.States
         {
             var phases = new MeleeAnimPhasesSimple.AnimationPhase[]
             {
-                new(){ timePercent=0.00f, pos=new Vector3( 0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,  0f,  0f) },
-                new(){ timePercent=0.25f, pos=new Vector3(-0.02f, 0.04f, 0.08f), rotEuler=new Vector3( 38f,  8f, 20f) },
-                new(){ timePercent=0.50f, pos=new Vector3( 0.01f,-0.01f, 0.30f), rotEuler=new Vector3( 60f, 12f, 18f) },
-                new(){ timePercent=0.75f, pos=new Vector3( 0.01f,-0.01f, 0.16f), rotEuler=new Vector3( 36f,  8f,  8f) },
-                new(){ timePercent=1.00f, pos=new Vector3( 0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,  0f,  0f) }
+                new(){ timePercent=0.00f, pos=new Vector3(0.000f,  0.000f,  0.000f), rotEuler=new Vector3( 0f,  0f,  0f) },
+                new(){ timePercent=0.1f, pos=new Vector3(0.125f, -0.018f,  0.015f), rotEuler=new Vector3( 25f,  7f,  0f) },
+                new(){ timePercent=0.85f, pos=new Vector3(0.163f, -0.025f,  0.024f), rotEuler=new Vector3( 35f, 10f,  0f) },
+                new(){ timePercent=1.00f, pos=new Vector3(0.000f,  0.000f,  0.000f), rotEuler=new Vector3(  0f,  0f,  0f) }
             };
             MeleeAnimPhasesSimple.ApplyNormalized(owner.transform, owner.originalPosition, owner.originalRotation, t01, phases);
         }
@@ -149,11 +154,10 @@ namespace Helloop.Weapons.States
         {
             var phases = new MeleeAnimPhasesSimple.AnimationPhase[]
             {
-                new(){ timePercent=0.00f, pos=new Vector3(0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,   0f,  0f) },
-                new(){ timePercent=0.20f, pos=new Vector3(0.02f, 0.02f, 0.10f), rotEuler=new Vector3( 12f,  60f, 12f) },
-                new(){ timePercent=0.48f, pos=new Vector3(0.05f, 0.00f, 0.32f), rotEuler=new Vector3( 18f, 140f, 18f) },
-                new(){ timePercent=0.70f, pos=new Vector3(0.02f,-0.01f, 0.26f), rotEuler=new Vector3( 10f,  40f, 10f) },
-                new(){ timePercent=1.00f, pos=new Vector3(0.00f, 0.00f, 0.00f), rotEuler=new Vector3(  0f,   0f,  0f) }
+                new(){ timePercent=0.00f, pos=new Vector3(0.000f,  0.000f,  0.000f), rotEuler=new Vector3( 0f,  0f,  0f) },
+                new(){ timePercent=0.1f, pos=new Vector3(0.120f, -0.018f,  0.015f), rotEuler=new Vector3( 25f,  7f,  0f) },
+                new(){ timePercent=0.85f, pos=new Vector3(0.163f, -0.025f,  0.024f), rotEuler=new Vector3( 35f, 10f,  0f) },
+                new(){ timePercent=1.00f, pos=new Vector3(0.000f,  0.000f,  0.000f), rotEuler=new Vector3(  0f,  0f,  0f) }
             };
             MeleeAnimPhasesSimple.ApplyNormalized(owner.transform, owner.originalPosition, owner.originalRotation, t01, phases);
         }
