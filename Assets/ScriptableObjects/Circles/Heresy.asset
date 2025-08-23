@@ -14,12 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circleLevel: 6
   circleName: Heresy
-  nextCircle: {fileID: 0}
+  nextCircle: {fileID: 11400000, guid: 43ab4ab14d1d34036a930df2fc7876aa, type: 2}
   entryRoom: {fileID: 7944020806768574695, guid: dcd28dd47d3f44937821ef8bc48b2ac0, type: 3}
-  bossRoomCollection: []
-  miniBossRoomCollection: []
+  bossRoomCollection:
+  - roomPrefab: {fileID: 5418725456268238691, guid: f4bb8b4c3b2474cba8c12c47fc7d155a, type: 3}
+    roomType: 3
+  - roomPrefab: {fileID: 5418725456268238691, guid: 9504938495efa4b95aecff036f76dfa6, type: 3}
+    roomType: 3
+  - roomPrefab: {fileID: 5418725456268238691, guid: dbda924293dd4481ea5f22e06017d451, type: 3}
+    roomType: 3
+  - roomPrefab: {fileID: 5418725456268238691, guid: fb8a93e3b28c74c5aa40384e8cc9532a, type: 3}
+    roomType: 3
+  - roomPrefab: {fileID: 5418725456268238691, guid: 084ebdbaf3f854b99b623fecd0b7d5f4, type: 3}
+    roomType: 3
+  miniBossRoomCollection:
+  - roomPrefab: {fileID: 4995004958087492251, guid: cefe84e6f29b2466d9306e5f7b08d003, type: 3}
+    roomType: 2
+  - roomPrefab: {fileID: 5229333002451773178, guid: 409ce119221b94f5da0d5d6b9e9a4d67, type: 3}
+    roomType: 1
+  - roomPrefab: {fileID: 4995004958087492251, guid: 10eb5c0d9f40d43d3b003b6b0d94d313, type: 3}
+    roomType: 2
   roomCollection:
   - roomPrefab: {fileID: 7944020806768574695, guid: 26134f15c1b4040779a2c17f0290246e, type: 3}
     roomType: 0
   - roomPrefab: {fileID: 7944020806768574695, guid: b00a4689e4d0f413aa8cbbe63175e39f, type: 3}
     roomType: 0
+  - roomPrefab: {fileID: 7944020806768574695, guid: 618cc3a3c05374f56a07a6f78c32f763, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 4995004958087492251, guid: e14cb8a7a786d445596578b780388071, type: 3}
+    roomType: 2
+  - roomPrefab: {fileID: 4995004958087492251, guid: c93ebd53e37914b9f9247f7b8cbbc601, type: 3}
+    roomType: 2
+  - roomPrefab: {fileID: 5229333002451773178, guid: 730ad6caaf3ee4218b815d7c63e628df, type: 3}
+    roomType: 1
+  - roomPrefab: {fileID: 5229333002451773178, guid: 5d3d0a6aa0f324b03ac1e49196bbf067, type: 3}
+    roomType: 1
+  - roomPrefab: {fileID: 7944020806768574695, guid: 440d4481f76d74350b30bc36b963fd69, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 7944020806768574695, guid: 942ecd8607a244ee7b4be3b503194f33, type: 3}
+    roomType: 0
+  - roomPrefab: {fileID: 5229333002451773178, guid: 8a445646695b1471bb6829a594a6bb4a, type: 3}
+    roomType: 1

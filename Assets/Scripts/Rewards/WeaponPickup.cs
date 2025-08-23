@@ -95,7 +95,7 @@ namespace Helloop.Rewards
         {
             if (other.CompareTag("Player") && hasPlayerExited)
             {
-                Interact();
+                // Interact();
             }
         }
 

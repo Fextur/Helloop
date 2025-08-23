@@ -60,7 +60,7 @@ namespace Helloop.Interactions
         {
             if (other.CompareTag("Player") && hasPlayerExited)
             {
-                Interact();
+                // Interact();
             }
         }
 

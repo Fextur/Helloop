@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 098d1be90282c43c6a164058859b7d4a, type: 3}
+  m_Name: Boshin Warrior
+  m_EditorClassIdentifier: 
+  enemyName: Boshin Warrior
+  enemyPrefab: {fileID: 8453306119792775734, guid: 52d0cf373836844a98523c45c0c1d7e2, type: 3}
+  maxHealth: 1300
+  damage: 30
+  attackRange: 5
+  attackDetectionRange: 4
+  attackConeDegrees: 180
+  enemyType: 0
+  sightRange: 70
+  pursueDistance: 70
+  moveSpeed: 6.5
+  attackCooldown: 1.75
+  attackDamageDelay: 1.5
+  attackAnimationDuration: 1.75
+  idleSound: {fileID: 0}
+  hittingSound: {fileID: 0}
+  gettingHitSound: {fileID: 8300000, guid: 50824761f0a0548f79a05ba8fd7322f2, type: 3}
+  deathSound: {fileID: 8300000, guid: c69a2847b442841bcb9ce6cdedd7f8d7, type: 3}

@@ -13,12 +13,15 @@ MonoBehaviour:
   m_Name: Katana
   m_EditorClassIdentifier: 
   weaponName: Katana
-  weaponType: 0
   weaponPrefab: {fileID: 3862586457987601311, guid: ab85af8643b814b2797118d88a2d9861, type: 3}
   damage: 20
   durability: 70
   range: 5
   swingTime: 0.4
+  swipeTime: 0.7
+  swingAngleDegrees: 75
+  swipeAngleDegrees: 150
+  dashAngleDegrees: 25
   animationType: 0
   useWideSlash: 1
   ignoreLayers:

@@ -13,13 +13,16 @@ MonoBehaviour:
   m_Name: Mace
   m_EditorClassIdentifier: 
   weaponName: Mace
-  weaponType: 0
   weaponPrefab: {fileID: 3576471463873956392, guid: 2895f3a7e7cb44f35ad42c4c301c1194, type: 3}
   damage: 20
   durability: 80
   range: 4
   swingTime: 0.7
-  animationType: 1
+  swipeTime: 0.58
+  swingAngleDegrees: 75
+  swipeAngleDegrees: 150
+  dashAngleDegrees: 25
+  animationType: 0
   useWideSlash: 0
   ignoreLayers:
     serializedVersion: 2
